@@ -52,7 +52,7 @@
 | [High level synthesis for Image Deblurring Processor](https://github.com/2020MSOC_Final) | 楊智翔, 舒泓諭, 董濟昀|
 | Accelerate calculation of mel-frequency cepstral coefficients by HLS | 林承德, 張俊堉, 蔡孟桓 |
 | [Real-time 3D Rendering](https://github.com/victoresque/HLS3D) | team4 |
-| BNN – Binarized CNN | 陳昱愷, 楊凱翔, 孫名志|
+| [BNN – Binarized CNN](https://github.com/siangyang/BNN-for-pynq) | 陳昱愷, 楊凱翔, 孫名志|
 | [Feature-Based Image Morphing Accelerator on PYNQ](https://github.com/MRdudu156/MSOC_2020_FINAL_Project_group7/tree/main) | Tang Lee, I-Ting Lin, Cheng-Yan Du |
 | [Coherent Plane-Wave Compounding using Delay-and-Sum Beamforming for Ultrasound B-mode Imaging on PYNQ](https://github.com/aqle4090/MSOC_FINAL_DAS) | Yi-Lin Lo, Chen-Chien Kao, Yu-Chi Lee |
 | [Object detection accelerator in Xilinx PYNQ-z2](https://github.com/tzuj6/Object-detection-accelerator-in-Xilinx-PYNQ-z2) | 林哲嶔, 劉子傑, 黃紹軒 |
