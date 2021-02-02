@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="finalconv_hls" solutionName="parallel_Cin" date="2021-01-20T14:36:22.962+0800"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="finalconv_hls" solutionName="parallel_Cin" date="2021-01-20T14:36:22.954+0800"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between axis write on port 'cofm' (finalconv_Jan19.cpp:241) and axis read on port 'cofm' (finalconv_Jan19.cpp:236)." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:46.985+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190)." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:46.310+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190)." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:46.228+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190)." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:46.219+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190)." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:46.211+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalconv_Jan19.cpp:139:17) in function 'conv_write' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.758+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.237+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 56 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.182+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.175+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.169+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.161+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'." projectName="finalconv_hls" solutionName="solution1" date="2021-01-20T14:16:44.155+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between axis write on port 'cofm' (finalconv_Jan19.cpp:241) and axis read on port 'cofm' (finalconv_Jan19.cpp:236)." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:31.759+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:201) and 'fadd' operation ('Y', finalconv_Jan19.cpp:201)." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:31.095+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:201) and 'fadd' operation ('Y', finalconv_Jan19.cpp:201)." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:30.969+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:201) and 'fadd' operation ('Y', finalconv_Jan19.cpp:201)." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:30.958+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)&#xD;&#xA;   between 'fadd' operation ('Y', finalconv_Jan19.cpp:201) and 'fadd' operation ('Y', finalconv_Jan19.cpp:201)." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:30.947+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalconv_Jan19.cpp:139:17) in function 'conv_write' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:29.470+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.953+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 56 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.904+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.886+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.879+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.872+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'." projectName="finalconv_hls" solutionName="conv_write_cin_pip" date="2021-01-19T21:00:28.864+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

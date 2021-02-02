@@ -1,0 +1,402 @@
+
+
+================================================================
+== Vivado HLS Report for 'load_cifm_data'
+================================================================
+* Date:           Thu Jan 21 20:27:14 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        finalwrapup_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.254 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      180|      180| 1.800 us | 1.800 us |  180|  180|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       58|       58|         1|          1|          1|    58|    yes   |
+        |- Loop 2  |       58|       58|         1|          1|          1|    58|    yes   |
+        |- Loop 3  |       58|       58|         1|          1|          1|    58|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 1, depth = 1
+  * Pipeline-2: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 3
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+  Pipeline-1 : II = 1, D = 1, States = { 4 }
+  Pipeline-2 : II = 1, D = 1, States = { 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 2 
+3 --> 4 
+4 --> 5 4 
+5 --> 6 
+6 --> 7 6 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %cifm, [5 x i8]* @p_str15, i32 0, i32 0, [5 x i8]* @p_str16, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.76ns)   --->   "br label %1" [finalwrapup.cpp:344]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%cifm_counter_0 = phi i6 [ 0, %0 ], [ %j, %hls_label_6 ]"   --->   Operation 10 'phi' 'cifm_counter_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.42ns)   --->   "%icmp_ln344 = icmp eq i6 %cifm_counter_0, -6" [finalwrapup.cpp:344]   --->   Operation 11 'icmp' 'icmp_ln344' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 58, i64 58, i64 58)"   --->   Operation 12 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.82ns)   --->   "%j = add i6 %cifm_counter_0, 1" [finalwrapup.cpp:363]   --->   Operation 13 'add' 'j' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln344, label %.preheader1.preheader, label %hls_label_6" [finalwrapup.cpp:344]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)" [finalwrapup.cpp:345]   --->   Operation 15 'specregionbegin' 'tmp' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:346]   --->   Operation 16 'specpipeline' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln347 = zext i6 %cifm_counter_0 to i64" [finalwrapup.cpp:347]   --->   Operation 17 'zext' 'zext_ln347' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%cifm_read = call i512 @_ssdm_op_Read.axis.volatile.i512P(i512* %cifm)" [finalwrapup.cpp:347]   --->   Operation 18 'read' 'cifm_read' <Predicate = (!icmp_ln344)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln347 = trunc i512 %cifm_read to i32" [finalwrapup.cpp:347]   --->   Operation 19 'trunc' 'trunc_ln347' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%bitcast_ln347 = bitcast i32 %trunc_ln347 to float" [finalwrapup.cpp:347]   --->   Operation 20 'bitcast' 'bitcast_ln347' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%ifm_buff0_0_addr = getelementptr [58 x float]* %ifm_buff0_0, i64 0, i64 %zext_ln347" [finalwrapup.cpp:347]   --->   Operation 21 'getelementptr' 'ifm_buff0_0_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (3.25ns)   --->   "store float %bitcast_ln347, float* %ifm_buff0_0_addr, align 4" [finalwrapup.cpp:347]   --->   Operation 22 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%cifm_a1_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 32, i32 63)" [finalwrapup.cpp:348]   --->   Operation 23 'partselect' 'cifm_a1_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%bitcast_ln348 = bitcast i32 %cifm_a1_load_new to float" [finalwrapup.cpp:348]   --->   Operation 24 'bitcast' 'bitcast_ln348' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%ifm_buff0_1_addr = getelementptr [58 x float]* %ifm_buff0_1, i64 0, i64 %zext_ln347" [finalwrapup.cpp:348]   --->   Operation 25 'getelementptr' 'ifm_buff0_1_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (3.25ns)   --->   "store float %bitcast_ln348, float* %ifm_buff0_1_addr, align 4" [finalwrapup.cpp:348]   --->   Operation 26 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%cifm_a2_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 64, i32 95)" [finalwrapup.cpp:349]   --->   Operation 27 'partselect' 'cifm_a2_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%bitcast_ln349 = bitcast i32 %cifm_a2_load_new to float" [finalwrapup.cpp:349]   --->   Operation 28 'bitcast' 'bitcast_ln349' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%ifm_buff0_2_addr = getelementptr [58 x float]* %ifm_buff0_2, i64 0, i64 %zext_ln347" [finalwrapup.cpp:349]   --->   Operation 29 'getelementptr' 'ifm_buff0_2_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (3.25ns)   --->   "store float %bitcast_ln349, float* %ifm_buff0_2_addr, align 4" [finalwrapup.cpp:349]   --->   Operation 30 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%cifm_a3_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 96, i32 127)" [finalwrapup.cpp:350]   --->   Operation 31 'partselect' 'cifm_a3_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%bitcast_ln350 = bitcast i32 %cifm_a3_load_new to float" [finalwrapup.cpp:350]   --->   Operation 32 'bitcast' 'bitcast_ln350' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%ifm_buff0_3_addr = getelementptr [58 x float]* %ifm_buff0_3, i64 0, i64 %zext_ln347" [finalwrapup.cpp:350]   --->   Operation 33 'getelementptr' 'ifm_buff0_3_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (3.25ns)   --->   "store float %bitcast_ln350, float* %ifm_buff0_3_addr, align 4" [finalwrapup.cpp:350]   --->   Operation 34 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%cifm_a4_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 128, i32 159)" [finalwrapup.cpp:351]   --->   Operation 35 'partselect' 'cifm_a4_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%bitcast_ln351 = bitcast i32 %cifm_a4_load_new to float" [finalwrapup.cpp:351]   --->   Operation 36 'bitcast' 'bitcast_ln351' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%ifm_buff0_4_addr = getelementptr [58 x float]* %ifm_buff0_4, i64 0, i64 %zext_ln347" [finalwrapup.cpp:351]   --->   Operation 37 'getelementptr' 'ifm_buff0_4_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (3.25ns)   --->   "store float %bitcast_ln351, float* %ifm_buff0_4_addr, align 4" [finalwrapup.cpp:351]   --->   Operation 38 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%cifm_a5_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 160, i32 191)" [finalwrapup.cpp:352]   --->   Operation 39 'partselect' 'cifm_a5_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%bitcast_ln352 = bitcast i32 %cifm_a5_load_new to float" [finalwrapup.cpp:352]   --->   Operation 40 'bitcast' 'bitcast_ln352' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%ifm_buff0_5_addr = getelementptr [58 x float]* %ifm_buff0_5, i64 0, i64 %zext_ln347" [finalwrapup.cpp:352]   --->   Operation 41 'getelementptr' 'ifm_buff0_5_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (3.25ns)   --->   "store float %bitcast_ln352, float* %ifm_buff0_5_addr, align 4" [finalwrapup.cpp:352]   --->   Operation 42 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%cifm_a6_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 192, i32 223)" [finalwrapup.cpp:353]   --->   Operation 43 'partselect' 'cifm_a6_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%bitcast_ln353 = bitcast i32 %cifm_a6_load_new to float" [finalwrapup.cpp:353]   --->   Operation 44 'bitcast' 'bitcast_ln353' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%ifm_buff0_6_addr = getelementptr [58 x float]* %ifm_buff0_6, i64 0, i64 %zext_ln347" [finalwrapup.cpp:353]   --->   Operation 45 'getelementptr' 'ifm_buff0_6_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (3.25ns)   --->   "store float %bitcast_ln353, float* %ifm_buff0_6_addr, align 4" [finalwrapup.cpp:353]   --->   Operation 46 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%cifm_a7_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 224, i32 255)" [finalwrapup.cpp:354]   --->   Operation 47 'partselect' 'cifm_a7_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%bitcast_ln354 = bitcast i32 %cifm_a7_load_new to float" [finalwrapup.cpp:354]   --->   Operation 48 'bitcast' 'bitcast_ln354' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%ifm_buff0_7_addr = getelementptr [58 x float]* %ifm_buff0_7, i64 0, i64 %zext_ln347" [finalwrapup.cpp:354]   --->   Operation 49 'getelementptr' 'ifm_buff0_7_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (3.25ns)   --->   "store float %bitcast_ln354, float* %ifm_buff0_7_addr, align 4" [finalwrapup.cpp:354]   --->   Operation 50 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%cifm_a8_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 256, i32 287)" [finalwrapup.cpp:355]   --->   Operation 51 'partselect' 'cifm_a8_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%bitcast_ln355 = bitcast i32 %cifm_a8_load_new to float" [finalwrapup.cpp:355]   --->   Operation 52 'bitcast' 'bitcast_ln355' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%ifm_buff0_8_addr = getelementptr [58 x float]* %ifm_buff0_8, i64 0, i64 %zext_ln347" [finalwrapup.cpp:355]   --->   Operation 53 'getelementptr' 'ifm_buff0_8_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (3.25ns)   --->   "store float %bitcast_ln355, float* %ifm_buff0_8_addr, align 4" [finalwrapup.cpp:355]   --->   Operation 54 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%cifm_a9_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 288, i32 319)" [finalwrapup.cpp:356]   --->   Operation 55 'partselect' 'cifm_a9_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%bitcast_ln356 = bitcast i32 %cifm_a9_load_new to float" [finalwrapup.cpp:356]   --->   Operation 56 'bitcast' 'bitcast_ln356' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%ifm_buff0_9_addr = getelementptr [58 x float]* %ifm_buff0_9, i64 0, i64 %zext_ln347" [finalwrapup.cpp:356]   --->   Operation 57 'getelementptr' 'ifm_buff0_9_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (3.25ns)   --->   "store float %bitcast_ln356, float* %ifm_buff0_9_addr, align 4" [finalwrapup.cpp:356]   --->   Operation 58 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%cifm_a10_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 320, i32 351)" [finalwrapup.cpp:357]   --->   Operation 59 'partselect' 'cifm_a10_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln357 = bitcast i32 %cifm_a10_load_new to float" [finalwrapup.cpp:357]   --->   Operation 60 'bitcast' 'bitcast_ln357' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%ifm_buff0_10_addr = getelementptr [58 x float]* %ifm_buff0_10, i64 0, i64 %zext_ln347" [finalwrapup.cpp:357]   --->   Operation 61 'getelementptr' 'ifm_buff0_10_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (3.25ns)   --->   "store float %bitcast_ln357, float* %ifm_buff0_10_addr, align 4" [finalwrapup.cpp:357]   --->   Operation 62 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%cifm_a11_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 352, i32 383)" [finalwrapup.cpp:358]   --->   Operation 63 'partselect' 'cifm_a11_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln358 = bitcast i32 %cifm_a11_load_new to float" [finalwrapup.cpp:358]   --->   Operation 64 'bitcast' 'bitcast_ln358' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%ifm_buff0_11_addr = getelementptr [58 x float]* %ifm_buff0_11, i64 0, i64 %zext_ln347" [finalwrapup.cpp:358]   --->   Operation 65 'getelementptr' 'ifm_buff0_11_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (3.25ns)   --->   "store float %bitcast_ln358, float* %ifm_buff0_11_addr, align 4" [finalwrapup.cpp:358]   --->   Operation 66 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%cifm_a12_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 384, i32 415)" [finalwrapup.cpp:359]   --->   Operation 67 'partselect' 'cifm_a12_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%bitcast_ln359 = bitcast i32 %cifm_a12_load_new to float" [finalwrapup.cpp:359]   --->   Operation 68 'bitcast' 'bitcast_ln359' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%ifm_buff0_12_addr = getelementptr [58 x float]* %ifm_buff0_12, i64 0, i64 %zext_ln347" [finalwrapup.cpp:359]   --->   Operation 69 'getelementptr' 'ifm_buff0_12_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (3.25ns)   --->   "store float %bitcast_ln359, float* %ifm_buff0_12_addr, align 4" [finalwrapup.cpp:359]   --->   Operation 70 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%cifm_a13_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 416, i32 447)" [finalwrapup.cpp:360]   --->   Operation 71 'partselect' 'cifm_a13_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln360 = bitcast i32 %cifm_a13_load_new to float" [finalwrapup.cpp:360]   --->   Operation 72 'bitcast' 'bitcast_ln360' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%ifm_buff0_13_addr = getelementptr [58 x float]* %ifm_buff0_13, i64 0, i64 %zext_ln347" [finalwrapup.cpp:360]   --->   Operation 73 'getelementptr' 'ifm_buff0_13_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (3.25ns)   --->   "store float %bitcast_ln360, float* %ifm_buff0_13_addr, align 4" [finalwrapup.cpp:360]   --->   Operation 74 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%cifm_a14_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 448, i32 479)" [finalwrapup.cpp:361]   --->   Operation 75 'partselect' 'cifm_a14_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%bitcast_ln361 = bitcast i32 %cifm_a14_load_new to float" [finalwrapup.cpp:361]   --->   Operation 76 'bitcast' 'bitcast_ln361' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%ifm_buff0_14_addr = getelementptr [58 x float]* %ifm_buff0_14, i64 0, i64 %zext_ln347" [finalwrapup.cpp:361]   --->   Operation 77 'getelementptr' 'ifm_buff0_14_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (3.25ns)   --->   "store float %bitcast_ln361, float* %ifm_buff0_14_addr, align 4" [finalwrapup.cpp:361]   --->   Operation 78 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%cifm_a15_load_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read, i32 480, i32 511)" [finalwrapup.cpp:362]   --->   Operation 79 'partselect' 'cifm_a15_load_new' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%bitcast_ln362 = bitcast i32 %cifm_a15_load_new to float" [finalwrapup.cpp:362]   --->   Operation 80 'bitcast' 'bitcast_ln362' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%ifm_buff0_15_addr = getelementptr [58 x float]* %ifm_buff0_15, i64 0, i64 %zext_ln347" [finalwrapup.cpp:362]   --->   Operation 81 'getelementptr' 'ifm_buff0_15_addr' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (3.25ns)   --->   "store float %bitcast_ln362, float* %ifm_buff0_15_addr, align 4" [finalwrapup.cpp:362]   --->   Operation 82 'store' <Predicate = (!icmp_ln344)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp)" [finalwrapup.cpp:364]   --->   Operation 83 'specregionend' 'empty' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "br label %1" [finalwrapup.cpp:344]   --->   Operation 84 'br' <Predicate = (!icmp_ln344)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 85 [1/1] (1.76ns)   --->   "br label %.preheader1" [finalwrapup.cpp:367]   --->   Operation 85 'br' <Predicate = true> <Delay = 1.76>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%j1_0 = phi i6 [ %j_2, %hls_label_7 ], [ 0, %.preheader1.preheader ]"   --->   Operation 86 'phi' 'j1_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (1.42ns)   --->   "%icmp_ln367 = icmp eq i6 %j1_0, -6" [finalwrapup.cpp:367]   --->   Operation 87 'icmp' 'icmp_ln367' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 58, i64 58, i64 58)"   --->   Operation 88 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (1.82ns)   --->   "%j_2 = add i6 %j1_0, 1" [finalwrapup.cpp:367]   --->   Operation 89 'add' 'j_2' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %icmp_ln367, label %.preheader.preheader, label %hls_label_7" [finalwrapup.cpp:367]   --->   Operation 90 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str11)" [finalwrapup.cpp:368]   --->   Operation 91 'specregionbegin' 'tmp_3' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:369]   --->   Operation 92 'specpipeline' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%cifm_read_2 = call i512 @_ssdm_op_Read.axis.volatile.i512P(i512* %cifm)" [finalwrapup.cpp:370]   --->   Operation 93 'read' 'cifm_read_2' <Predicate = (!icmp_ln367)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln370 = trunc i512 %cifm_read_2 to i32" [finalwrapup.cpp:370]   --->   Operation 94 'trunc' 'trunc_ln370' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%bitcast_ln370 = bitcast i32 %trunc_ln370 to float" [finalwrapup.cpp:370]   --->   Operation 95 'bitcast' 'bitcast_ln370' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln370 = zext i6 %j1_0 to i64" [finalwrapup.cpp:370]   --->   Operation 96 'zext' 'zext_ln370' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "%ifm_buff1_0_addr = getelementptr [58 x float]* %ifm_buff1_0, i64 0, i64 %zext_ln370" [finalwrapup.cpp:370]   --->   Operation 97 'getelementptr' 'ifm_buff1_0_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (3.25ns)   --->   "store float %bitcast_ln370, float* %ifm_buff1_0_addr, align 4" [finalwrapup.cpp:370]   --->   Operation 98 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%cifm_a1_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 32, i32 63)" [finalwrapup.cpp:371]   --->   Operation 99 'partselect' 'cifm_a1_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%bitcast_ln371 = bitcast i32 %cifm_a1_load_2_new to float" [finalwrapup.cpp:371]   --->   Operation 100 'bitcast' 'bitcast_ln371' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%ifm_buff1_1_addr = getelementptr [58 x float]* %ifm_buff1_1, i64 0, i64 %zext_ln370" [finalwrapup.cpp:371]   --->   Operation 101 'getelementptr' 'ifm_buff1_1_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (3.25ns)   --->   "store float %bitcast_ln371, float* %ifm_buff1_1_addr, align 4" [finalwrapup.cpp:371]   --->   Operation 102 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%cifm_a2_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 64, i32 95)" [finalwrapup.cpp:372]   --->   Operation 103 'partselect' 'cifm_a2_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%bitcast_ln372 = bitcast i32 %cifm_a2_load_2_new to float" [finalwrapup.cpp:372]   --->   Operation 104 'bitcast' 'bitcast_ln372' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%ifm_buff1_2_addr = getelementptr [58 x float]* %ifm_buff1_2, i64 0, i64 %zext_ln370" [finalwrapup.cpp:372]   --->   Operation 105 'getelementptr' 'ifm_buff1_2_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (3.25ns)   --->   "store float %bitcast_ln372, float* %ifm_buff1_2_addr, align 4" [finalwrapup.cpp:372]   --->   Operation 106 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 107 [1/1] (0.00ns)   --->   "%cifm_a3_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 96, i32 127)" [finalwrapup.cpp:373]   --->   Operation 107 'partselect' 'cifm_a3_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%bitcast_ln373 = bitcast i32 %cifm_a3_load_2_new to float" [finalwrapup.cpp:373]   --->   Operation 108 'bitcast' 'bitcast_ln373' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%ifm_buff1_3_addr = getelementptr [58 x float]* %ifm_buff1_3, i64 0, i64 %zext_ln370" [finalwrapup.cpp:373]   --->   Operation 109 'getelementptr' 'ifm_buff1_3_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (3.25ns)   --->   "store float %bitcast_ln373, float* %ifm_buff1_3_addr, align 4" [finalwrapup.cpp:373]   --->   Operation 110 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%cifm_a4_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 128, i32 159)" [finalwrapup.cpp:374]   --->   Operation 111 'partselect' 'cifm_a4_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%bitcast_ln374 = bitcast i32 %cifm_a4_load_2_new to float" [finalwrapup.cpp:374]   --->   Operation 112 'bitcast' 'bitcast_ln374' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%ifm_buff1_4_addr = getelementptr [58 x float]* %ifm_buff1_4, i64 0, i64 %zext_ln370" [finalwrapup.cpp:374]   --->   Operation 113 'getelementptr' 'ifm_buff1_4_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (3.25ns)   --->   "store float %bitcast_ln374, float* %ifm_buff1_4_addr, align 4" [finalwrapup.cpp:374]   --->   Operation 114 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%cifm_a5_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 160, i32 191)" [finalwrapup.cpp:375]   --->   Operation 115 'partselect' 'cifm_a5_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%bitcast_ln375 = bitcast i32 %cifm_a5_load_2_new to float" [finalwrapup.cpp:375]   --->   Operation 116 'bitcast' 'bitcast_ln375' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%ifm_buff1_5_addr = getelementptr [58 x float]* %ifm_buff1_5, i64 0, i64 %zext_ln370" [finalwrapup.cpp:375]   --->   Operation 117 'getelementptr' 'ifm_buff1_5_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (3.25ns)   --->   "store float %bitcast_ln375, float* %ifm_buff1_5_addr, align 4" [finalwrapup.cpp:375]   --->   Operation 118 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%cifm_a6_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 192, i32 223)" [finalwrapup.cpp:376]   --->   Operation 119 'partselect' 'cifm_a6_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%bitcast_ln376 = bitcast i32 %cifm_a6_load_2_new to float" [finalwrapup.cpp:376]   --->   Operation 120 'bitcast' 'bitcast_ln376' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (0.00ns)   --->   "%ifm_buff1_6_addr = getelementptr [58 x float]* %ifm_buff1_6, i64 0, i64 %zext_ln370" [finalwrapup.cpp:376]   --->   Operation 121 'getelementptr' 'ifm_buff1_6_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 122 [1/1] (3.25ns)   --->   "store float %bitcast_ln376, float* %ifm_buff1_6_addr, align 4" [finalwrapup.cpp:376]   --->   Operation 122 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%cifm_a7_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 224, i32 255)" [finalwrapup.cpp:377]   --->   Operation 123 'partselect' 'cifm_a7_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%bitcast_ln377 = bitcast i32 %cifm_a7_load_2_new to float" [finalwrapup.cpp:377]   --->   Operation 124 'bitcast' 'bitcast_ln377' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 125 [1/1] (0.00ns)   --->   "%ifm_buff1_7_addr = getelementptr [58 x float]* %ifm_buff1_7, i64 0, i64 %zext_ln370" [finalwrapup.cpp:377]   --->   Operation 125 'getelementptr' 'ifm_buff1_7_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 126 [1/1] (3.25ns)   --->   "store float %bitcast_ln377, float* %ifm_buff1_7_addr, align 4" [finalwrapup.cpp:377]   --->   Operation 126 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 127 [1/1] (0.00ns)   --->   "%cifm_a8_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 256, i32 287)" [finalwrapup.cpp:378]   --->   Operation 127 'partselect' 'cifm_a8_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%bitcast_ln378 = bitcast i32 %cifm_a8_load_2_new to float" [finalwrapup.cpp:378]   --->   Operation 128 'bitcast' 'bitcast_ln378' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "%ifm_buff1_8_addr = getelementptr [58 x float]* %ifm_buff1_8, i64 0, i64 %zext_ln370" [finalwrapup.cpp:378]   --->   Operation 129 'getelementptr' 'ifm_buff1_8_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 130 [1/1] (3.25ns)   --->   "store float %bitcast_ln378, float* %ifm_buff1_8_addr, align 4" [finalwrapup.cpp:378]   --->   Operation 130 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "%cifm_a9_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 288, i32 319)" [finalwrapup.cpp:379]   --->   Operation 131 'partselect' 'cifm_a9_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 132 [1/1] (0.00ns)   --->   "%bitcast_ln379 = bitcast i32 %cifm_a9_load_2_new to float" [finalwrapup.cpp:379]   --->   Operation 132 'bitcast' 'bitcast_ln379' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 133 [1/1] (0.00ns)   --->   "%ifm_buff1_9_addr = getelementptr [58 x float]* %ifm_buff1_9, i64 0, i64 %zext_ln370" [finalwrapup.cpp:379]   --->   Operation 133 'getelementptr' 'ifm_buff1_9_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 134 [1/1] (3.25ns)   --->   "store float %bitcast_ln379, float* %ifm_buff1_9_addr, align 4" [finalwrapup.cpp:379]   --->   Operation 134 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 135 [1/1] (0.00ns)   --->   "%cifm_a10_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 320, i32 351)" [finalwrapup.cpp:380]   --->   Operation 135 'partselect' 'cifm_a10_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "%bitcast_ln380 = bitcast i32 %cifm_a10_load_2_new to float" [finalwrapup.cpp:380]   --->   Operation 136 'bitcast' 'bitcast_ln380' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 137 [1/1] (0.00ns)   --->   "%ifm_buff1_10_addr = getelementptr [58 x float]* %ifm_buff1_10, i64 0, i64 %zext_ln370" [finalwrapup.cpp:380]   --->   Operation 137 'getelementptr' 'ifm_buff1_10_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 138 [1/1] (3.25ns)   --->   "store float %bitcast_ln380, float* %ifm_buff1_10_addr, align 4" [finalwrapup.cpp:380]   --->   Operation 138 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 139 [1/1] (0.00ns)   --->   "%cifm_a11_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 352, i32 383)" [finalwrapup.cpp:381]   --->   Operation 139 'partselect' 'cifm_a11_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "%bitcast_ln381 = bitcast i32 %cifm_a11_load_2_new to float" [finalwrapup.cpp:381]   --->   Operation 140 'bitcast' 'bitcast_ln381' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 141 [1/1] (0.00ns)   --->   "%ifm_buff1_11_addr = getelementptr [58 x float]* %ifm_buff1_11, i64 0, i64 %zext_ln370" [finalwrapup.cpp:381]   --->   Operation 141 'getelementptr' 'ifm_buff1_11_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 142 [1/1] (3.25ns)   --->   "store float %bitcast_ln381, float* %ifm_buff1_11_addr, align 4" [finalwrapup.cpp:381]   --->   Operation 142 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%cifm_a12_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 384, i32 415)" [finalwrapup.cpp:382]   --->   Operation 143 'partselect' 'cifm_a12_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 144 [1/1] (0.00ns)   --->   "%bitcast_ln382 = bitcast i32 %cifm_a12_load_2_new to float" [finalwrapup.cpp:382]   --->   Operation 144 'bitcast' 'bitcast_ln382' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%ifm_buff1_12_addr = getelementptr [58 x float]* %ifm_buff1_12, i64 0, i64 %zext_ln370" [finalwrapup.cpp:382]   --->   Operation 145 'getelementptr' 'ifm_buff1_12_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 146 [1/1] (3.25ns)   --->   "store float %bitcast_ln382, float* %ifm_buff1_12_addr, align 4" [finalwrapup.cpp:382]   --->   Operation 146 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%cifm_a13_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 416, i32 447)" [finalwrapup.cpp:383]   --->   Operation 147 'partselect' 'cifm_a13_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%bitcast_ln383 = bitcast i32 %cifm_a13_load_2_new to float" [finalwrapup.cpp:383]   --->   Operation 148 'bitcast' 'bitcast_ln383' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%ifm_buff1_13_addr = getelementptr [58 x float]* %ifm_buff1_13, i64 0, i64 %zext_ln370" [finalwrapup.cpp:383]   --->   Operation 149 'getelementptr' 'ifm_buff1_13_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (3.25ns)   --->   "store float %bitcast_ln383, float* %ifm_buff1_13_addr, align 4" [finalwrapup.cpp:383]   --->   Operation 150 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "%cifm_a14_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 448, i32 479)" [finalwrapup.cpp:384]   --->   Operation 151 'partselect' 'cifm_a14_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%bitcast_ln384 = bitcast i32 %cifm_a14_load_2_new to float" [finalwrapup.cpp:384]   --->   Operation 152 'bitcast' 'bitcast_ln384' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%ifm_buff1_14_addr = getelementptr [58 x float]* %ifm_buff1_14, i64 0, i64 %zext_ln370" [finalwrapup.cpp:384]   --->   Operation 153 'getelementptr' 'ifm_buff1_14_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (3.25ns)   --->   "store float %bitcast_ln384, float* %ifm_buff1_14_addr, align 4" [finalwrapup.cpp:384]   --->   Operation 154 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%cifm_a15_load_2_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_2, i32 480, i32 511)" [finalwrapup.cpp:385]   --->   Operation 155 'partselect' 'cifm_a15_load_2_new' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%bitcast_ln385 = bitcast i32 %cifm_a15_load_2_new to float" [finalwrapup.cpp:385]   --->   Operation 156 'bitcast' 'bitcast_ln385' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%ifm_buff1_15_addr = getelementptr [58 x float]* %ifm_buff1_15, i64 0, i64 %zext_ln370" [finalwrapup.cpp:385]   --->   Operation 157 'getelementptr' 'ifm_buff1_15_addr' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 158 [1/1] (3.25ns)   --->   "store float %bitcast_ln385, float* %ifm_buff1_15_addr, align 4" [finalwrapup.cpp:385]   --->   Operation 158 'store' <Predicate = (!icmp_ln367)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str11, i32 %tmp_3)" [finalwrapup.cpp:387]   --->   Operation 159 'specregionend' 'empty_8' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "br label %.preheader1" [finalwrapup.cpp:367]   --->   Operation 160 'br' <Predicate = (!icmp_ln367)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.76>
+ST_5 : Operation 161 [1/1] (1.76ns)   --->   "br label %.preheader" [finalwrapup.cpp:389]   --->   Operation 161 'br' <Predicate = true> <Delay = 1.76>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "%j2_0 = phi i6 [ %j_3, %hls_label_8 ], [ 0, %.preheader.preheader ]"   --->   Operation 162 'phi' 'j2_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (1.42ns)   --->   "%icmp_ln389 = icmp eq i6 %j2_0, -6" [finalwrapup.cpp:389]   --->   Operation 163 'icmp' 'icmp_ln389' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 164 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 58, i64 58, i64 58)"   --->   Operation 164 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 165 [1/1] (1.82ns)   --->   "%j_3 = add i6 %j2_0, 1" [finalwrapup.cpp:389]   --->   Operation 165 'add' 'j_3' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 166 [1/1] (0.00ns)   --->   "br i1 %icmp_ln389, label %2, label %hls_label_8" [finalwrapup.cpp:389]   --->   Operation 166 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str12)" [finalwrapup.cpp:390]   --->   Operation 167 'specregionbegin' 'tmp_4' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:391]   --->   Operation 168 'specpipeline' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 169 [1/1] (0.00ns)   --->   "%cifm_read_3 = call i512 @_ssdm_op_Read.axis.volatile.i512P(i512* %cifm)" [finalwrapup.cpp:392]   --->   Operation 169 'read' 'cifm_read_3' <Predicate = (!icmp_ln389)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%trunc_ln392 = trunc i512 %cifm_read_3 to i32" [finalwrapup.cpp:392]   --->   Operation 170 'trunc' 'trunc_ln392' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 171 [1/1] (0.00ns)   --->   "%bitcast_ln392 = bitcast i32 %trunc_ln392 to float" [finalwrapup.cpp:392]   --->   Operation 171 'bitcast' 'bitcast_ln392' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln392 = zext i6 %j2_0 to i64" [finalwrapup.cpp:392]   --->   Operation 172 'zext' 'zext_ln392' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (0.00ns)   --->   "%ifm_buff2_0_addr = getelementptr [58 x float]* %ifm_buff2_0, i64 0, i64 %zext_ln392" [finalwrapup.cpp:392]   --->   Operation 173 'getelementptr' 'ifm_buff2_0_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 174 [1/1] (3.25ns)   --->   "store float %bitcast_ln392, float* %ifm_buff2_0_addr, align 4" [finalwrapup.cpp:392]   --->   Operation 174 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%cifm_a1_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 32, i32 63)" [finalwrapup.cpp:393]   --->   Operation 175 'partselect' 'cifm_a1_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 176 [1/1] (0.00ns)   --->   "%bitcast_ln393 = bitcast i32 %cifm_a1_load_3_new to float" [finalwrapup.cpp:393]   --->   Operation 176 'bitcast' 'bitcast_ln393' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 177 [1/1] (0.00ns)   --->   "%ifm_buff2_1_addr = getelementptr [58 x float]* %ifm_buff2_1, i64 0, i64 %zext_ln392" [finalwrapup.cpp:393]   --->   Operation 177 'getelementptr' 'ifm_buff2_1_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 178 [1/1] (3.25ns)   --->   "store float %bitcast_ln393, float* %ifm_buff2_1_addr, align 4" [finalwrapup.cpp:393]   --->   Operation 178 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 179 [1/1] (0.00ns)   --->   "%cifm_a2_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 64, i32 95)" [finalwrapup.cpp:394]   --->   Operation 179 'partselect' 'cifm_a2_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 180 [1/1] (0.00ns)   --->   "%bitcast_ln394 = bitcast i32 %cifm_a2_load_3_new to float" [finalwrapup.cpp:394]   --->   Operation 180 'bitcast' 'bitcast_ln394' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 181 [1/1] (0.00ns)   --->   "%ifm_buff2_2_addr = getelementptr [58 x float]* %ifm_buff2_2, i64 0, i64 %zext_ln392" [finalwrapup.cpp:394]   --->   Operation 181 'getelementptr' 'ifm_buff2_2_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 182 [1/1] (3.25ns)   --->   "store float %bitcast_ln394, float* %ifm_buff2_2_addr, align 4" [finalwrapup.cpp:394]   --->   Operation 182 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 183 [1/1] (0.00ns)   --->   "%cifm_a3_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 96, i32 127)" [finalwrapup.cpp:395]   --->   Operation 183 'partselect' 'cifm_a3_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 184 [1/1] (0.00ns)   --->   "%bitcast_ln395 = bitcast i32 %cifm_a3_load_3_new to float" [finalwrapup.cpp:395]   --->   Operation 184 'bitcast' 'bitcast_ln395' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 185 [1/1] (0.00ns)   --->   "%ifm_buff2_3_addr = getelementptr [58 x float]* %ifm_buff2_3, i64 0, i64 %zext_ln392" [finalwrapup.cpp:395]   --->   Operation 185 'getelementptr' 'ifm_buff2_3_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 186 [1/1] (3.25ns)   --->   "store float %bitcast_ln395, float* %ifm_buff2_3_addr, align 4" [finalwrapup.cpp:395]   --->   Operation 186 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 187 [1/1] (0.00ns)   --->   "%cifm_a4_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 128, i32 159)" [finalwrapup.cpp:396]   --->   Operation 187 'partselect' 'cifm_a4_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 188 [1/1] (0.00ns)   --->   "%bitcast_ln396 = bitcast i32 %cifm_a4_load_3_new to float" [finalwrapup.cpp:396]   --->   Operation 188 'bitcast' 'bitcast_ln396' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 189 [1/1] (0.00ns)   --->   "%ifm_buff2_4_addr = getelementptr [58 x float]* %ifm_buff2_4, i64 0, i64 %zext_ln392" [finalwrapup.cpp:396]   --->   Operation 189 'getelementptr' 'ifm_buff2_4_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 190 [1/1] (3.25ns)   --->   "store float %bitcast_ln396, float* %ifm_buff2_4_addr, align 4" [finalwrapup.cpp:396]   --->   Operation 190 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 191 [1/1] (0.00ns)   --->   "%cifm_a5_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 160, i32 191)" [finalwrapup.cpp:397]   --->   Operation 191 'partselect' 'cifm_a5_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 192 [1/1] (0.00ns)   --->   "%bitcast_ln397 = bitcast i32 %cifm_a5_load_3_new to float" [finalwrapup.cpp:397]   --->   Operation 192 'bitcast' 'bitcast_ln397' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 193 [1/1] (0.00ns)   --->   "%ifm_buff2_5_addr = getelementptr [58 x float]* %ifm_buff2_5, i64 0, i64 %zext_ln392" [finalwrapup.cpp:397]   --->   Operation 193 'getelementptr' 'ifm_buff2_5_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 194 [1/1] (3.25ns)   --->   "store float %bitcast_ln397, float* %ifm_buff2_5_addr, align 4" [finalwrapup.cpp:397]   --->   Operation 194 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 195 [1/1] (0.00ns)   --->   "%cifm_a6_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 192, i32 223)" [finalwrapup.cpp:398]   --->   Operation 195 'partselect' 'cifm_a6_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 196 [1/1] (0.00ns)   --->   "%bitcast_ln398 = bitcast i32 %cifm_a6_load_3_new to float" [finalwrapup.cpp:398]   --->   Operation 196 'bitcast' 'bitcast_ln398' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 197 [1/1] (0.00ns)   --->   "%ifm_buff2_6_addr = getelementptr [58 x float]* %ifm_buff2_6, i64 0, i64 %zext_ln392" [finalwrapup.cpp:398]   --->   Operation 197 'getelementptr' 'ifm_buff2_6_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 198 [1/1] (3.25ns)   --->   "store float %bitcast_ln398, float* %ifm_buff2_6_addr, align 4" [finalwrapup.cpp:398]   --->   Operation 198 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 199 [1/1] (0.00ns)   --->   "%cifm_a7_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 224, i32 255)" [finalwrapup.cpp:399]   --->   Operation 199 'partselect' 'cifm_a7_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 200 [1/1] (0.00ns)   --->   "%bitcast_ln399 = bitcast i32 %cifm_a7_load_3_new to float" [finalwrapup.cpp:399]   --->   Operation 200 'bitcast' 'bitcast_ln399' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 201 [1/1] (0.00ns)   --->   "%ifm_buff2_7_addr = getelementptr [58 x float]* %ifm_buff2_7, i64 0, i64 %zext_ln392" [finalwrapup.cpp:399]   --->   Operation 201 'getelementptr' 'ifm_buff2_7_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 202 [1/1] (3.25ns)   --->   "store float %bitcast_ln399, float* %ifm_buff2_7_addr, align 4" [finalwrapup.cpp:399]   --->   Operation 202 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 203 [1/1] (0.00ns)   --->   "%cifm_a8_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 256, i32 287)" [finalwrapup.cpp:400]   --->   Operation 203 'partselect' 'cifm_a8_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 204 [1/1] (0.00ns)   --->   "%bitcast_ln400 = bitcast i32 %cifm_a8_load_3_new to float" [finalwrapup.cpp:400]   --->   Operation 204 'bitcast' 'bitcast_ln400' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 205 [1/1] (0.00ns)   --->   "%ifm_buff2_8_addr = getelementptr [58 x float]* %ifm_buff2_8, i64 0, i64 %zext_ln392" [finalwrapup.cpp:400]   --->   Operation 205 'getelementptr' 'ifm_buff2_8_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 206 [1/1] (3.25ns)   --->   "store float %bitcast_ln400, float* %ifm_buff2_8_addr, align 4" [finalwrapup.cpp:400]   --->   Operation 206 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 207 [1/1] (0.00ns)   --->   "%cifm_a9_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 288, i32 319)" [finalwrapup.cpp:401]   --->   Operation 207 'partselect' 'cifm_a9_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 208 [1/1] (0.00ns)   --->   "%bitcast_ln401 = bitcast i32 %cifm_a9_load_3_new to float" [finalwrapup.cpp:401]   --->   Operation 208 'bitcast' 'bitcast_ln401' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 209 [1/1] (0.00ns)   --->   "%ifm_buff2_9_addr = getelementptr [58 x float]* %ifm_buff2_9, i64 0, i64 %zext_ln392" [finalwrapup.cpp:401]   --->   Operation 209 'getelementptr' 'ifm_buff2_9_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 210 [1/1] (3.25ns)   --->   "store float %bitcast_ln401, float* %ifm_buff2_9_addr, align 4" [finalwrapup.cpp:401]   --->   Operation 210 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 211 [1/1] (0.00ns)   --->   "%cifm_a10_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 320, i32 351)" [finalwrapup.cpp:402]   --->   Operation 211 'partselect' 'cifm_a10_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 212 [1/1] (0.00ns)   --->   "%bitcast_ln402 = bitcast i32 %cifm_a10_load_3_new to float" [finalwrapup.cpp:402]   --->   Operation 212 'bitcast' 'bitcast_ln402' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "%ifm_buff2_10_addr = getelementptr [58 x float]* %ifm_buff2_10, i64 0, i64 %zext_ln392" [finalwrapup.cpp:402]   --->   Operation 213 'getelementptr' 'ifm_buff2_10_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (3.25ns)   --->   "store float %bitcast_ln402, float* %ifm_buff2_10_addr, align 4" [finalwrapup.cpp:402]   --->   Operation 214 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 215 [1/1] (0.00ns)   --->   "%cifm_a11_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 352, i32 383)" [finalwrapup.cpp:403]   --->   Operation 215 'partselect' 'cifm_a11_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 216 [1/1] (0.00ns)   --->   "%bitcast_ln403 = bitcast i32 %cifm_a11_load_3_new to float" [finalwrapup.cpp:403]   --->   Operation 216 'bitcast' 'bitcast_ln403' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 217 [1/1] (0.00ns)   --->   "%ifm_buff2_11_addr = getelementptr [58 x float]* %ifm_buff2_11, i64 0, i64 %zext_ln392" [finalwrapup.cpp:403]   --->   Operation 217 'getelementptr' 'ifm_buff2_11_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 218 [1/1] (3.25ns)   --->   "store float %bitcast_ln403, float* %ifm_buff2_11_addr, align 4" [finalwrapup.cpp:403]   --->   Operation 218 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 219 [1/1] (0.00ns)   --->   "%cifm_a12_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 384, i32 415)" [finalwrapup.cpp:404]   --->   Operation 219 'partselect' 'cifm_a12_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 220 [1/1] (0.00ns)   --->   "%bitcast_ln404 = bitcast i32 %cifm_a12_load_3_new to float" [finalwrapup.cpp:404]   --->   Operation 220 'bitcast' 'bitcast_ln404' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 221 [1/1] (0.00ns)   --->   "%ifm_buff2_12_addr = getelementptr [58 x float]* %ifm_buff2_12, i64 0, i64 %zext_ln392" [finalwrapup.cpp:404]   --->   Operation 221 'getelementptr' 'ifm_buff2_12_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 222 [1/1] (3.25ns)   --->   "store float %bitcast_ln404, float* %ifm_buff2_12_addr, align 4" [finalwrapup.cpp:404]   --->   Operation 222 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 223 [1/1] (0.00ns)   --->   "%cifm_a13_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 416, i32 447)" [finalwrapup.cpp:405]   --->   Operation 223 'partselect' 'cifm_a13_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 224 [1/1] (0.00ns)   --->   "%bitcast_ln405 = bitcast i32 %cifm_a13_load_3_new to float" [finalwrapup.cpp:405]   --->   Operation 224 'bitcast' 'bitcast_ln405' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 225 [1/1] (0.00ns)   --->   "%ifm_buff2_13_addr = getelementptr [58 x float]* %ifm_buff2_13, i64 0, i64 %zext_ln392" [finalwrapup.cpp:405]   --->   Operation 225 'getelementptr' 'ifm_buff2_13_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 226 [1/1] (3.25ns)   --->   "store float %bitcast_ln405, float* %ifm_buff2_13_addr, align 4" [finalwrapup.cpp:405]   --->   Operation 226 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 227 [1/1] (0.00ns)   --->   "%cifm_a14_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 448, i32 479)" [finalwrapup.cpp:406]   --->   Operation 227 'partselect' 'cifm_a14_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 228 [1/1] (0.00ns)   --->   "%bitcast_ln406 = bitcast i32 %cifm_a14_load_3_new to float" [finalwrapup.cpp:406]   --->   Operation 228 'bitcast' 'bitcast_ln406' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 229 [1/1] (0.00ns)   --->   "%ifm_buff2_14_addr = getelementptr [58 x float]* %ifm_buff2_14, i64 0, i64 %zext_ln392" [finalwrapup.cpp:406]   --->   Operation 229 'getelementptr' 'ifm_buff2_14_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 230 [1/1] (3.25ns)   --->   "store float %bitcast_ln406, float* %ifm_buff2_14_addr, align 4" [finalwrapup.cpp:406]   --->   Operation 230 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 231 [1/1] (0.00ns)   --->   "%cifm_a15_load_3_new = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %cifm_read_3, i32 480, i32 511)" [finalwrapup.cpp:407]   --->   Operation 231 'partselect' 'cifm_a15_load_3_new' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 232 [1/1] (0.00ns)   --->   "%bitcast_ln407 = bitcast i32 %cifm_a15_load_3_new to float" [finalwrapup.cpp:407]   --->   Operation 232 'bitcast' 'bitcast_ln407' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 233 [1/1] (0.00ns)   --->   "%ifm_buff2_15_addr = getelementptr [58 x float]* %ifm_buff2_15, i64 0, i64 %zext_ln392" [finalwrapup.cpp:407]   --->   Operation 233 'getelementptr' 'ifm_buff2_15_addr' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 234 [1/1] (3.25ns)   --->   "store float %bitcast_ln407, float* %ifm_buff2_15_addr, align 4" [finalwrapup.cpp:407]   --->   Operation 234 'store' <Predicate = (!icmp_ln389)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 58> <RAM>
+ST_6 : Operation 235 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str12, i32 %tmp_4)" [finalwrapup.cpp:409]   --->   Operation 235 'specregionend' 'empty_9' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+ST_6 : Operation 236 [1/1] (0.00ns)   --->   "br label %.preheader" [finalwrapup.cpp:389]   --->   Operation 236 'br' <Predicate = (!icmp_ln389)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 237 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 237 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:363) [53]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:363) [53]  (0 ns)
+	'getelementptr' operation ('ifm_buff0_0_addr', finalwrapup.cpp:347) [65]  (0 ns)
+	'store' operation ('store_ln347', finalwrapup.cpp:347) of variable 'bitcast_ln347', finalwrapup.cpp:347 on array 'ifm_buff0_0' [66]  (3.25 ns)
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:367) [132]  (1.77 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:367) [132]  (0 ns)
+	'getelementptr' operation ('ifm_buff1_0_addr', finalwrapup.cpp:370) [144]  (0 ns)
+	'store' operation ('store_ln370', finalwrapup.cpp:370) of variable 'bitcast_ln370', finalwrapup.cpp:370 on array 'ifm_buff1_0' [145]  (3.25 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:389) [211]  (1.77 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', finalwrapup.cpp:389) [211]  (0 ns)
+	'getelementptr' operation ('ifm_buff2_0_addr', finalwrapup.cpp:392) [223]  (0 ns)
+	'store' operation ('store_ln392', finalwrapup.cpp:392) of variable 'bitcast_ln392', finalwrapup.cpp:392 on array 'ifm_buff2_0' [224]  (3.25 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

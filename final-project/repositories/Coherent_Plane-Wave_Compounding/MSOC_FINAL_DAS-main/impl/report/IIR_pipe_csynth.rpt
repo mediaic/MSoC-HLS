@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vivado HLS Report for 'IIR_pipe'
+================================================================
+* Date:           Thu Jan 21 00:05:54 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        07_optTiming_hls
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.501 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        5|        5| 50.000 ns | 50.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|     16|       -|      -|    -|
+|Expression       |        -|      -|       0|    625|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     36|    -|
+|Register         |        0|      -|     856|     32|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|     16|     856|    693|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      7|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |DAS_mac_mul_sub_1pcA_U51  |DAS_mac_mul_sub_1pcA  | i0 * i1 - i2 |
+    |DAS_mac_mul_sub_1pcA_U52  |DAS_mac_mul_sub_1pcA  | i0 * i1 - i2 |
+    |DAS_mul_mul_18s_1hbi_U37  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1hbi_U41  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1hbi_U46  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1hbi_U47  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1hbi_U49  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1hbi_U50  |DAS_mul_mul_18s_1hbi  |    i0 * i1   |
+    |DAS_mul_mul_18s_1lbW_U38  |DAS_mul_mul_18s_1lbW  |    i0 * i1   |
+    |DAS_mul_mul_18s_1lbW_U42  |DAS_mul_mul_18s_1lbW  |    i0 * i1   |
+    |DAS_mul_mul_18s_1mb6_U39  |DAS_mul_mul_18s_1mb6  |    i0 * i1   |
+    |DAS_mul_mul_18s_1mb6_U43  |DAS_mul_mul_18s_1mb6  |    i0 * i1   |
+    |DAS_mul_mul_18s_1ncg_U40  |DAS_mul_mul_18s_1ncg  |    i0 * i1   |
+    |DAS_mul_mul_18s_1ncg_U44  |DAS_mul_mul_18s_1ncg  |    i0 * i1   |
+    |DAS_mul_mul_18s_1ocq_U45  |DAS_mul_mul_18s_1ocq  |    i0 * i1   |
+    |DAS_mul_mul_18s_1ocq_U48  |DAS_mul_mul_18s_1ocq  |    i0 * i1   |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln703_10_fu_584_p2        |     +    |      0|  0|   8|          18|          18|
+    |add_ln703_2_fu_360_p2         |     +    |      0|  0|   8|          18|          18|
+    |add_ln703_4_fu_563_p2         |     +    |      0|  0|   8|          18|          18|
+    |add_ln703_6_fu_292_p2         |     +    |      0|  0|   8|          18|          18|
+    |add_ln703_8_fu_417_p2         |     +    |      0|  0|   8|          18|          18|
+    |add_ln703_fu_279_p2           |     +    |      0|  0|   8|          18|          18|
+    |d10_V_fu_365_p2               |     +    |      0|  0|   8|          18|          18|
+    |d18_V_fu_422_p2               |     +    |      0|  0|   8|          18|          18|
+    |delay_1_1_imag_w_V_fu_297_p2  |     +    |      0|  0|   8|          18|          18|
+    |delay_1_1_real_w_V_fu_284_p2  |     +    |      0|  0|   8|          18|          18|
+    |delay_2_1_imag_w_V_fu_588_p2  |     +    |      0|  0|   8|          18|          18|
+    |delay_2_1_real_w_V_fu_567_p2  |     +    |      0|  0|   8|          18|          18|
+    |r_V_12_fu_634_p2              |     -    |      0|  0|  59|           1|          52|
+    |r_V_16_fu_378_p2              |     -    |      0|  0|  42|           1|          35|
+    |r_V_18_fu_401_p2              |     -    |      0|  0|  42|           1|          35|
+    |r_V_23_fu_670_p2              |     -    |      0|  0|  59|           1|          52|
+    |r_V_5_fu_321_p2               |     -    |      0|  0|  42|           1|          35|
+    |r_V_7_fu_344_p2               |     -    |      0|  0|  42|           1|          35|
+    |sub_ln1118_4_fu_657_p2        |     -    |      0|  0|  42|          35|          35|
+    |sub_ln1118_fu_621_p2          |     -    |      0|  0|  42|          35|          35|
+    |ap_block_pp0_stage0_11001     |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln62_fu_108_p2           |   icmp   |      0|  0|  11|           5|           5|
+    |delay_1_2_imag_w_V_fu_146_p3  |  select  |      0|  0|  18|           1|          18|
+    |delay_1_2_real_w_V_fu_130_p3  |  select  |      0|  0|  18|           1|          18|
+    |delay_2_2_imag_w_V_fu_458_p3  |  select  |      0|  0|  18|           1|          18|
+    |delay_2_2_real_w_V_fu_444_p3  |  select  |      0|  0|  18|           1|          18|
+    |select_ln62_1_fu_138_p3       |  select  |      0|  0|  18|           1|          18|
+    |select_ln62_3_fu_451_p3       |  select  |      0|  0|  18|           1|          18|
+    |select_ln62_5_fu_154_p3       |  select  |      0|  0|  18|           1|          18|
+    |select_ln62_7_fu_465_p3       |  select  |      0|  0|  18|           1|          18|
+    |ap_enable_pp0                 |    xor   |      0|  0|   2|           1|           2|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |Total                         |          |      0|  0| 625|         307|         682|
+    +------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sig_allocacmp_delay_1_1_imag_r_V_l  |   9|          2|   18|         36|
+    |ap_sig_allocacmp_delay_1_1_real_r_V_l  |   9|          2|   18|         36|
+    |ap_sig_allocacmp_delay_2_1_imag_r_V_l  |   9|          2|   18|         36|
+    |ap_sig_allocacmp_delay_2_1_real_r_V_l  |   9|          2|   18|         36|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  36|          8|   72|        144|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+----+----+-----+-----------+
+    |                 Name                | FF | LUT| Bits| Const Bits|
+    +-------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5              |   1|   0|    1|          0|
+    |d10_V_reg_878                        |  18|   0|   18|          0|
+    |d12_V_reg_908                        |  18|   0|   18|          0|
+    |d13_V_reg_913                        |  18|   0|   18|          0|
+    |d16_V_reg_863                        |  18|   0|   18|          0|
+    |d16_V_reg_863_pp0_iter1_reg          |  18|   0|   18|          0|
+    |d18_V_reg_883                        |  18|   0|   18|          0|
+    |d1_V_reg_828                         |  18|   0|   18|          0|
+    |d20_V_reg_928                        |  18|   0|   18|          0|
+    |d21_V_reg_933                        |  18|   0|   18|          0|
+    |d2_V_reg_833                         |  18|   0|   18|          0|
+    |d4_V_reg_848                         |  18|   0|   18|          0|
+    |d5_V_reg_853                         |  18|   0|   18|          0|
+    |d8_V_reg_843                         |  18|   0|   18|          0|
+    |d8_V_reg_843_pp0_iter1_reg           |  18|   0|   18|          0|
+    |delay_1_1_imag_r_V                   |  18|   0|   18|          0|
+    |delay_1_1_imag_w_V_reg_873           |  18|   0|   18|          0|
+    |delay_1_1_real_r_V                   |  18|   0|   18|          0|
+    |delay_1_1_real_w_V_reg_868           |  18|   0|   18|          0|
+    |delay_1_2_imag_r_V                   |  18|   0|   18|          0|
+    |delay_1_2_real_r_V                   |  18|   0|   18|          0|
+    |delay_2_1_imag_r_V                   |  18|   0|   18|          0|
+    |delay_2_1_real_r_V                   |  18|   0|   18|          0|
+    |delay_2_2_imag_r_V                   |  18|   0|   18|          0|
+    |delay_2_2_real_r_V                   |  18|   0|   18|          0|
+    |icmp_ln62_reg_810                    |   1|   0|    1|          0|
+    |select_ln62_1_reg_818                |  18|   0|   18|          0|
+    |select_ln62_1_reg_818_pp0_iter1_reg  |  18|   0|   18|          0|
+    |select_ln62_3_reg_888                |  18|   0|   18|          0|
+    |select_ln62_3_reg_888_pp0_iter4_reg  |  18|   0|   18|          0|
+    |select_ln62_5_reg_823                |  18|   0|   18|          0|
+    |select_ln62_5_reg_823_pp0_iter1_reg  |  18|   0|   18|          0|
+    |select_ln62_7_reg_893                |  18|   0|   18|          0|
+    |select_ln62_7_reg_893_pp0_iter4_reg  |  18|   0|   18|          0|
+    |sext_ln1116_1_reg_903                |  35|   0|   35|          0|
+    |sext_ln1116_4_reg_923                |  35|   0|   35|          0|
+    |sub_ln1192_1_reg_943                 |  35|   0|   35|          0|
+    |sub_ln1192_reg_938                   |  35|   0|   35|          0|
+    |trunc_ln708_1_reg_918                |  15|   0|   15|          0|
+    |trunc_ln708_4_reg_898                |  15|   0|   15|          0|
+    |trunc_ln708_s_reg_858                |  17|   0|   17|          0|
+    |trunc_ln_reg_838                     |  17|   0|   17|          0|
+    |x_pos_record                         |   5|   0|    5|          0|
+    |icmp_ln62_reg_810                    |  64|  32|    1|          0|
+    +-------------------------------------+----+----+-----+-----------+
+    |Total                                | 856|  32|  793|          0|
+    +-------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+---------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object |    C Type    |
++---------------+-----+-----+------------+---------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_start       |  in |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_done        | out |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_idle        | out |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_ready       | out |    1| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_return_0    | out |   18| ap_ctrl_hs |    IIR_pipe   | return value |
+|ap_return_1    | out |   18| ap_ctrl_hs |    IIR_pipe   | return value |
+|signal_real_V  |  in |   18|   ap_none  | signal_real_V |    scalar    |
+|signal_imag_V  |  in |   18|   ap_none  | signal_imag_V |    scalar    |
+|x_pos          |  in |    5|   ap_none  |     x_pos     |    scalar    |
++---------------+-----+-----+------------+---------------+--------------+
+

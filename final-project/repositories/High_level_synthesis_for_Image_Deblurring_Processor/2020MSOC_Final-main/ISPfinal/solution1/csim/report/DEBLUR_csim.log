@@ -1,0 +1,30 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../deblur.cpp in debug mode
+   Compiling ../../../../divergent.cpp in debug mode
+   Compiling ../../../../proximal.cpp in debug mode
+   Generating csim.exe
+128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/R_ground.bmp 
+Image Rows:128 Cols:128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/G_ground.bmp 
+Image Rows:128 Cols:128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/B_ground.bmp 
+Image Rows:128 Cols:128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/CPUfft-final/R_blurred.bmp 
+Image Rows:128 Cols:128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/CPUfft-final/G_blurred.bmp 
+Image Rows:128 Cols:128
+Load image C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/CPUfft-final/B_blurred.bmp 
+Image Rows:128 Cols:128
+==== Before deblurring ====
+R channel PSNR=45.855382 
+B channel PSNR=15.462976 
+G channel PSNR=16.660679 
+====  After deblurring ====
+R channel PSNR=45.855382 
+B channel PSNR=10.913897 
+G channel PSNR=14.878319 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

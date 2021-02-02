@@ -1,0 +1,169 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'leo870823' on host 'desktop-t3r8mjh' (Windows NT_amd64 version 6.2) on Mon Jan 11 18:23:04 +0800 2021
+INFO: [HLS 200-10] In directory 'C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final'
+Sourcing Tcl script 'C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/ISPfinal/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/ISPfinal'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/ISPfinal/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in release mode
+   Compiling ../../../../deblur.cpp in release mode
+   Compiling ../../../../divergent.cpp in release mode
+   Compiling ../../../../fft_top.cpp in release mode
+   Compiling ../../../../proximal.cpp in release mode
+   Generating csim.exe
+In file included from C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../tb.cpp:8:
+C:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../tb.cpp:8:
+C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fft_x_complex.h:68:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fft.h:912,
+                 from ../../../../tb.cpp:17:
+C:/Xilinx/Vivado/2019.2/include/hls_x_complex.h:43:185: note: #pragma message: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.
+ #pragma message("hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.")
+                                                                                                                                                                                         ^
+In file included from C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../proximal.h:1,
+                 from ../../../../deblur.h:1,
+                 from ../../../../deblur.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../proximal.h:1,
+                 from ../../../../deblur.h:1,
+                 from ../../../../deblur.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fft_x_complex.h:68:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fft.h:912,
+                 from ../../../../fft_top.h:94,
+                 from ../../../../proximal.h:1,
+                 from ../../../../deblur.h:1,
+                 from ../../../../deblur.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/hls_x_complex.h:43:185: note: #pragma message: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.
+ #pragma message("hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.")
+                                                                                                                                                                                         ^
+In file included from C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../divergent.h:1,
+                 from ../../../../divergent.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../divergent.h:1,
+                 from ../../../../divergent.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../fft_top.cpp:93:
+C:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../fft_top.cpp:93:
+C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fft_x_complex.h:68:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fft.h:912,
+                 from ../../../../fft_top.h:94,
+                 from ../../../../fft_top.cpp:93:
+C:/Xilinx/Vivado/2019.2/include/hls_x_complex.h:43:185: note: #pragma message: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.
+ #pragma message("hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.")
+                                                                                                                                                                                         ^
+In file included from C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../proximal.h:1,
+                 from ../../../../proximal.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from C:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from C:/Xilinx/Vivado/2019.2/include/ap_fixed.h:54,
+                 from ../../../../fft_top.h:93,
+                 from ../../../../proximal.h:1,
+                 from ../../../../proximal.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vivado/2019.2/include/hls_fft_x_complex.h:68:0,
+                 from C:/Xilinx/Vivado/2019.2/include/hls_fft.h:912,
+                 from ../../../../fft_top.h:94,
+                 from ../../../../proximal.h:1,
+                 from ../../../../proximal.cpp:1:
+C:/Xilinx/Vivado/2019.2/include/hls_x_complex.h:43:185: note: #pragma message: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.
+ #pragma message("hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.")
+                                                                                                                                                                                         ^
+@E Simulation failed.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/ISPfinal/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/ISPfinal/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

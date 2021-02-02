@@ -1,0 +1,12 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../finalconv_test.cpp in debug mode
+   Compiling ../../../../finalconv_Jan19.cpp in debug mode
+   Generating csim.exe
+
+convolution_sw 34938 us
+
+convolution_hw 15996 us
+error count = 50172
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

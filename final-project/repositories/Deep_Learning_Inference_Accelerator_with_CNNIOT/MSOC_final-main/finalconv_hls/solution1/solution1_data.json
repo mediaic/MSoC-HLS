@@ -1,0 +1,1073 @@
+{
+  "Top": "convolution_hw",
+  "RtlTop": "convolution_hw",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1"
+  },
+  "HlsSolution": {
+    "DirectiveTcl": [
+      "set_directive_interface convolution_hw ",
+      "set_directive_interface convolution_hw ",
+      "set_directive_interface convolution_hw "
+    ],
+    "DirectiveInfo": [
+      "interface convolution_hw {{axis positionBoolean0mode} {register positionBoolean1} {both positionBoolean0register_mode} {port positionBooleanTextRequiredcifm}} {}",
+      "interface convolution_hw {{axis positionBoolean0mode} {register positionBoolean1} {both positionBoolean0register_mode} {port positionBooleanTextRequiredcofm}} {}",
+      "interface convolution_hw {{axis positionBoolean0mode} {register positionBoolean1} {both positionBoolean0register_mode} {port positionBooleanTextRequiredtran_wgt}} {}"
+    ]
+  },
+  "Args": {
+    "cifm": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "IPACK",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "a0": {
+            "order": "0",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "31:0",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a1": {
+            "order": "1",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "63:32",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a2": {
+            "order": "2",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "95:64",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a3": {
+            "order": "3",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "127:96",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a4": {
+            "order": "4",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "159:128",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a5": {
+            "order": "5",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "191:160",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a6": {
+            "order": "6",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "223:192",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a7": {
+            "order": "7",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "255:224",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a8": {
+            "order": "8",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "287:256",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a9": {
+            "order": "9",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "319:288",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a10": {
+            "order": "10",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "351:320",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a11": {
+            "order": "11",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "383:352",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a12": {
+            "order": "12",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "415:384",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a13": {
+            "order": "13",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "447:416",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a14": {
+            "order": "14",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "479:448",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "a15": {
+            "order": "15",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "cifm",
+            "bitMap": "511:480",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "cofm": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "OPACK",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "b0": {
+            "order": "0",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "31:0",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b1": {
+            "order": "1",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "63:32",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b2": {
+            "order": "2",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "95:64",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b3": {
+            "order": "3",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "127:96",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b4": {
+            "order": "4",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "159:128",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b5": {
+            "order": "5",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "191:160",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b6": {
+            "order": "6",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "223:192",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b7": {
+            "order": "7",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "255:224",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b8": {
+            "order": "8",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "287:256",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b9": {
+            "order": "9",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "319:288",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b10": {
+            "order": "10",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "351:320",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b11": {
+            "order": "11",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "383:352",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b12": {
+            "order": "12",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "415:384",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b13": {
+            "order": "13",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "447:416",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b14": {
+            "order": "14",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "479:448",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "b15": {
+            "order": "15",
+            "dataType": "float",
+            "dataWidth": "32",
+            "bitMap": "511:480",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "tran_wgt": {
+      "index": "2",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "FPACK",
+        "portRef": "TDATA",
+        "structImpl": "interface",
+        "dataPack": true,
+        "fields": {
+          "f0": {
+            "order": "0",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "31:0",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f1": {
+            "order": "1",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "63:32",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f2": {
+            "order": "2",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "95:64",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f3": {
+            "order": "3",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "127:96",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f4": {
+            "order": "4",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "159:128",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f5": {
+            "order": "5",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "191:160",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f6": {
+            "order": "6",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "223:192",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f7": {
+            "order": "7",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "255:224",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f8": {
+            "order": "8",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "287:256",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f9": {
+            "order": "9",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "319:288",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f10": {
+            "order": "10",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "351:320",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f11": {
+            "order": "11",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "383:352",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f12": {
+            "order": "12",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "415:384",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f13": {
+            "order": "13",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "447:416",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f14": {
+            "order": "14",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "479:448",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          },
+          "f15": {
+            "order": "15",
+            "dataType": "float",
+            "dataWidth": "32",
+            "interfaceRef": "tran_wgt",
+            "bitMap": "511:480",
+            "portRef": "TDATA",
+            "structImpl": "field",
+            "dataPack": true
+          }
+        }
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "178",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "convolution_hw",
+    "Version": "1.0",
+    "DisplayName": "Convolution_hw",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/finalconv_Jan19.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/conv_read.vhd",
+      "impl\/vhdl\/conv_write.vhd",
+      "impl\/vhdl\/convolution_hw_fabkb.vhd",
+      "impl\/vhdl\/convolution_hw_fiqcK.vhd",
+      "impl\/vhdl\/convolution_hw_fmcud.vhd",
+      "impl\/vhdl\/convolution_hw_ifeOg.vhd",
+      "impl\/vhdl\/convolution_hw_mudEe.vhd",
+      "impl\/vhdl\/convolution_hw_ofRg6.vhd",
+      "impl\/vhdl\/load_cifm_data.vhd",
+      "impl\/vhdl\/load_filter_buffer.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/write_row_ifm.vhd",
+      "impl\/vhdl\/convolution_hw.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/conv_read.v",
+      "impl\/verilog\/conv_write.v",
+      "impl\/verilog\/convolution_hw_fabkb.v",
+      "impl\/verilog\/convolution_hw_fiqcK.v",
+      "impl\/verilog\/convolution_hw_fmcud.v",
+      "impl\/verilog\/convolution_hw_ifeOg.v",
+      "impl\/verilog\/convolution_hw_mudEe.v",
+      "impl\/verilog\/convolution_hw_ofRg6.v",
+      "impl\/verilog\/load_cifm_data.v",
+      "impl\/verilog\/load_filter_buffer.v",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/write_row_ifm.v",
+      "impl\/verilog\/convolution_hw.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/convolution_hw_ap_fadd_3_full_dsp_32_ip.tcl",
+      "impl\/misc\/convolution_hw_ap_fmul_2_max_dsp_32_ip.tcl"
+    ],
+    "DesignXml": "D:\/Course\/mSOC\/final\/finalconv_hls\/solution1\/.autopilot\/db\/convolution_hw.design.xml",
+    "DebugDir": "D:\/Course\/mSOC\/final\/finalconv_hls\/solution1\/.debug",
+    "ProtoInst": ["D:\/Course\/mSOC\/final\/finalconv_hls\/solution1\/.debug\/convolution_hw.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": [
+      {
+        "name": "convolution_hw_ap_fadd_3_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name convolution_hw_ap_fadd_3_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "convolution_hw_ap_fmul_2_max_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 2 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name convolution_hw_ap_fmul_2_max_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "cifm cofm_i cofm_o tran_wgt",
+      "reset": "ap_rst_n"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_idle ap_ready",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "idle": {"Type": "bool"},
+        "ready": {"Type": "bool"}
+      }
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "cifm": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "cifm",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "null",
+          "Width": "512"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "512"}
+    },
+    "cofm_i": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "cofm_i",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "null",
+          "Width": "512"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "512"}
+    },
+    "cofm_o": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "cofm_o",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "null",
+          "Width": "512"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "512"}
+    },
+    "tran_wgt": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "tran_wgt",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "null",
+          "Width": "512"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {"TDATA": "512"}
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "cifm_TDATA": {
+      "dir": "in",
+      "width": "512"
+    },
+    "cifm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "cifm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "cofm_i_TDATA": {
+      "dir": "in",
+      "width": "512"
+    },
+    "cofm_i_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "cofm_i_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "cofm_o_TDATA": {
+      "dir": "out",
+      "width": "512"
+    },
+    "cofm_o_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "cofm_o_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "tran_wgt_TDATA": {
+      "dir": "in",
+      "width": "512"
+    },
+    "tran_wgt_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "tran_wgt_TREADY": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "convolution_hw",
+      "Instances": [
+        {
+          "ModuleName": "conv_write",
+          "InstanceName": "grp_conv_write_fu_297"
+        },
+        {
+          "ModuleName": "conv_read",
+          "InstanceName": "grp_conv_read_fu_343"
+        },
+        {
+          "ModuleName": "write_row_ifm",
+          "InstanceName": "grp_write_row_ifm_fu_358"
+        },
+        {
+          "ModuleName": "load_cifm_data",
+          "InstanceName": "grp_load_cifm_data_fu_370"
+        },
+        {
+          "ModuleName": "load_filter_buffer",
+          "InstanceName": "grp_load_filter_buffer_fu_385"
+        }
+      ]
+    },
+    "Info": {
+      "load_cifm_data": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "load_filter_buffer": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "write_row_ifm": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_write": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_read": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "convolution_hw": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "load_cifm_data": {
+        "Latency": {
+          "LatencyBest": "108",
+          "LatencyAvg": "108",
+          "LatencyWorst": "108",
+          "PipelineII": "108",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.254"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "34",
+            "Latency": "34",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "34",
+            "Latency": "34",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "Loop 3",
+            "TripCount": "34",
+            "Latency": "34",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }
+        ],
+        "Area": {
+          "FF": "25",
+          "LUT": "161",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "load_filter_buffer": {
+        "Latency": {
+          "LatencyBest": "20",
+          "LatencyAvg": "20",
+          "LatencyWorst": "20",
+          "PipelineII": "20",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "4.952"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "18",
+            "Latency": "18",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "13",
+          "LUT": "120",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "write_row_ifm": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "19",
+          "LatencyWorst": "36",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "36",
+          "PipelineII": "1 ~ 36",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.254"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "34",
+            "Latency": "34",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "105",
+          "LUT": "133",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "conv_write": {
+        "Latency": {
+          "LatencyBest": "9217",
+          "LatencyAvg": "9217",
+          "LatencyWorst": "9217",
+          "PipelineII": "9217",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.400"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "192",
+            "Latency": "9216",
+            "PipelineII": "",
+            "PipelineDepth": "48",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "3",
+                "Latency": "45",
+                "PipelineII": "5",
+                "PipelineDepth": "36"
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "10",
+          "FF": "2280",
+          "LUT": "2322",
+          "URAM": "0"
+        }
+      },
+      "conv_read": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "34",
+          "LatencyWorst": "67",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "67",
+          "PipelineII": "1 ~ 67",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.254"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "32",
+            "Latency": "64",
+            "PipelineII": "2",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "628",
+          "LUT": "171",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "convolution_hw": {
+        "Latency": {
+          "LatencyBest": "178",
+          "LatencyAvg": "236179",
+          "LatencyWorst": "295188",
+          "PipelineIIMin": "179",
+          "PipelineIIMax": "295189",
+          "PipelineII": "179 ~ 295189",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.400"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "32",
+            "LatencyMin": "64",
+            "LatencyMax": "295008",
+            "Latency": "64 ~ 295008",
+            "PipelineII": "",
+            "PipelineDepthMin": "2",
+            "PipelineDepthMax": "9219",
+            "PipelineDepth": "2 ~ 9219"
+          }],
+        "Area": {
+          "BRAM_18K": "36",
+          "DSP48E": "10",
+          "FF": "4953",
+          "LUT": "6955",
+          "URAM": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "convolution_hw",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2021-01-20 14:16:52 +0800",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.2"
+  }
+}

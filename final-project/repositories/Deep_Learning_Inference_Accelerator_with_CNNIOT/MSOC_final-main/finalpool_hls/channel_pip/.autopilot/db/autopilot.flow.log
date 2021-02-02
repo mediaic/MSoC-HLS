@@ -1,0 +1,934 @@
+INFO-FLOW: Workspace D:/Course/mSOC/final/finalpool_hls/channel_pip opened at Wed Jan 20 17:37:23 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.111 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.719 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.879 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.082 sec.
+Execute   set_part xc7z020clg400-1 
+Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.159 sec.
+Execute   create_clock -period 10 -name default 
+Execute   source ./finalpool_hls/channel_pip/directives.tcl 
+Execute     set_directive_interface -mode axis -register -register_mode both pool_hw cifm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcifm 
+Execute     set_directive_interface -mode axis -register -register_mode both pool_hw cofm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcifm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcofm 
+Execute     set_directive_interface pool_hw tran_wgt 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcifm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcofm 
+INFO-FLOW: Setting directive 'INTERFACE' port=positionBooleanTextRequiredtran_wgt 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'finalpool.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling finalpool.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted finalpool.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "finalpool.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E finalpool.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp
+Command       clang done; 0.969 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.156 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp"  -o "D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/useless.bc
+Command       clang done; 0.992 sec.
+INFO-FLOW: Done: GCC PP time: 2.1 seconds per iteration
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcifm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcofm 
+INFO-FLOW: Setting directive 'INTERFACE' port=positionBooleanTextRequiredtran_wgt 
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcifm 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredcofm 
+INFO-FLOW: Setting directive 'INTERFACE' port=positionBooleanTextRequiredtran_wgt 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp std=gnu++98 -directive=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.144 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp std=gnu++98 -directive=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/all.directive.json -quiet -fix-errors D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.262 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/xilinx-dataflow-lawyer.finalpool.pp.0.cpp.diag.yml D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/xilinx-dataflow-lawyer.finalpool.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/xilinx-dataflow-lawyer.finalpool.pp.0.cpp.err.log 
+Command       ap_eval done; 0.131 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/tidy-3.1.finalpool.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/tidy-3.1.finalpool.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/tidy-3.1.finalpool.pp.0.cpp.err.log 
+Command         ap_eval done; 0.3 sec.
+Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/xilinx-legacy-rewriter.finalpool.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/xilinx-legacy-rewriter.finalpool.pp.0.cpp.err.log 
+Command         ap_eval done; 0.106 sec.
+Command       tidy_31 done; 0.468 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.307 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.bc
+Command       clang done; 1.005 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/finalpool.g.bc -hls-opt -except-internalize pool_hw -LC:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g 
+Command       llvm-ld done; 0.762 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.973 ; gain = 96.539
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.pp.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.493 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top pool_hw -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.0.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.1.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.328 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.2.prechk.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.g.1.bc to D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.1.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalpool.cpp:179) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalpool.cpp:184) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalpool.cpp:256) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalpool.cpp:258) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalpool.cpp:260) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalpool.cpp:271) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalpool.cpp:272) in dimension 1 completely.
+Command         transform done; 0.507 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.1.tmp.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.243 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.2.bc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:86:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:88:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalpool.cpp:210:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalpool.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalpool.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalpool.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalpool.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalpool.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalpool.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalpool.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalpool.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalpool.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalpool.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalpool.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalpool.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalpool.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalpool.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalpool.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalpool.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalpool.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalpool.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalpool.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalpool.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalpool.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalpool.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalpool.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalpool.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalpool.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalpool.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalpool.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalpool.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalpool.cpp:50:9)
+Command         transform done; 1.478 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 211.926 ; gain = 122.492
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.191 sec.
+Command     elaborate done; 8.636 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'pool_hw' ...
+Execute       ap_set_top_model pool_hw 
+Execute       get_model_list pool_hw -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model pool_hw 
+Execute       preproc_iomode -model conv_read 
+Execute       preproc_iomode -model pool_write 
+Execute       preproc_iomode -model write_row_ifm 
+Execute       preproc_iomode -model load_cifm_data 
+Execute       get_model_list pool_hw -filter all-wo-channel 
+INFO-FLOW: Model list for configure: load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO-FLOW: Configuring Module : load_cifm_data ...
+Execute       set_default_model load_cifm_data 
+Execute       apply_spec_resource_limit load_cifm_data 
+INFO-FLOW: Configuring Module : write_row_ifm ...
+Execute       set_default_model write_row_ifm 
+Execute       apply_spec_resource_limit write_row_ifm 
+INFO-FLOW: Configuring Module : pool_write ...
+Execute       set_default_model pool_write 
+Execute       apply_spec_resource_limit pool_write 
+INFO-FLOW: Configuring Module : conv_read ...
+Execute       set_default_model conv_read 
+Execute       apply_spec_resource_limit conv_read 
+INFO-FLOW: Configuring Module : pool_hw ...
+Execute       set_default_model pool_hw 
+Execute       apply_spec_resource_limit pool_hw 
+INFO-FLOW: Model list for preprocess: load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO-FLOW: Preprocessing Module: load_cifm_data ...
+Execute       set_default_model load_cifm_data 
+Execute       cdfg_preprocess -model load_cifm_data 
+Execute       rtl_gen_preprocess load_cifm_data 
+INFO-FLOW: Preprocessing Module: write_row_ifm ...
+Execute       set_default_model write_row_ifm 
+Execute       cdfg_preprocess -model write_row_ifm 
+Execute       rtl_gen_preprocess write_row_ifm 
+INFO-FLOW: Preprocessing Module: pool_write ...
+Execute       set_default_model pool_write 
+Execute       cdfg_preprocess -model pool_write 
+Execute       rtl_gen_preprocess pool_write 
+INFO-FLOW: Preprocessing Module: conv_read ...
+Execute       set_default_model conv_read 
+Execute       cdfg_preprocess -model conv_read 
+Execute       rtl_gen_preprocess conv_read 
+INFO-FLOW: Preprocessing Module: pool_hw ...
+Execute       set_default_model pool_hw 
+Execute       cdfg_preprocess -model pool_hw 
+Execute       rtl_gen_preprocess pool_hw 
+INFO-FLOW: Model list for synthesis: load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_cifm_data 
+Execute       schedule -model load_cifm_data 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.518 seconds; current allocated memory: 158.872 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.sched.adb -f 
+INFO-FLOW: Finish scheduling load_cifm_data.
+Execute       set_default_model load_cifm_data 
+Execute       bind -model load_cifm_data 
+BIND OPTION: model=load_cifm_data
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 159.329 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.bind.adb -f 
+INFO-FLOW: Finish binding load_cifm_data.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model write_row_ifm 
+Execute       schedule -model write_row_ifm 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 159.421 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.sched.adb -f 
+INFO-FLOW: Finish scheduling write_row_ifm.
+Execute       set_default_model write_row_ifm 
+Execute       bind -model write_row_ifm 
+BIND OPTION: model=write_row_ifm
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 159.550 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.bind.adb -f 
+INFO-FLOW: Finish binding write_row_ifm.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool_write 
+Execute       schedule -model pool_write 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.372 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.446 seconds; current allocated memory: 161.770 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.verbose.sched.rpt 
+Command       syn_report done; 0.299 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.sched.adb -f 
+Command       db_write done; 0.171 sec.
+INFO-FLOW: Finish scheduling pool_write.
+Execute       set_default_model pool_write 
+Execute       bind -model pool_write 
+BIND OPTION: model=pool_write
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.277 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.775 seconds; current allocated memory: 165.145 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.verbose.bind.rpt 
+Command       syn_report done; 0.708 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.bind.adb -f 
+Command       db_write done; 0.206 sec.
+INFO-FLOW: Finish binding pool_write.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_read 
+Execute       schedule -model conv_read 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.01 seconds; current allocated memory: 165.817 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_read.
+Execute       set_default_model conv_read 
+Execute       bind -model conv_read 
+BIND OPTION: model=conv_read
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 165.987 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.bind.adb -f 
+INFO-FLOW: Finish binding conv_read.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool_hw 
+Execute       schedule -model pool_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.134 seconds; current allocated memory: 166.327 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling pool_hw.
+Execute       set_default_model pool_hw 
+Execute       bind -model pool_hw 
+BIND OPTION: model=pool_hw
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.939 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.034 seconds; current allocated memory: 167.491 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.verbose.bind.rpt 
+Command       syn_report done; 0.536 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.bind.adb -f 
+INFO-FLOW: Finish binding pool_hw.
+Execute       get_model_list pool_hw -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess load_cifm_data 
+Execute       rtl_gen_preprocess write_row_ifm 
+Execute       rtl_gen_preprocess pool_write 
+Execute       rtl_gen_preprocess conv_read 
+Execute       rtl_gen_preprocess pool_hw 
+INFO-FLOW: Model list for RTL generation: load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_cifm_data -vendor xilinx -mg_file D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.664 seconds; current allocated memory: 168.737 MB.
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_cifm_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/systemc/load_cifm_data -synmodules load_cifm_data write_row_ifm pool_write conv_read pool_hw 
+Execute       gen_rtl load_cifm_data -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/vhdl/load_cifm_data 
+Execute       gen_rtl load_cifm_data -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/verilog/load_cifm_data 
+Execute       syn_report -csynth -model load_cifm_data -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/load_cifm_data_csynth.rpt 
+Execute       syn_report -rtlxml -model load_cifm_data -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/load_cifm_data_csynth.xml 
+Execute       syn_report -verbosereport -model load_cifm_data -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.verbose.rpt 
+Execute       db_write -model load_cifm_data -f -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.adb 
+Execute       gen_tb_info load_cifm_data -p D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model write_row_ifm -vendor xilinx -mg_file D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.319 seconds; current allocated memory: 169.199 MB.
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl write_row_ifm -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/systemc/write_row_ifm -synmodules load_cifm_data write_row_ifm pool_write conv_read pool_hw 
+Execute       gen_rtl write_row_ifm -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/vhdl/write_row_ifm 
+Execute       gen_rtl write_row_ifm -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/verilog/write_row_ifm 
+Execute       syn_report -csynth -model write_row_ifm -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/write_row_ifm_csynth.rpt 
+Execute       syn_report -rtlxml -model write_row_ifm -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/write_row_ifm_csynth.xml 
+Execute       syn_report -verbosereport -model write_row_ifm -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.verbose.rpt 
+Execute       db_write -model write_row_ifm -f -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.adb 
+Execute       gen_tb_info write_row_ifm -p D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model pool_write -vendor xilinx -mg_file D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'pool_hw_fcmp_32ns_32ns_1_2_1' to 'pool_hw_fcmp_32nsbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_fcmp_32nsbkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+Command       create_rtl_model done; 0.285 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 175.249 MB.
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool_write -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/systemc/pool_write -synmodules load_cifm_data write_row_ifm pool_write conv_read pool_hw 
+Execute       gen_rtl pool_write -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/vhdl/pool_write 
+Execute       gen_rtl pool_write -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/verilog/pool_write 
+Execute       syn_report -csynth -model pool_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/pool_write_csynth.rpt 
+Command       syn_report done; 0.355 sec.
+Execute       syn_report -rtlxml -model pool_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/pool_write_csynth.xml 
+Command       syn_report done; 0.152 sec.
+Execute       syn_report -verbosereport -model pool_write -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.verbose.rpt 
+Command       syn_report done; 0.858 sec.
+Execute       db_write -model pool_write -f -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.adb 
+Command       db_write done; 0.547 sec.
+Execute       gen_tb_info pool_write -p D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model conv_read -vendor xilinx -mg_file D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.757 seconds; current allocated memory: 177.952 MB.
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_read -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/systemc/conv_read -synmodules load_cifm_data write_row_ifm pool_write conv_read pool_hw 
+Execute       gen_rtl conv_read -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/vhdl/conv_read 
+Execute       gen_rtl conv_read -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/verilog/conv_read 
+Execute       syn_report -csynth -model conv_read -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/conv_read_csynth.rpt 
+Execute       syn_report -rtlxml -model conv_read -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/conv_read_csynth.xml 
+Execute       syn_report -verbosereport -model conv_read -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.verbose.rpt 
+Execute       db_write -model conv_read -f -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.adb 
+Execute       gen_tb_info conv_read -p D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model pool_hw -vendor xilinx -mg_file D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/tran_wgt' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pool_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+Command       create_rtl_model done; 0.514 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.764 seconds; current allocated memory: 181.806 MB.
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/systemc/pool_hw -synmodules load_cifm_data write_row_ifm pool_write conv_read pool_hw 
+Execute       gen_rtl pool_hw -istop -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/vhdl/pool_hw 
+Command       gen_rtl done; 0.262 sec.
+Execute       gen_rtl pool_hw -istop -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/verilog/pool_hw 
+Command       gen_rtl done; 0.159 sec.
+Execute       syn_report -csynth -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/pool_hw_csynth.rpt 
+Command       syn_report done; 0.134 sec.
+Execute       syn_report -rtlxml -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/syn/report/pool_hw_csynth.xml 
+Command       syn_report done; 0.128 sec.
+Execute       syn_report -verbosereport -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.verbose.rpt 
+Command       syn_report done; 0.706 sec.
+Execute       db_write -model pool_hw -f -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.adb 
+Command       db_write done; 0.26 sec.
+Execute       gen_tb_info pool_hw -p D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw 
+Execute       export_constraint_db -f -tool general -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.constraint.tcl 
+Execute       syn_report -designview -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.design.xml 
+Command       syn_report done; 0.552 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model pool_hw -o D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks pool_hw 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain pool_hw 
+INFO-FLOW: Model list for RTL component generation: load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO-FLOW: Handling components in module [load_cifm_data] ... 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+INFO-FLOW: Handling components in module [write_row_ifm] ... 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+INFO-FLOW: Handling components in module [pool_write] ... 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+INFO-FLOW: Found component pool_hw_fcmp_32nsbkb.
+INFO-FLOW: Append model pool_hw_fcmp_32nsbkb
+INFO-FLOW: Handling components in module [conv_read] ... 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+INFO-FLOW: Handling components in module [pool_hw] ... 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+INFO-FLOW: Found component pool_hw_ifm_buff0_0.
+INFO-FLOW: Append model pool_hw_ifm_buff0_0
+INFO-FLOW: Found component pool_hw_ifm_buff0_3.
+INFO-FLOW: Append model pool_hw_ifm_buff0_3
+INFO-FLOW: Found component pool_hw_ofm_buff0_0.
+INFO-FLOW: Append model pool_hw_ofm_buff0_0
+INFO-FLOW: Found component pool_hw_ofm_buff0_6.
+INFO-FLOW: Append model pool_hw_ofm_buff0_6
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model load_cifm_data
+INFO-FLOW: Append model write_row_ifm
+INFO-FLOW: Append model pool_write
+INFO-FLOW: Append model conv_read
+INFO-FLOW: Append model pool_hw
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: pool_hw_fcmp_32nsbkb pool_hw_ifm_buff0_0 pool_hw_ifm_buff0_3 pool_hw_ofm_buff0_0 pool_hw_ofm_buff0_6 regslice_core load_cifm_data write_row_ifm pool_write conv_read pool_hw
+INFO-FLOW: To file: write model pool_hw_fcmp_32nsbkb
+INFO-FLOW: To file: write model pool_hw_ifm_buff0_0
+INFO-FLOW: To file: write model pool_hw_ifm_buff0_3
+INFO-FLOW: To file: write model pool_hw_ofm_buff0_0
+INFO-FLOW: To file: write model pool_hw_ofm_buff0_6
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model load_cifm_data
+INFO-FLOW: To file: write model write_row_ifm
+INFO-FLOW: To file: write model pool_write
+INFO-FLOW: To file: write model conv_read
+INFO-FLOW: To file: write model pool_hw
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model pool_hw -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Course/mSOC/final/finalpool_hls/channel_pip
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.109 sec.
+Command       ap_source done; 0.111 sec.
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pool_hw_ifm_buff0_3_rom' using block ROMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_6_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.217 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Course/mSOC/final/finalpool_hls/channel_pip
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.111 sec.
+Command       ap_source done; 0.111 sec.
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute         source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+Command       ap_source done; 0.19 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.constraint.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=pool_hw
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=11 #gSsdmPorts=6
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pool_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:         dump_ctype_info_xml failed
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.compgen.dataonly.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.constraint.tcl 
+Execute       sc_get_clocks pool_hw 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/impl/misc/pool_hw_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/load_cifm_data.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/write_row_ifm.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_write.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/conv_read.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Course/mSOC/final/finalpool_hls/channel_pip/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 271.598 ; gain = 182.164
+INFO: [VHDL 208-304] Generating VHDL RTL for pool_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for pool_hw.
+Command     autosyn done; 13.21 sec.
+Command   csynth_design done; 21.853 sec.
+Command ap_source done; 23.125 sec.
+Execute cleanup_all 

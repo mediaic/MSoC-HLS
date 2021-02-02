@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vivado HLS Report for 'dnn_hw'
+================================================================
+* Date:           Thu Jan 21 20:27:21 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        finalwrapup_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.685 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |        2|  5720553| 20.000 ns | 57.206 ms |    2|  5720553|   none  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 3 2 
+2 --> 4 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.47>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %tran_wgt), !map !48"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %cofm), !map !97"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %cifm), !map !146"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %config_r), !map !195"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @dnn_hw_str) nounwind"   --->   Operation 9 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %config_r, [5 x i8]* @p_str15, i32 1, i32 1, [5 x i8]* @p_str16, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:697]   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %tran_wgt, [5 x i8]* @p_str15, i32 1, i32 1, [5 x i8]* @p_str16, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:698]   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %cofm, [5 x i8]* @p_str15, i32 1, i32 1, [5 x i8]* @p_str16, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:699]   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %cifm, [5 x i8]* @p_str15, i32 1, i32 1, [5 x i8]* @p_str16, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalwrapup.cpp:700]   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%config_read = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %config_r)" [finalwrapup.cpp:735]   --->   Operation 14 'read' 'config_read' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 15 [1/1] (2.47ns)   --->   "%icmp_ln735 = icmp eq i32 %config_read, 0" [finalwrapup.cpp:735]   --->   Operation 15 'icmp' 'icmp_ln735' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "br i1 %icmp_ln735, label %1, label %2" [finalwrapup.cpp:735]   --->   Operation 16 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (2.47ns)   --->   "%icmp_ln738 = icmp eq i32 %config_read, 1" [finalwrapup.cpp:738]   --->   Operation 17 'icmp' 'icmp_ln738' <Predicate = (!icmp_ln735)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %icmp_ln738, label %3, label %._crit_edge" [finalwrapup.cpp:738]   --->   Operation 18 'br' <Predicate = (!icmp_ln735)> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (0.00ns)   --->   "call fastcc void @pool_hw(i512* %cifm, i512* %cofm)" [finalwrapup.cpp:739]   --->   Operation 19 'call' <Predicate = (!icmp_ln735 & icmp_ln738)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 20 [2/2] (0.00ns)   --->   "call fastcc void @convolution_hw(i512* %cifm, i512* %cofm, i512* %tran_wgt)" [finalwrapup.cpp:736]   --->   Operation 20 'call' <Predicate = (icmp_ln735)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 21 [1/2] (0.00ns)   --->   "call fastcc void @pool_hw(i512* %cifm, i512* %cofm)" [finalwrapup.cpp:739]   --->   Operation 21 'call' <Predicate = (icmp_ln738)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "br label %._crit_edge" [finalwrapup.cpp:740]   --->   Operation 22 'br' <Predicate = (icmp_ln738)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "br label %4"   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 1> <Delay = 0.00>
+ST_3 : Operation 24 [1/2] (0.00ns)   --->   "call fastcc void @convolution_hw(i512* %cifm, i512* %cofm, i512* %tran_wgt)" [finalwrapup.cpp:736]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "br label %4" [finalwrapup.cpp:737]   --->   Operation 25 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "ret void" [finalwrapup.cpp:741]   --->   Operation 26 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.47ns
+The critical path consists of the following:
+	axis read on port 'config_r' (finalwrapup.cpp:735) [14]  (0 ns)
+	'icmp' operation ('icmp_ln738', finalwrapup.cpp:738) [18]  (2.47 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

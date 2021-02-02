@@ -1,0 +1,295 @@
+
+
+================================================================
+== Vivado HLS Report for 'convolution_hw'
+================================================================
+* Date:           Wed Jan 20 14:16:47 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        finalconv_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.400 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+    +---------+---------+----------+----------+-----+--------+---------+
+    |      178|   295188| 1.780 us | 2.952 ms |  178|  295188|   none  |
+    +---------+---------+----------+----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       64|   295008| 2 ~ 9219 |          -|          -|    32|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 6 5 
+5 --> 4 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.90>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%cifm_counter_4 = alloca i32"   --->   Operation 8 'alloca' 'cifm_counter_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%cofm_counter_4 = alloca i32"   --->   Operation 9 'alloca' 'cofm_counter_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ifm_buff0_0 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:268]   --->   Operation 10 'alloca' 'ifm_buff0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%ifm_buff0_1 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:268]   --->   Operation 11 'alloca' 'ifm_buff0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ifm_buff0_2 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:268]   --->   Operation 12 'alloca' 'ifm_buff0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%ifm_buff1_0 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:270]   --->   Operation 13 'alloca' 'ifm_buff1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%ifm_buff1_1 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:270]   --->   Operation 14 'alloca' 'ifm_buff1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ifm_buff1_2 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:270]   --->   Operation 15 'alloca' 'ifm_buff1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%ifm_buff2_0 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:272]   --->   Operation 16 'alloca' 'ifm_buff2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%ifm_buff2_1 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:272]   --->   Operation 17 'alloca' 'ifm_buff2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ifm_buff2_2 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:272]   --->   Operation 18 'alloca' 'ifm_buff2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ifm_buff3_0 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:274]   --->   Operation 19 'alloca' 'ifm_buff3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%ifm_buff3_1 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:274]   --->   Operation 20 'alloca' 'ifm_buff3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ifm_buff3_2 = alloca [34 x float], align 4" [finalconv_Jan19.cpp:274]   --->   Operation 21 'alloca' 'ifm_buff3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%filter_buff_0_0_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 22 'alloca' 'filter_buff_0_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%filter_buff_0_0_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 23 'alloca' 'filter_buff_0_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%filter_buff_0_0_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 24 'alloca' 'filter_buff_0_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%filter_buff_0_1_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 25 'alloca' 'filter_buff_0_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%filter_buff_0_1_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 26 'alloca' 'filter_buff_0_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%filter_buff_0_1_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 27 'alloca' 'filter_buff_0_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%filter_buff_0_2_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 28 'alloca' 'filter_buff_0_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%filter_buff_0_2_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 29 'alloca' 'filter_buff_0_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%filter_buff_0_2_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 30 'alloca' 'filter_buff_0_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%filter_buff_1_0_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 31 'alloca' 'filter_buff_1_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%filter_buff_1_0_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 32 'alloca' 'filter_buff_1_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%filter_buff_1_0_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 33 'alloca' 'filter_buff_1_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%filter_buff_1_1_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 34 'alloca' 'filter_buff_1_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%filter_buff_1_1_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 35 'alloca' 'filter_buff_1_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%filter_buff_1_1_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 36 'alloca' 'filter_buff_1_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%filter_buff_1_2_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 37 'alloca' 'filter_buff_1_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%filter_buff_1_2_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 38 'alloca' 'filter_buff_1_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%filter_buff_1_2_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 39 'alloca' 'filter_buff_1_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%filter_buff_2_0_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 40 'alloca' 'filter_buff_2_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%filter_buff_2_0_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 41 'alloca' 'filter_buff_2_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%filter_buff_2_0_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 42 'alloca' 'filter_buff_2_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%filter_buff_2_1_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 43 'alloca' 'filter_buff_2_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%filter_buff_2_1_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 44 'alloca' 'filter_buff_2_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%filter_buff_2_1_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 45 'alloca' 'filter_buff_2_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%filter_buff_2_2_0 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 46 'alloca' 'filter_buff_2_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%filter_buff_2_2_1 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 47 'alloca' 'filter_buff_2_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%filter_buff_2_2_2 = alloca [6 x float], align 4" [finalconv_Jan19.cpp:277]   --->   Operation 48 'alloca' 'filter_buff_2_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%ofm_buff0_0 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 49 'alloca' 'ofm_buff0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%ofm_buff0_1 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 50 'alloca' 'ofm_buff0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%ofm_buff0_2 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 51 'alloca' 'ofm_buff0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%ofm_buff0_3 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 52 'alloca' 'ofm_buff0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%ofm_buff0_4 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 53 'alloca' 'ofm_buff0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%ofm_buff0_5 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:283]   --->   Operation 54 'alloca' 'ofm_buff0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%ofm_buff1_0 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 55 'alloca' 'ofm_buff1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%ofm_buff1_1 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 56 'alloca' 'ofm_buff1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%ofm_buff1_2 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 57 'alloca' 'ofm_buff1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%ofm_buff1_3 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 58 'alloca' 'ofm_buff1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%ofm_buff1_4 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 59 'alloca' 'ofm_buff1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%ofm_buff1_5 = alloca [32 x float], align 4" [finalconv_Jan19.cpp:284]   --->   Operation 60 'alloca' 'ofm_buff1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (1.90ns)   --->   "store i32 0, i32* %cofm_counter_4" [finalconv_Jan19.cpp:308]   --->   Operation 61 'store' <Predicate = true> <Delay = 1.90>
+ST_1 : Operation 62 [1/1] (1.90ns)   --->   "store i32 102, i32* %cifm_counter_4" [finalconv_Jan19.cpp:308]   --->   Operation 62 'store' <Predicate = true> <Delay = 1.90>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 63 [2/2] (3.25ns)   --->   "call fastcc void @load_cifm_data(i512* %cifm, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2)" [finalconv_Jan19.cpp:300]   --->   Operation 63 'call' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 64 [2/2] (2.32ns)   --->   "call fastcc void @load_filter_buffer(i512* %tran_wgt, [6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2)" [finalconv_Jan19.cpp:301]   --->   Operation 64 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %tran_wgt), !map !38"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %cofm), !map !87"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %cifm), !map !136"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @convolution_hw_str) nounwind"   --->   Operation 68 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %cifm, [5 x i8]* @p_str10, i32 1, i32 1, [5 x i8]* @p_str11, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalconv_Jan19.cpp:260]   --->   Operation 69 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %cofm, [5 x i8]* @p_str10, i32 1, i32 1, [5 x i8]* @p_str11, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalconv_Jan19.cpp:260]   --->   Operation 70 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %tran_wgt, [5 x i8]* @p_str10, i32 1, i32 1, [5 x i8]* @p_str11, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [finalconv_Jan19.cpp:260]   --->   Operation 71 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/2] (0.00ns)   --->   "call fastcc void @load_cifm_data(i512* %cifm, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2)" [finalconv_Jan19.cpp:300]   --->   Operation 72 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 73 [1/2] (0.00ns)   --->   "call fastcc void @load_filter_buffer(i512* %tran_wgt, [6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2)" [finalconv_Jan19.cpp:301]   --->   Operation 73 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 74 [1/1] (1.76ns)   --->   "br label %1" [finalconv_Jan19.cpp:308]   --->   Operation 74 'br' <Predicate = true> <Delay = 1.76>
+
+State 4 <SV = 3> <Delay = 6.54>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%rotate_counter_0 = phi i16 [ 0, %0 ], [ %select_ln351, %._crit_edge ]" [finalconv_Jan19.cpp:351]   --->   Operation 75 'phi' 'rotate_counter_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%row_0 = phi i6 [ 0, %0 ], [ %row, %._crit_edge ]"   --->   Operation 76 'phi' 'row_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (1.42ns)   --->   "%icmp_ln308 = icmp eq i6 %row_0, -32" [finalconv_Jan19.cpp:308]   --->   Operation 77 'icmp' 'icmp_ln308' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 78 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (1.82ns)   --->   "%row = add i6 %row_0, 1" [finalconv_Jan19.cpp:308]   --->   Operation 79 'add' 'row' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "br i1 %icmp_ln308, label %10, label %2" [finalconv_Jan19.cpp:308]   --->   Operation 80 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (2.42ns)   --->   "%icmp_ln312 = icmp eq i16 %rotate_counter_0, 0" [finalconv_Jan19.cpp:312]   --->   Operation 81 'icmp' 'icmp_ln312' <Predicate = (!icmp_ln308)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "br i1 %icmp_ln312, label %3, label %4" [finalconv_Jan19.cpp:312]   --->   Operation 82 'br' <Predicate = (!icmp_ln308)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (2.42ns)   --->   "%icmp_ln322 = icmp eq i16 %rotate_counter_0, 1" [finalconv_Jan19.cpp:322]   --->   Operation 83 'icmp' 'icmp_ln322' <Predicate = (!icmp_ln308 & !icmp_ln312)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "br i1 %icmp_ln322, label %5, label %6" [finalconv_Jan19.cpp:322]   --->   Operation 84 'br' <Predicate = (!icmp_ln308 & !icmp_ln312)> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (2.42ns)   --->   "%icmp_ln331 = icmp eq i16 %rotate_counter_0, 2" [finalconv_Jan19.cpp:331]   --->   Operation 85 'icmp' 'icmp_ln331' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "br i1 %icmp_ln331, label %7, label %8" [finalconv_Jan19.cpp:331]   --->   Operation 86 'br' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322)> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (2.42ns)   --->   "%icmp_ln340 = icmp eq i16 %rotate_counter_0, 3" [finalconv_Jan19.cpp:340]   --->   Operation 87 'icmp' 'icmp_ln340' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "br i1 %icmp_ln340, label %9, label %._crit_edge" [finalconv_Jan19.cpp:340]   --->   Operation 88 'br' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331)> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%cifm_counter_4_load_3 = load i32* %cifm_counter_4" [finalconv_Jan19.cpp:342]   --->   Operation 89 'load' 'cifm_counter_4_load_3' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%cofm_counter_4_load_4 = load i32* %cofm_counter_4" [finalconv_Jan19.cpp:344]   --->   Operation 90 'load' 'cofm_counter_4_load_4' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (1.42ns)   --->   "%icmp_ln342 = icmp ne i6 %row_0, 31" [finalconv_Jan19.cpp:342]   --->   Operation 91 'icmp' 'icmp_ln342' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [2/2] (5.11ns)   --->   "%cifm_counter_3 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, i32 %cifm_counter_4_load_3, i1 zeroext %icmp_ln342)" [finalconv_Jan19.cpp:342]   --->   Operation 92 'call' 'cifm_counter_3' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 5.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 93 [2/2] (1.86ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5)" [finalconv_Jan19.cpp:343]   --->   Operation 93 'call' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 94 [2/2] (4.45ns)   --->   "%cofm_counter_3 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5, i32 %cofm_counter_4_load_4, i1 zeroext true)" [finalconv_Jan19.cpp:344]   --->   Operation 94 'call' 'cofm_counter_3' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 4.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%cifm_counter_4_load_2 = load i32* %cifm_counter_4" [finalconv_Jan19.cpp:333]   --->   Operation 95 'load' 'cifm_counter_4_load_2' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%cofm_counter_4_load_3 = load i32* %cofm_counter_4" [finalconv_Jan19.cpp:335]   --->   Operation 96 'load' 'cofm_counter_4_load_3' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 0.00>
+ST_4 : Operation 97 [2/2] (5.11ns)   --->   "%cifm_counter_2 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, i32 %cifm_counter_4_load_2, i1 zeroext true)" [finalconv_Jan19.cpp:333]   --->   Operation 97 'call' 'cifm_counter_2' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 5.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 98 [2/2] (1.86ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5)" [finalconv_Jan19.cpp:334]   --->   Operation 98 'call' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 99 [2/2] (4.45ns)   --->   "%cofm_counter_2 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load_3, i1 zeroext true)" [finalconv_Jan19.cpp:335]   --->   Operation 99 'call' 'cofm_counter_2' <Predicate = (!icmp_ln308 & !icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 4.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%cifm_counter_4_load_1 = load i32* %cifm_counter_4" [finalconv_Jan19.cpp:324]   --->   Operation 100 'load' 'cifm_counter_4_load_1' <Predicate = (!icmp_ln308 & !icmp_ln312 & icmp_ln322)> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%cofm_counter_4_load_2 = load i32* %cofm_counter_4" [finalconv_Jan19.cpp:326]   --->   Operation 101 'load' 'cofm_counter_4_load_2' <Predicate = (!icmp_ln308 & !icmp_ln312 & icmp_ln322)> <Delay = 0.00>
+ST_4 : Operation 102 [2/2] (5.11ns)   --->   "%cifm_counter_1 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, i32 %cifm_counter_4_load_1, i1 zeroext true)" [finalconv_Jan19.cpp:324]   --->   Operation 102 'call' 'cifm_counter_1' <Predicate = (!icmp_ln308 & !icmp_ln312 & icmp_ln322)> <Delay = 5.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 103 [2/2] (1.86ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5)" [finalconv_Jan19.cpp:325]   --->   Operation 103 'call' <Predicate = (!icmp_ln308 & !icmp_ln312 & icmp_ln322)> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 104 [2/2] (4.45ns)   --->   "%cofm_counter_1 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5, i32 %cofm_counter_4_load_2, i1 zeroext true)" [finalconv_Jan19.cpp:326]   --->   Operation 104 'call' 'cofm_counter_1' <Predicate = (!icmp_ln308 & !icmp_ln312 & icmp_ln322)> <Delay = 4.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%cifm_counter_4_load = load i32* %cifm_counter_4" [finalconv_Jan19.cpp:314]   --->   Operation 105 'load' 'cifm_counter_4_load' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%cofm_counter_4_load_1 = load i32* %cofm_counter_4" [finalconv_Jan19.cpp:316]   --->   Operation 106 'load' 'cofm_counter_4_load_1' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 0.00>
+ST_4 : Operation 107 [2/2] (5.11ns)   --->   "%cifm_counter = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, i32 %cifm_counter_4_load, i1 zeroext true)" [finalconv_Jan19.cpp:314]   --->   Operation 107 'call' 'cifm_counter' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 5.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 108 [2/2] (1.86ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5)" [finalconv_Jan19.cpp:315]   --->   Operation 108 'call' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 109 [1/1] (1.42ns)   --->   "%icmp_ln316 = icmp ne i6 %row_0, 0" [finalconv_Jan19.cpp:316]   --->   Operation 109 'icmp' 'icmp_ln316' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [2/2] (4.45ns)   --->   "%cofm_counter = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load_1, i1 zeroext %icmp_ln316)" [finalconv_Jan19.cpp:316]   --->   Operation 110 'call' 'cofm_counter' <Predicate = (!icmp_ln308 & icmp_ln312)> <Delay = 4.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%cofm_counter_4_load = load i32* %cofm_counter_4" [finalconv_Jan19.cpp:356]   --->   Operation 111 'load' 'cofm_counter_4_load' <Predicate = (icmp_ln308)> <Delay = 0.00>
+ST_4 : Operation 112 [2/2] (4.45ns)   --->   "%call_ret155317 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load, i1 zeroext true)" [finalconv_Jan19.cpp:356]   --->   Operation 112 'call' 'call_ret155317' <Predicate = (icmp_ln308)> <Delay = 4.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 5.31>
+ST_5 : Operation 113 [1/2] (1.76ns)   --->   "%cifm_counter_3 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, i32 %cifm_counter_4_load_3, i1 zeroext %icmp_ln342)" [finalconv_Jan19.cpp:342]   --->   Operation 113 'call' 'cifm_counter_3' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 114 [1/2] (0.00ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5)" [finalconv_Jan19.cpp:343]   --->   Operation 114 'call' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 115 [1/2] (0.00ns)   --->   "%cofm_counter_3 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5, i32 %cofm_counter_4_load_4, i1 zeroext true)" [finalconv_Jan19.cpp:344]   --->   Operation 115 'call' 'cofm_counter_3' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 116 [1/1] (1.90ns)   --->   "store i32 %cofm_counter_3, i32* %cofm_counter_4" [finalconv_Jan19.cpp:349]   --->   Operation 116 'store' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 1.90>
+ST_5 : Operation 117 [1/1] (1.90ns)   --->   "store i32 %cifm_counter_3, i32* %cifm_counter_4" [finalconv_Jan19.cpp:349]   --->   Operation 117 'store' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 1.90>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "br label %._crit_edge" [finalconv_Jan19.cpp:349]   --->   Operation 118 'br' <Predicate = (!icmp_ln312 & !icmp_ln322 & !icmp_ln331 & icmp_ln340)> <Delay = 0.00>
+ST_5 : Operation 119 [1/2] (1.76ns)   --->   "%cifm_counter_2 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, i32 %cifm_counter_4_load_2, i1 zeroext true)" [finalconv_Jan19.cpp:333]   --->   Operation 119 'call' 'cifm_counter_2' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 120 [1/2] (0.00ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5)" [finalconv_Jan19.cpp:334]   --->   Operation 120 'call' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 121 [1/2] (0.00ns)   --->   "%cofm_counter_2 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load_3, i1 zeroext true)" [finalconv_Jan19.cpp:335]   --->   Operation 121 'call' 'cofm_counter_2' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 122 [1/1] (1.90ns)   --->   "store i32 %cofm_counter_2, i32* %cofm_counter_4" [finalconv_Jan19.cpp:340]   --->   Operation 122 'store' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 1.90>
+ST_5 : Operation 123 [1/1] (1.90ns)   --->   "store i32 %cifm_counter_2, i32* %cifm_counter_4" [finalconv_Jan19.cpp:340]   --->   Operation 123 'store' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 1.90>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "br label %._crit_edge" [finalconv_Jan19.cpp:340]   --->   Operation 124 'br' <Predicate = (!icmp_ln312 & !icmp_ln322 & icmp_ln331)> <Delay = 0.00>
+ST_5 : Operation 125 [1/2] (1.76ns)   --->   "%cifm_counter_1 = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, i32 %cifm_counter_4_load_1, i1 zeroext true)" [finalconv_Jan19.cpp:324]   --->   Operation 125 'call' 'cifm_counter_1' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 126 [1/2] (0.00ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5)" [finalconv_Jan19.cpp:325]   --->   Operation 126 'call' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 127 [1/2] (0.00ns)   --->   "%cofm_counter_1 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5, i32 %cofm_counter_4_load_2, i1 zeroext true)" [finalconv_Jan19.cpp:326]   --->   Operation 127 'call' 'cofm_counter_1' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 128 [1/1] (1.90ns)   --->   "store i32 %cofm_counter_1, i32* %cofm_counter_4" [finalconv_Jan19.cpp:331]   --->   Operation 128 'store' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 1.90>
+ST_5 : Operation 129 [1/1] (1.90ns)   --->   "store i32 %cifm_counter_1, i32* %cifm_counter_4" [finalconv_Jan19.cpp:331]   --->   Operation 129 'store' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 1.90>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "br label %._crit_edge" [finalconv_Jan19.cpp:331]   --->   Operation 130 'br' <Predicate = (!icmp_ln312 & icmp_ln322)> <Delay = 0.00>
+ST_5 : Operation 131 [1/2] (1.76ns)   --->   "%cifm_counter = call fastcc i32 @write_row_ifm(i512* %cifm, [34 x float]* %ifm_buff0_0, [34 x float]* %ifm_buff0_1, [34 x float]* %ifm_buff0_2, i32 %cifm_counter_4_load, i1 zeroext true)" [finalconv_Jan19.cpp:314]   --->   Operation 131 'call' 'cifm_counter' <Predicate = (icmp_ln312)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 132 [1/2] (0.00ns)   --->   "call fastcc void @conv_write([6 x float]* %filter_buff_0_0_0, [6 x float]* %filter_buff_0_0_1, [6 x float]* %filter_buff_0_0_2, [6 x float]* %filter_buff_0_1_0, [6 x float]* %filter_buff_0_1_1, [6 x float]* %filter_buff_0_1_2, [6 x float]* %filter_buff_0_2_0, [6 x float]* %filter_buff_0_2_1, [6 x float]* %filter_buff_0_2_2, [6 x float]* %filter_buff_1_0_0, [6 x float]* %filter_buff_1_0_1, [6 x float]* %filter_buff_1_0_2, [6 x float]* %filter_buff_1_1_0, [6 x float]* %filter_buff_1_1_1, [6 x float]* %filter_buff_1_1_2, [6 x float]* %filter_buff_1_2_0, [6 x float]* %filter_buff_1_2_1, [6 x float]* %filter_buff_1_2_2, [6 x float]* %filter_buff_2_0_0, [6 x float]* %filter_buff_2_0_1, [6 x float]* %filter_buff_2_0_2, [6 x float]* %filter_buff_2_1_0, [6 x float]* %filter_buff_2_1_1, [6 x float]* %filter_buff_2_1_2, [6 x float]* %filter_buff_2_2_0, [6 x float]* %filter_buff_2_2_1, [6 x float]* %filter_buff_2_2_2, [34 x float]* %ifm_buff1_0, [34 x float]* %ifm_buff1_1, [34 x float]* %ifm_buff1_2, [34 x float]* %ifm_buff2_0, [34 x float]* %ifm_buff2_1, [34 x float]* %ifm_buff2_2, [34 x float]* %ifm_buff3_0, [34 x float]* %ifm_buff3_1, [34 x float]* %ifm_buff3_2, [32 x float]* %ofm_buff0_0, [32 x float]* %ofm_buff0_1, [32 x float]* %ofm_buff0_2, [32 x float]* %ofm_buff0_3, [32 x float]* %ofm_buff0_4, [32 x float]* %ofm_buff0_5)" [finalconv_Jan19.cpp:315]   --->   Operation 132 'call' <Predicate = (icmp_ln312)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 133 [1/2] (0.00ns)   --->   "%cofm_counter = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load_1, i1 zeroext %icmp_ln316)" [finalconv_Jan19.cpp:316]   --->   Operation 133 'call' 'cofm_counter' <Predicate = (icmp_ln312)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 134 [1/1] (1.90ns)   --->   "store i32 %cofm_counter, i32* %cofm_counter_4" [finalconv_Jan19.cpp:322]   --->   Operation 134 'store' <Predicate = (icmp_ln312)> <Delay = 1.90>
+ST_5 : Operation 135 [1/1] (1.90ns)   --->   "store i32 %cifm_counter, i32* %cifm_counter_4" [finalconv_Jan19.cpp:322]   --->   Operation 135 'store' <Predicate = (icmp_ln312)> <Delay = 1.90>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "br label %._crit_edge" [finalconv_Jan19.cpp:322]   --->   Operation 136 'br' <Predicate = (icmp_ln312)> <Delay = 0.00>
+ST_5 : Operation 137 [1/1] (2.07ns)   --->   "%rotate_counter = add i16 %rotate_counter_0, 1" [finalconv_Jan19.cpp:350]   --->   Operation 137 'add' 'rotate_counter' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 138 [1/1] (2.42ns)   --->   "%icmp_ln351 = icmp eq i16 %rotate_counter, 4" [finalconv_Jan19.cpp:351]   --->   Operation 138 'icmp' 'icmp_ln351' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (0.80ns)   --->   "%select_ln351 = select i1 %icmp_ln351, i16 0, i16 %rotate_counter" [finalconv_Jan19.cpp:351]   --->   Operation 139 'select' 'select_ln351' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "br label %1" [finalconv_Jan19.cpp:308]   --->   Operation 140 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 0.00>
+ST_6 : Operation 141 [1/2] (0.00ns)   --->   "%call_ret155317 = call fastcc i32 @conv_read(i512* %cofm, [32 x float]* %ofm_buff1_0, [32 x float]* %ofm_buff1_1, [32 x float]* %ofm_buff1_2, [32 x float]* %ofm_buff1_3, [32 x float]* %ofm_buff1_4, [32 x float]* %ofm_buff1_5, i32 %cofm_counter_4_load, i1 zeroext true)" [finalconv_Jan19.cpp:356]   --->   Operation 141 'call' 'call_ret155317' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 5> <Delay = 0.00>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "ret void" [finalconv_Jan19.cpp:357]   --->   Operation 142 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.91ns
+The critical path consists of the following:
+	'alloca' operation ('cifm_counter') [4]  (0 ns)
+	'store' operation ('store_ln308', finalconv_Jan19.cpp:308) of constant 102 on local variable 'cifm_counter' [67]  (1.91 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln300', finalconv_Jan19.cpp:300) to 'load_cifm_data' [64]  (3.25 ns)
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('rotate_counter_0', finalconv_Jan19.cpp:351) with incoming values : ('select_ln351', finalconv_Jan19.cpp:351) [70]  (1.77 ns)
+
+ <State 4>: 6.54ns
+The critical path consists of the following:
+	'phi' operation ('row') with incoming values : ('row', finalconv_Jan19.cpp:308) [71]  (0 ns)
+	'icmp' operation ('icmp_ln342', finalconv_Jan19.cpp:342) [91]  (1.43 ns)
+	'call' operation ('cifm_counter', finalconv_Jan19.cpp:342) to 'write_row_ifm' [92]  (5.11 ns)
+
+ <State 5>: 5.31ns
+The critical path consists of the following:
+	'add' operation ('rotate_counter', finalconv_Jan19.cpp:350) [127]  (2.08 ns)
+	'icmp' operation ('icmp_ln351', finalconv_Jan19.cpp:351) [128]  (2.43 ns)
+	'select' operation ('select_ln351', finalconv_Jan19.cpp:351) [129]  (0.805 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

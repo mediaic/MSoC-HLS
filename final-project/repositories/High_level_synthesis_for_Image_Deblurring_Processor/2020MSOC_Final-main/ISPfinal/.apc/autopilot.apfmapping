@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="deblur.cpp" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\deblur.cpp"/>
+    <originFiles name="deblur.h" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\deblur.h"/>
+    <originFiles name="divergent.cpp" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\divergent.cpp"/>
+    <originFiles name="divergent.h" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\divergent.h"/>
+    <originFiles name="fft_top.cpp" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\fft_top.cpp"/>
+    <originFiles name="fft_top.h" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\fft_top.h"/>
+    <originFiles name="proximal.cpp" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\proximal.cpp"/>
+    <originFiles name="proximal.h" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\proximal.h"/>
+  </source>
+  <testbench>
+    <originFiles name="DENOM.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\DeconvolutionColorPrior\DENOM.txt"/>
+    <originFiles name="IMAGINARY.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\DeconvolutionColorPrior\IMAGINARY.txt"/>
+    <originFiles name="I_blurred_B.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\I_blurred_B.txt"/>
+    <originFiles name="I_blurred_G.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\I_blurred_G.txt"/>
+    <originFiles name="I_blurred_R.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\I_blurred_R.txt"/>
+    <originFiles name="REAL.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\DeconvolutionColorPrior\REAL.txt"/>
+    <originFiles name="ground_truth_B.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\ground_truth_B.txt"/>
+    <originFiles name="ground_truth_G.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\ground_truth_G.txt"/>
+    <originFiles name="ground_truth_R.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb_files\ground_truth_R.txt"/>
+    <originFiles name="tb.cpp" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\tb.cpp"/>
+    <originFiles name="DENOM2.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\DENOM2.txt"/>
+    <originFiles name="DENOM3.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\DENOM3.txt"/>
+    <originFiles name="IMAGINARY2.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\IMAGINARY2.txt"/>
+    <originFiles name="IMAGINARY3.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\IMAGINARY3.txt"/>
+    <originFiles name="REAL2.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\REAL2.txt"/>
+    <originFiles name="REAL3.txt" path="C:\Users\leo870823\Desktop\MSOC\2020MSOC_Final\CPUfft-final\REAL3.txt"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

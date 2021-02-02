@@ -1,0 +1,12 @@
+pool_hw_fcmp_32nsbkb
+pool_hw_mux_164_3cud
+pool_hw_ifm_buff0_0
+pool_hw_ifm_buff0_3
+pool_hw_ofm_buff0_0
+pool_hw_ofm_buff0_6
+regslice_core
+load_cifm_data
+write_row_ifm
+pool_write
+conv_read
+pool_hw

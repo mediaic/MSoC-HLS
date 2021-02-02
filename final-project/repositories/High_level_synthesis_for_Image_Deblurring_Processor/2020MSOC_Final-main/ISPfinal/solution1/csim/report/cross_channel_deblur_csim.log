@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../deblur.cpp in debug mode
+   Compiling ../../../../divergent.cpp in debug mode
+   Compiling ../../../../proximal.cpp in debug mode
+   Generating csim.exe
+128
+Open success file_truth_R
+Open success file_truth_G
+Open success file_truth_B
+Open success I_blurred_R.txt
+Open success I_blurred_G.txt
+Open success I_blurred_B.txt
+==== Before deblurring ====/nR channel PSNR=37.949336 
+B channel PSNR=14.948570 
+G channel PSNR=16.237753 
+====  After deblurring ====/nR channel PSNR=37.949336 
+B channel PSNR=12.421665 
+G channel PSNR=12.547919 
+output file C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/deblur_R.bmp :
+output file C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/deblur_G.bmp :
+output file C:/Users/leo870823/Desktop/MSOC/2020MSOC_Final/tb_log/deblur_B.bmp :
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,3 @@
+在DeconvolutionColorPrior資料夾中運行demo_deblurring.m產生I_sharp.png,I_blurred.png
+運行generate.m產生txt檔
+

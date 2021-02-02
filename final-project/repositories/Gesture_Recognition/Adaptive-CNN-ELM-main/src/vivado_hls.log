@@ -1,0 +1,12 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user '7wei' on host 'desktop-h4h5kh7' (Windows NT_amd64 version 6.2) on Wed Jan 20 19:20:15 +0800 2021
+INFO: [HLS 200-10] In directory 'D:/MS1/Course/MSoC/Final_Project/my_HLS/Github/lenet5'
+ERROR [AP-1] Could not read script 'script.tcl'.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Jan 20 19:20:15 2021...

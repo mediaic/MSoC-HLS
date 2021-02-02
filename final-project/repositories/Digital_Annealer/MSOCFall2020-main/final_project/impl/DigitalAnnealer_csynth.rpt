@@ -1,0 +1,1265 @@
+
+
+================================================================
+== Vivado HLS Report for 'DigitalAnnealer'
+================================================================
+* Date:           Fri Jan 22 13:07:16 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        da_final
+* Solution:       opt_1
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 9.279 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |   max  |   Type  |
+    +---------+---------+----------+----------+-------+--------+---------+
+    |    30978|   304638| 0.310 ms | 3.046 ms |  30978|  304638|   none  |
+    +---------+---------+----------+----------+-------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------+------------------+---------+---------+----------+-----------+-----+------+---------+
+        |                              |                  |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+        |           Instance           |      Module      |   min   |   max   |    min   |    max    | min |  max |   Type  |
+        +------------------------------+------------------+---------+---------+----------+-----------+-----+------+---------+
+        |grp_execute_replica_fu_8428   |execute_replica   |       61|      833| 0.610 us |  8.330 us |   61|   833|   none  |
+        |grp_replica_exchange_fu_8437  |replica_exchange  |       49|      135| 0.490 us |  1.350 us |   49|   135|   none  |
+        |grp_reset_fu_8471             |reset             |      101|      158| 1.010 us |  1.580 us |  101|   158|   none  |
+        |grp_calculate_energy_fu_8584  |calculate_energy  |      132|     1257| 1.320 us | 12.570 us |  132|  1257|   none  |
+        +------------------------------+------------------+---------+---------+----------+-----------+-----+------+---------+
+
+        * Loop: 
+        +------------------+---------+---------+--------------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) |   Iteration  |  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |    Latency   |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+--------------+-----------+-----------+------+----------+
+        |- Loop 1          |      435|      435|            87|          -|          -|     5|    no    |
+        | + Loop 1.1       |       85|       85|            17|          -|          -|     5|    no    |
+        |- Loop 2          |     2080|     3220|   104 ~ 161  |          -|          -|    20|    no    |
+        |- DA_L1           |    28460|   300980| 2846 ~ 30098 |          -|          -|    10|    no    |
+        | + DA_L3          |       40|     2820|    2 ~ 141   |          -|          -|    20|    no    |
+        | + DA_L4          |       60|     1260|    3 ~ 63    |          -|          -|    20|    no    |
+        |  ++ DA_L4.1      |       60|       60|            12|          -|          -|     5|    no    |
+        |   +++ DA_L4.1.1  |       10|       10|             2|          -|          -|     5|    no    |
+        +------------------+---------+---------+--------------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|    13667|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        5|    737|   125260|   179772|     0|
+|Memory               |      100|      -|     5760|      225|     0|
+|Multiplexer          |        -|      -|        -|     6616|     -|
+|Register             |        -|      -|    17491|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |      105|    737|   148511|   200280|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        7|     23|       17|       46|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        1|      5|        4|       11|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+----------------------+---------+-------+--------+--------+-----+
+    |           Instance           |        Module        | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
+    +------------------------------+----------------------+---------+-------+--------+--------+-----+
+    |DigitalAnnealer_dbVr_U393     |DigitalAnnealer_dbVr  |        0|      0|     606|    1660|    0|
+    |DigitalAnnealer_dbkb_U390     |DigitalAnnealer_dbkb  |        0|      8|     256|     106|    0|
+    |DigitalAnnealer_dbkb_U391     |DigitalAnnealer_dbkb  |        0|      8|     256|     106|    0|
+    |DigitalAnnealer_djbC_U388     |DigitalAnnealer_djbC  |        0|      3|     343|     708|    0|
+    |DigitalAnnealer_dlbW_U392     |DigitalAnnealer_dlbW  |        0|      0|       0|      84|    0|
+    |DigitalAnnealer_dvdy_U389     |DigitalAnnealer_dvdy  |        0|      3|     343|     708|    0|
+    |DigitalAnnealer_mbWr_U398     |DigitalAnnealer_mbWr  |        0|      0|       0|     100|    0|
+    |DigitalAnnealer_mdEe_U394     |DigitalAnnealer_mdEe  |        0|      0|       0|     100|    0|
+    |DigitalAnnealer_mdEe_U395     |DigitalAnnealer_mdEe  |        0|      0|       0|     100|    0|
+    |DigitalAnnealer_mdEe_U396     |DigitalAnnealer_mdEe  |        0|      0|       0|     100|    0|
+    |DigitalAnnealer_mdEe_U397     |DigitalAnnealer_mdEe  |        0|      0|       0|     100|    0|
+    |grp_calculate_energy_fu_8584  |calculate_energy      |        0|     20|    2119|    2873|    0|
+    |grp_execute_replica_fu_8428   |execute_replica       |        5|    647|  116070|  160767|    0|
+    |grp_replica_exchange_fu_8437  |replica_exchange      |        0|     40|    3846|    8484|    0|
+    |grp_reset_fu_8471             |reset                 |        0|      8|    1421|    3776|    0|
+    +------------------------------+----------------------+---------+-------+--------+--------+-----+
+    |Total                         |                      |        5|    737|  125260|  179772|    0|
+    +------------------------------+----------------------+---------+-------+--------+--------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +------------------------+----------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |         Memory         |        Module        | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------------+----------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |distance_matrix_0_U     |DigitalAnnealer_dbQq  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |distance_matrix_1_U     |DigitalAnnealer_dbQq  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |distance_matrix_2_U     |DigitalAnnealer_dbQq  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |distance_matrix_3_U     |DigitalAnnealer_dbQq  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |distance_matrix_4_U     |DigitalAnnealer_dbQq  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_0_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_1_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_2_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_3_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_4_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_5_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_6_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_7_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_8_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_9_distance_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_10_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_11_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_12_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_13_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_14_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_15_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_16_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_17_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_18_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_19_distanc_U    |DigitalAnnealer_rbck  |        4|    0|   0|    0|    25|   64|     1|         1600|
+    |replica_0_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_1_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_2_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_3_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_4_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_5_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_6_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_7_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_8_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_9_qubit_ma_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_10_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_11_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_12_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_13_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_14_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_15_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_16_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_17_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_18_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_19_qubit_m_U    |DigitalAnnealer_rbwn  |        1|    0|   0|    0|    25|    1|     1|           25|
+    |replica_nodeArray_s_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_1_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_2_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_3_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_4_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_5_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_6_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_7_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_8_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_9_U   |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_10_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_11_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_12_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_13_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_14_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_15_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_16_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_17_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_18_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_19_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_20_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_21_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_22_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_23_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_24_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_25_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_26_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_27_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_28_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_29_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_30_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_31_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_32_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_33_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_34_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_35_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_36_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_37_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_38_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    |replica_nodeArray_39_U  |DigitalAnnealer_ryd2  |        0|  128|   5|    0|     5|   64|     1|          320|
+    +------------------------+----------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Total                   |                      |      100| 5760| 225|    0|  1225| 4180|    85|        46900|
+    +------------------------+----------------------+---------+-----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------------+----------+-------+---+-----+------------+------------+
+    |              Variable Name              | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------+----------+-------+---+-----+------------+------------+
+    |add_ln289_1_fu_10966_p2                  |     +    |      0|  0|    6|           6|           6|
+    |add_ln289_fu_10944_p2                    |     +    |      0|  0|    6|           6|           6|
+    |i_2_fu_8638_p2                           |     +    |      0|  0|    4|           3|           1|
+    |i_5_fu_8916_p2                           |     +    |      0|  0|    6|           5|           1|
+    |i_6_fu_10913_p2                          |     +    |      0|  0|    4|           3|           1|
+    |i_7_fu_10772_p2                          |     +    |      0|  0|    6|           5|           1|
+    |i_fu_8792_p2                             |     +    |      0|  0|    6|           5|           1|
+    |iter_fu_8904_p2                          |     +    |      0|  0|    6|           4|           1|
+    |j_1_fu_10956_p2                          |     +    |      0|  0|    4|           3|           1|
+    |j_fu_8659_p2                             |     +    |      0|  0|    4|           3|           1|
+    |and_ln284_1_fu_10901_p2                  |    and   |      0|  0|    2|           1|           1|
+    |and_ln284_fu_10895_p2                    |    and   |      0|  0|    2|           1|           1|
+    |ap_condition_3038                        |    and   |      0|  0|    2|           1|           1|
+    |ap_condition_4946                        |    and   |      0|  0|    2|           1|           1|
+    |ap_condition_4981                        |    and   |      0|  0|    2|           1|           1|
+    |icmp_ln262_fu_8786_p2                    |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln268_fu_8898_p2                    |   icmp   |      0|  0|    9|           4|           4|
+    |icmp_ln277_fu_8910_p2                    |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln278_fu_8922_p2                    |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln279_10_fu_9049_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_11_fu_9061_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_12_fu_9073_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_13_fu_9085_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_14_fu_9097_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_15_fu_9109_p2                 |   icmp   |      0|  0|   11|           5|           6|
+    |icmp_ln279_16_fu_9121_p2                 |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln279_17_fu_9133_p2                 |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln279_18_fu_9153_p2                 |   icmp   |      0|  0|   11|           5|           1|
+    |icmp_ln279_19_fu_9167_p2                 |   icmp   |      0|  0|   11|           5|           2|
+    |icmp_ln279_1_fu_8941_p2                  |   icmp   |      0|  0|   11|           5|           2|
+    |icmp_ln279_20_fu_9181_p2                 |   icmp   |      0|  0|   11|           5|           2|
+    |icmp_ln279_21_fu_9195_p2                 |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_22_fu_9209_p2                 |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_23_fu_9223_p2                 |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_24_fu_9237_p2                 |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_25_fu_9251_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_26_fu_9265_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_27_fu_9279_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_28_fu_9293_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_29_fu_9307_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_2_fu_8953_p2                  |   icmp   |      0|  0|   11|           5|           2|
+    |icmp_ln279_30_fu_9321_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_31_fu_9335_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_32_fu_9349_p2                 |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_33_fu_9363_p2                 |   icmp   |      0|  0|   11|           5|           6|
+    |icmp_ln279_34_fu_9377_p2                 |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln279_3_fu_8965_p2                  |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_4_fu_8977_p2                  |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_5_fu_8989_p2                  |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_6_fu_9001_p2                  |   icmp   |      0|  0|   11|           5|           3|
+    |icmp_ln279_7_fu_9013_p2                  |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_8_fu_9025_p2                  |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_9_fu_9037_p2                  |   icmp   |      0|  0|   11|           5|           4|
+    |icmp_ln279_fu_8928_p2                    |   icmp   |      0|  0|   11|           5|           1|
+    |icmp_ln283_fu_10766_p2                   |   icmp   |      0|  0|   11|           5|           5|
+    |icmp_ln284_1_fu_10865_p2                 |   icmp   |      0|  0|   29|          52|           1|
+    |icmp_ln284_2_fu_10877_p2                 |   icmp   |      0|  0|   13|          11|           2|
+    |icmp_ln284_3_fu_10883_p2                 |   icmp   |      0|  0|   29|          52|           1|
+    |icmp_ln284_fu_10859_p2                   |   icmp   |      0|  0|   13|          11|           2|
+    |icmp_ln287_fu_10907_p2                   |   icmp   |      0|  0|    9|           3|           3|
+    |icmp_ln288_fu_10950_p2                   |   icmp   |      0|  0|    9|           3|           3|
+    |icmp_ln93_fu_8632_p2                     |   icmp   |      0|  0|    9|           3|           3|
+    |icmp_ln95_fu_8653_p2                     |   icmp   |      0|  0|    9|           3|           3|
+    |ap_block_state26_on_subcall_done         |    or    |      0|  0|    2|           1|           1|
+    |or_ln284_1_fu_10889_p2                   |    or    |      0|  0|    2|           1|           1|
+    |or_ln284_fu_10871_p2                     |    or    |      0|  0|    2|           1|           1|
+    |replica_energy_addr_4181526_fu_9519_p3   |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181527_fu_9647_p3   |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181528_fu_9767_p3   |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181529_fu_9879_p3   |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181530_fu_9983_p3   |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181531_fu_10079_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181532_fu_10167_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181533_fu_10247_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181534_fu_10319_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181535_fu_10383_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181536_fu_10439_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181537_fu_10487_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181538_fu_10527_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181539_fu_10559_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181540_fu_10583_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181541_fu_10599_p3  |  select  |      0|  0|   63|           1|          64|
+    |replica_energy_addr_4181542_fu_10607_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_100_fu_9935_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_101_fu_9943_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_102_fu_9951_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_103_fu_9959_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_104_fu_9967_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_105_fu_9975_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_106_fu_9991_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_107_fu_9999_p3              |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_108_fu_10007_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_109_fu_10015_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_10_fu_9054_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_110_fu_10023_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_111_fu_10031_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_112_fu_10039_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_113_fu_10047_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_114_fu_10055_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_115_fu_10063_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_116_fu_10071_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_117_fu_10087_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_118_fu_10095_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_119_fu_10103_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_11_fu_9066_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_120_fu_10111_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_121_fu_10119_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_122_fu_10127_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_123_fu_10135_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_124_fu_10143_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_125_fu_10151_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_126_fu_10159_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_127_fu_10175_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_128_fu_10183_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_129_fu_10191_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_12_fu_9078_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_130_fu_10199_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_131_fu_10207_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_132_fu_10215_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_133_fu_10223_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_134_fu_10231_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_135_fu_10239_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_136_fu_10255_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_137_fu_10263_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_138_fu_10271_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_139_fu_10279_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_13_fu_9090_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_140_fu_10287_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_141_fu_10295_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_142_fu_10303_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_143_fu_10311_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_144_fu_10327_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_145_fu_10335_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_146_fu_10343_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_147_fu_10351_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_148_fu_10359_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_149_fu_10367_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_14_fu_9102_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_150_fu_10375_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_151_fu_10391_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_152_fu_10399_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_153_fu_10407_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_154_fu_10415_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_155_fu_10423_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_156_fu_10431_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_157_fu_10447_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_158_fu_10455_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_159_fu_10463_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_15_fu_9114_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_160_fu_10471_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_161_fu_10479_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_162_fu_10495_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_163_fu_10503_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_164_fu_10511_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_165_fu_10519_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_166_fu_10535_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_167_fu_10543_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_168_fu_10551_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_169_fu_10567_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_16_fu_9126_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_170_fu_10575_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_171_fu_10591_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_172_fu_10615_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_173_fu_10623_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_174_fu_10631_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_175_fu_10639_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_176_fu_10647_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_177_fu_10655_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_178_fu_10663_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_179_fu_10671_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_17_fu_9138_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_180_fu_10679_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_181_fu_10687_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_182_fu_10695_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_183_fu_10703_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_184_fu_10711_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_185_fu_10719_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_186_fu_10727_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_187_fu_10735_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_188_fu_10743_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_189_fu_10751_p3             |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_18_fu_9145_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_19_fu_9159_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_1_fu_8946_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_20_fu_9173_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_21_fu_9187_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_22_fu_9201_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_23_fu_9215_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_24_fu_9229_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_25_fu_9243_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_26_fu_9257_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_27_fu_9271_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_28_fu_9285_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_29_fu_9299_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_2_fu_8958_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_30_fu_9313_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_31_fu_9327_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_32_fu_9341_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_33_fu_9355_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_34_fu_9369_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_35_fu_9383_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_36_fu_9391_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_37_fu_9399_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_38_fu_9407_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_39_fu_9415_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_3_fu_8970_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_40_fu_9423_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_41_fu_9431_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_42_fu_9439_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_43_fu_9447_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_44_fu_9455_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_45_fu_9463_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_46_fu_9471_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_47_fu_9479_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_48_fu_9487_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_49_fu_9495_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_4_fu_8982_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_50_fu_9503_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_51_fu_9511_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_52_fu_9527_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_53_fu_9535_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_54_fu_9543_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_55_fu_9551_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_56_fu_9559_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_57_fu_9567_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_58_fu_9575_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_59_fu_9583_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_5_fu_8994_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_60_fu_9591_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_61_fu_9599_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_62_fu_9607_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_63_fu_9615_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_64_fu_9623_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_65_fu_9631_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_66_fu_9639_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_67_fu_9655_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_68_fu_9663_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_69_fu_9671_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_6_fu_9006_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_70_fu_9679_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_71_fu_9687_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_72_fu_9695_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_73_fu_9703_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_74_fu_9711_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_75_fu_9719_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_76_fu_9727_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_77_fu_9735_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_78_fu_9743_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_79_fu_9751_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_7_fu_9018_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_80_fu_9759_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_81_fu_9775_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_82_fu_9783_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_83_fu_9791_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_84_fu_9799_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_85_fu_9807_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_86_fu_9815_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_87_fu_9823_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_88_fu_9831_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_89_fu_9839_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_8_fu_9030_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_90_fu_9847_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_91_fu_9855_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_92_fu_9863_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_93_fu_9871_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_94_fu_9887_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_95_fu_9895_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_96_fu_9903_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_97_fu_9911_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_98_fu_9919_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_99_fu_9927_p3               |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_9_fu_9042_p3                |  select  |      0|  0|   63|           1|          64|
+    |select_ln279_fu_8934_p3                  |  select  |      0|  0|   63|           1|          64|
+    +-----------------------------------------+----------+-------+---+-----+------------+------------+
+    |Total                                    |          |      0|  0|13667|         595|       13443|
+    +-----------------------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |                        Name                        | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                           |  341|         77|    1|         77|
+    |ap_phi_mux_phi_ln289_phi_fu_8406_p10                |   33|          6|    1|          6|
+    |best_energy_o                                       |   15|          3|   64|        192|
+    |distance_matrix_0_address0                          |   15|          3|    3|          9|
+    |distance_matrix_0_ce0                               |   15|          3|    1|          3|
+    |distance_matrix_1_address0                          |   15|          3|    3|          9|
+    |distance_matrix_1_ce0                               |   15|          3|    1|          3|
+    |distance_matrix_2_address0                          |   15|          3|    3|          9|
+    |distance_matrix_2_ce0                               |   15|          3|    1|          3|
+    |distance_matrix_3_address0                          |   15|          3|    3|          9|
+    |distance_matrix_3_ce0                               |   15|          3|    1|          3|
+    |distance_matrix_4_address0                          |   15|          3|    3|          9|
+    |distance_matrix_4_ce0                               |   15|          3|    1|          3|
+    |grp_calculate_energy_fu_8584_da_distance_matrix_q0  |  101|         21|   64|       1344|
+    |grp_calculate_energy_fu_8584_da_qubit_matrix_q0     |  101|         21|    1|         21|
+    |grp_execute_replica_fu_8428_da_beta_read            |  101|         21|   64|       1344|
+    |grp_execute_replica_fu_8428_da_distance_matrix_q0   |  101|         21|   64|       1344|
+    |grp_execute_replica_fu_8428_da_distance_matrix_q1   |  101|         21|   64|       1344|
+    |grp_execute_replica_fu_8428_da_qubit_matrix_q0      |  101|         21|    1|         21|
+    |grp_execute_replica_fu_8428_da_qubit_matrix_q1      |  101|         21|    1|         21|
+    |grp_fu_8590_opcode                                  |   15|          3|    2|          6|
+    |grp_fu_8590_p0                                      |   15|          3|   64|        192|
+    |grp_fu_8590_p1                                      |   15|          3|   64|        192|
+    |i2_0_reg_1444                                       |    9|          2|    5|         10|
+    |i3_0_reg_8368                                       |    9|          2|    5|         10|
+    |i4_0_reg_8379                                       |    9|          2|    3|          6|
+    |i_0_i_reg_827                                       |    9|          2|    3|          6|
+    |i_0_reg_851                                         |    9|          2|    5|         10|
+    |iter_0_reg_863                                      |    9|          2|    4|          8|
+    |j_0_i_reg_839                                       |    9|          2|    3|          6|
+    |j_0_reg_8391                                        |    9|          2|    3|          6|
+    |lfsr_V                                              |    9|          2|   32|         64|
+    |phi_ln279_reg_1456                                  |   93|         19|   64|       1216|
+    |replica_0_distance_address0                         |   21|          4|    5|         20|
+    |replica_0_distance_ce0                              |   21|          4|    1|          4|
+    |replica_0_distance_ce1                              |    9|          2|    1|          2|
+    |replica_0_distance_we0                              |    9|          2|    1|          2|
+    |replica_0_energy_0_1_reg_5858                       |    9|          2|   64|        128|
+    |replica_0_energy_0_reg_1064                         |    9|          2|   64|        128|
+    |replica_0_energy_11_reg_2616                        |    9|          2|   64|        128|
+    |replica_0_qubit_ma_address0                         |   33|          6|    5|         30|
+    |replica_0_qubit_ma_ce0                              |   33|          6|    1|          6|
+    |replica_0_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_0_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_0_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_0_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_10_distanc_address0                         |   21|          4|    5|         20|
+    |replica_10_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_10_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_10_distanc_we0                              |    9|          2|    1|          2|
+    |replica_10_energy_111_reg_1996                      |    9|          2|   64|        128|
+    |replica_10_energy_1_reg_5198                        |   15|          3|   64|        192|
+    |replica_10_energy_s_reg_964                         |    9|          2|   64|        128|
+    |replica_10_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_10_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_10_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_10_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_10_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_10_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_11_distanc_address0                         |   21|          4|    5|         20|
+    |replica_11_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_11_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_11_distanc_we0                              |    9|          2|    1|          2|
+    |replica_11_energy_112_reg_1934                      |    9|          2|   64|        128|
+    |replica_11_energy_1_reg_5132                        |   15|          3|   64|        192|
+    |replica_11_energy_s_reg_954                         |    9|          2|   64|        128|
+    |replica_11_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_11_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_11_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_11_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_11_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_11_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_12_distanc_address0                         |   21|          4|    5|         20|
+    |replica_12_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_12_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_12_distanc_we0                              |    9|          2|    1|          2|
+    |replica_12_energy_113_reg_1872                      |    9|          2|   64|        128|
+    |replica_12_energy_1_reg_5066                        |   15|          3|   64|        192|
+    |replica_12_energy_s_reg_944                         |    9|          2|   64|        128|
+    |replica_12_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_12_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_12_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_12_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_12_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_12_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_13_distanc_address0                         |   21|          4|    5|         20|
+    |replica_13_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_13_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_13_distanc_we0                              |    9|          2|    1|          2|
+    |replica_13_energy_114_reg_1810                      |    9|          2|   64|        128|
+    |replica_13_energy_1_reg_5000                        |   15|          3|   64|        192|
+    |replica_13_energy_s_reg_934                         |    9|          2|   64|        128|
+    |replica_13_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_13_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_13_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_13_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_13_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_13_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_14_distanc_address0                         |   21|          4|    5|         20|
+    |replica_14_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_14_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_14_distanc_we0                              |    9|          2|    1|          2|
+    |replica_14_energy_115_reg_1748                      |    9|          2|   64|        128|
+    |replica_14_energy_1_reg_4934                        |   15|          3|   64|        192|
+    |replica_14_energy_s_reg_924                         |    9|          2|   64|        128|
+    |replica_14_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_14_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_14_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_14_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_14_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_14_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_15_distanc_address0                         |   21|          4|    5|         20|
+    |replica_15_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_15_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_15_distanc_we0                              |    9|          2|    1|          2|
+    |replica_15_energy_116_reg_1686                      |    9|          2|   64|        128|
+    |replica_15_energy_1_reg_4868                        |   15|          3|   64|        192|
+    |replica_15_energy_s_reg_914                         |    9|          2|   64|        128|
+    |replica_15_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_15_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_15_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_15_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_15_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_15_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_16_distanc_address0                         |   21|          4|    5|         20|
+    |replica_16_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_16_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_16_distanc_we0                              |    9|          2|    1|          2|
+    |replica_16_energy_117_reg_1624                      |    9|          2|   64|        128|
+    |replica_16_energy_1_reg_4802                        |   15|          3|   64|        192|
+    |replica_16_energy_s_reg_904                         |    9|          2|   64|        128|
+    |replica_16_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_16_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_16_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_16_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_16_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_16_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_17_distanc_address0                         |   21|          4|    5|         20|
+    |replica_17_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_17_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_17_distanc_we0                              |    9|          2|    1|          2|
+    |replica_17_energy_118_reg_1562                      |    9|          2|   64|        128|
+    |replica_17_energy_1_reg_4736                        |   15|          3|   64|        192|
+    |replica_17_energy_s_reg_894                         |    9|          2|   64|        128|
+    |replica_17_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_17_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_17_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_17_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_17_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_17_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_18_distanc_address0                         |   21|          4|    5|         20|
+    |replica_18_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_18_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_18_distanc_we0                              |    9|          2|    1|          2|
+    |replica_18_energy_119_reg_1500                      |    9|          2|   64|        128|
+    |replica_18_energy_1_reg_4670                        |   15|          3|   64|        192|
+    |replica_18_energy_s_reg_884                         |    9|          2|   64|        128|
+    |replica_18_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_18_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_18_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_18_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_18_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_18_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_19_distanc_address0                         |   21|          4|    5|         20|
+    |replica_19_distanc_ce0                              |   21|          4|    1|          4|
+    |replica_19_distanc_ce1                              |    9|          2|    1|          2|
+    |replica_19_distanc_we0                              |    9|          2|    1|          2|
+    |replica_19_energy_1_reg_4604                        |   15|          3|   64|        192|
+    |replica_19_energy_s_reg_874                         |    9|          2|   64|        128|
+    |replica_19_qubit_m_address0                         |   27|          5|    5|         25|
+    |replica_19_qubit_m_ce0                              |   27|          5|    1|          5|
+    |replica_19_qubit_m_ce1                              |    9|          2|    1|          2|
+    |replica_19_qubit_m_d0                               |   15|          3|    1|          3|
+    |replica_19_qubit_m_we0                              |   15|          3|    1|          3|
+    |replica_19_qubit_m_we1                              |    9|          2|    1|          2|
+    |replica_1_distance_address0                         |   21|          4|    5|         20|
+    |replica_1_distance_ce0                              |   21|          4|    1|          4|
+    |replica_1_distance_ce1                              |    9|          2|    1|          2|
+    |replica_1_distance_we0                              |    9|          2|    1|          2|
+    |replica_1_energy_0_1_reg_5792                       |   15|          3|   64|        192|
+    |replica_1_energy_0_reg_1054                         |    9|          2|   64|        128|
+    |replica_1_energy_12_reg_2554                        |    9|          2|   64|        128|
+    |replica_1_qubit_ma_address0                         |   33|          6|    5|         30|
+    |replica_1_qubit_ma_ce0                              |   33|          6|    1|          6|
+    |replica_1_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_1_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_1_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_1_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_2_distance_address0                         |   21|          4|    5|         20|
+    |replica_2_distance_ce0                              |   21|          4|    1|          4|
+    |replica_2_distance_ce1                              |    9|          2|    1|          2|
+    |replica_2_distance_we0                              |    9|          2|    1|          2|
+    |replica_2_energy_0_1_reg_5726                       |   15|          3|   64|        192|
+    |replica_2_energy_0_reg_1044                         |    9|          2|   64|        128|
+    |replica_2_energy_13_reg_2492                        |    9|          2|   64|        128|
+    |replica_2_qubit_ma_address0                         |   33|          6|    5|         30|
+    |replica_2_qubit_ma_ce0                              |   33|          6|    1|          6|
+    |replica_2_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_2_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_2_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_2_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_3_distance_address0                         |   21|          4|    5|         20|
+    |replica_3_distance_ce0                              |   21|          4|    1|          4|
+    |replica_3_distance_ce1                              |    9|          2|    1|          2|
+    |replica_3_distance_we0                              |    9|          2|    1|          2|
+    |replica_3_energy_0_1_reg_5660                       |   15|          3|   64|        192|
+    |replica_3_energy_0_reg_1034                         |    9|          2|   64|        128|
+    |replica_3_energy_14_reg_2430                        |    9|          2|   64|        128|
+    |replica_3_qubit_ma_address0                         |   33|          6|    5|         30|
+    |replica_3_qubit_ma_ce0                              |   33|          6|    1|          6|
+    |replica_3_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_3_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_3_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_3_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_4_distance_address0                         |   21|          4|    5|         20|
+    |replica_4_distance_ce0                              |   21|          4|    1|          4|
+    |replica_4_distance_ce1                              |    9|          2|    1|          2|
+    |replica_4_distance_we0                              |    9|          2|    1|          2|
+    |replica_4_energy_0_1_reg_5594                       |   15|          3|   64|        192|
+    |replica_4_energy_0_reg_1024                         |    9|          2|   64|        128|
+    |replica_4_energy_15_reg_2368                        |    9|          2|   64|        128|
+    |replica_4_qubit_ma_address0                         |   33|          6|    5|         30|
+    |replica_4_qubit_ma_ce0                              |   33|          6|    1|          6|
+    |replica_4_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_4_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_4_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_4_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_5_distance_address0                         |   21|          4|    5|         20|
+    |replica_5_distance_ce0                              |   21|          4|    1|          4|
+    |replica_5_distance_ce1                              |    9|          2|    1|          2|
+    |replica_5_distance_we0                              |    9|          2|    1|          2|
+    |replica_5_energy_0_1_reg_5528                       |   15|          3|   64|        192|
+    |replica_5_energy_0_reg_1014                         |    9|          2|   64|        128|
+    |replica_5_energy_16_reg_2306                        |    9|          2|   64|        128|
+    |replica_5_qubit_ma_address0                         |   27|          5|    5|         25|
+    |replica_5_qubit_ma_ce0                              |   27|          5|    1|          5|
+    |replica_5_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_5_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_5_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_5_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_6_distance_address0                         |   21|          4|    5|         20|
+    |replica_6_distance_ce0                              |   21|          4|    1|          4|
+    |replica_6_distance_ce1                              |    9|          2|    1|          2|
+    |replica_6_distance_we0                              |    9|          2|    1|          2|
+    |replica_6_energy_0_1_reg_5462                       |   15|          3|   64|        192|
+    |replica_6_energy_0_reg_1004                         |    9|          2|   64|        128|
+    |replica_6_energy_17_reg_2244                        |    9|          2|   64|        128|
+    |replica_6_qubit_ma_address0                         |   27|          5|    5|         25|
+    |replica_6_qubit_ma_ce0                              |   27|          5|    1|          5|
+    |replica_6_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_6_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_6_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_6_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_7_distance_address0                         |   21|          4|    5|         20|
+    |replica_7_distance_ce0                              |   21|          4|    1|          4|
+    |replica_7_distance_ce1                              |    9|          2|    1|          2|
+    |replica_7_distance_we0                              |    9|          2|    1|          2|
+    |replica_7_energy_0_1_reg_5396                       |   15|          3|   64|        192|
+    |replica_7_energy_0_reg_994                          |    9|          2|   64|        128|
+    |replica_7_energy_18_reg_2182                        |    9|          2|   64|        128|
+    |replica_7_qubit_ma_address0                         |   27|          5|    5|         25|
+    |replica_7_qubit_ma_ce0                              |   27|          5|    1|          5|
+    |replica_7_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_7_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_7_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_7_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_8_distance_address0                         |   21|          4|    5|         20|
+    |replica_8_distance_ce0                              |   21|          4|    1|          4|
+    |replica_8_distance_ce1                              |    9|          2|    1|          2|
+    |replica_8_distance_we0                              |    9|          2|    1|          2|
+    |replica_8_energy_0_1_reg_5330                       |   15|          3|   64|        192|
+    |replica_8_energy_0_reg_984                          |    9|          2|   64|        128|
+    |replica_8_energy_19_reg_2120                        |    9|          2|   64|        128|
+    |replica_8_qubit_ma_address0                         |   27|          5|    5|         25|
+    |replica_8_qubit_ma_ce0                              |   27|          5|    1|          5|
+    |replica_8_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_8_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_8_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_8_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_9_distance_address0                         |   21|          4|    5|         20|
+    |replica_9_distance_ce0                              |   21|          4|    1|          4|
+    |replica_9_distance_ce1                              |    9|          2|    1|          2|
+    |replica_9_distance_we0                              |    9|          2|    1|          2|
+    |replica_9_energy_0_1_reg_5264                       |   15|          3|   64|        192|
+    |replica_9_energy_0_reg_974                          |    9|          2|   64|        128|
+    |replica_9_energy_110_reg_2058                       |    9|          2|   64|        128|
+    |replica_9_qubit_ma_address0                         |   27|          5|    5|         25|
+    |replica_9_qubit_ma_ce0                              |   27|          5|    1|          5|
+    |replica_9_qubit_ma_ce1                              |    9|          2|    1|          2|
+    |replica_9_qubit_ma_d0                               |   15|          3|    1|          3|
+    |replica_9_qubit_ma_we0                              |   15|          3|    1|          3|
+    |replica_9_qubit_ma_we1                              |    9|          2|    1|          2|
+    |replica_energy_addr_10_reg_6585                     |   15|          3|   64|        192|
+    |replica_energy_addr_11_reg_6651                     |   15|          3|   64|        192|
+    |replica_energy_addr_12_reg_6717                     |   15|          3|   64|        192|
+    |replica_energy_addr_13_reg_6783                     |   15|          3|   64|        192|
+    |replica_energy_addr_14_reg_6849                     |   15|          3|   64|        192|
+    |replica_energy_addr_15_reg_6915                     |   15|          3|   64|        192|
+    |replica_energy_addr_16_reg_6981                     |   15|          3|   64|        192|
+    |replica_energy_addr_17_reg_7047                     |    9|          2|   64|        128|
+    |replica_energy_addr_18_reg_7114                     |   15|          3|   64|        192|
+    |replica_energy_addr_19_reg_7180                     |   15|          3|   64|        192|
+    |replica_energy_addr_1_reg_5991                      |   15|          3|   64|        192|
+    |replica_energy_addr_20_reg_7246                     |   15|          3|   64|        192|
+    |replica_energy_addr_21_reg_7312                     |   15|          3|   64|        192|
+    |replica_energy_addr_22_reg_7378                     |   15|          3|   64|        192|
+    |replica_energy_addr_23_reg_7444                     |   15|          3|   64|        192|
+    |replica_energy_addr_24_reg_7510                     |   15|          3|   64|        192|
+    |replica_energy_addr_25_reg_7576                     |   15|          3|   64|        192|
+    |replica_energy_addr_26_reg_7642                     |   15|          3|   64|        192|
+    |replica_energy_addr_27_reg_7708                     |   15|          3|   64|        192|
+    |replica_energy_addr_28_reg_7774                     |   15|          3|   64|        192|
+    |replica_energy_addr_29_reg_7840                     |   15|          3|   64|        192|
+    |replica_energy_addr_2_reg_6057                      |   15|          3|   64|        192|
+    |replica_energy_addr_30_reg_7906                     |   15|          3|   64|        192|
+    |replica_energy_addr_3171566238_reg_3732             |    9|          2|   64|        128|
+    |replica_energy_addr_3171566_reg_1244                |    9|          2|   64|        128|
+    |replica_energy_addr_3171567243_reg_3670             |    9|          2|   64|        128|
+    |replica_energy_addr_3171567_reg_1234                |    9|          2|   64|        128|
+    |replica_energy_addr_3171568248_reg_3608             |    9|          2|   64|        128|
+    |replica_energy_addr_3171568_reg_1224                |    9|          2|   64|        128|
+    |replica_energy_addr_3171569253_reg_3546             |    9|          2|   64|        128|
+    |replica_energy_addr_3171569_reg_1214                |    9|          2|   64|        128|
+    |replica_energy_addr_3171570258_reg_3484             |    9|          2|   64|        128|
+    |replica_energy_addr_3171570_reg_1204                |    9|          2|   64|        128|
+    |replica_energy_addr_3171571263_reg_3422             |    9|          2|   64|        128|
+    |replica_energy_addr_3171571_reg_1194                |    9|          2|   64|        128|
+    |replica_energy_addr_3171572268_reg_3360             |    9|          2|   64|        128|
+    |replica_energy_addr_3171572_reg_1184                |    9|          2|   64|        128|
+    |replica_energy_addr_3171573273_reg_3298             |    9|          2|   64|        128|
+    |replica_energy_addr_3171573_reg_1174                |    9|          2|   64|        128|
+    |replica_energy_addr_3171574278_reg_3236             |    9|          2|   64|        128|
+    |replica_energy_addr_3171574_reg_1164                |    9|          2|   64|        128|
+    |replica_energy_addr_3171575283_reg_3174             |    9|          2|   64|        128|
+    |replica_energy_addr_3171575_reg_1154                |    9|          2|   64|        128|
+    |replica_energy_addr_3171576288_reg_3112             |    9|          2|   64|        128|
+    |replica_energy_addr_3171576_reg_1144                |    9|          2|   64|        128|
+    |replica_energy_addr_3171577293_reg_3050             |    9|          2|   64|        128|
+    |replica_energy_addr_3171577_reg_1134                |    9|          2|   64|        128|
+    |replica_energy_addr_3171578298_reg_2988             |    9|          2|   64|        128|
+    |replica_energy_addr_3171578_reg_1124                |    9|          2|   64|        128|
+    |replica_energy_addr_3171579303_reg_2926             |    9|          2|   64|        128|
+    |replica_energy_addr_3171579_reg_1114                |    9|          2|   64|        128|
+    |replica_energy_addr_3171580308_reg_2864             |    9|          2|   64|        128|
+    |replica_energy_addr_3171580_reg_1104                |    9|          2|   64|        128|
+    |replica_energy_addr_3171581313_reg_2802             |    9|          2|   64|        128|
+    |replica_energy_addr_3171581_reg_1094                |    9|          2|   64|        128|
+    |replica_energy_addr_3171582318_reg_2740             |    9|          2|   64|        128|
+    |replica_energy_addr_3171582_reg_1084                |    9|          2|   64|        128|
+    |replica_energy_addr_3171583323_reg_2678             |    9|          2|   64|        128|
+    |replica_energy_addr_3171583_reg_1074                |    9|          2|   64|        128|
+    |replica_energy_addr_3171584127_reg_4542             |    9|          2|   64|        128|
+    |replica_energy_addr_31_reg_7972                     |   15|          3|   64|        192|
+    |replica_energy_addr_32_reg_8038                     |   15|          3|   64|        192|
+    |replica_energy_addr_33_reg_8104                     |   15|          3|   64|        192|
+    |replica_energy_addr_34_reg_8170                     |   15|          3|   64|        192|
+    |replica_energy_addr_35_reg_8236                     |   15|          3|   64|        192|
+    |replica_energy_addr_36_reg_8302                     |   15|          3|   64|        192|
+    |replica_energy_addr_3_reg_6123                      |   15|          3|   64|        192|
+    |replica_energy_addr_4181526135_reg_1414             |    9|          2|   64|        128|
+    |replica_energy_addr_4181526138_reg_4498             |    9|          2|   64|        128|
+    |replica_energy_addr_4181527141_reg_1404             |    9|          2|   64|        128|
+    |replica_energy_addr_4181527144_reg_4454             |    9|          2|   64|        128|
+    |replica_energy_addr_4181528147_reg_1394             |    9|          2|   64|        128|
+    |replica_energy_addr_4181528150_reg_4410             |    9|          2|   64|        128|
+    |replica_energy_addr_4181529153_reg_1384             |    9|          2|   64|        128|
+    |replica_energy_addr_4181529156_reg_4366             |    9|          2|   64|        128|
+    |replica_energy_addr_4181530159_reg_1374             |    9|          2|   64|        128|
+    |replica_energy_addr_4181530162_reg_4322             |    9|          2|   64|        128|
+    |replica_energy_addr_4181531165_reg_1364             |    9|          2|   64|        128|
+    |replica_energy_addr_4181531168_reg_4278             |    9|          2|   64|        128|
+    |replica_energy_addr_4181532171_reg_1354             |    9|          2|   64|        128|
+    |replica_energy_addr_4181532174_reg_4234             |    9|          2|   64|        128|
+    |replica_energy_addr_4181533177_reg_1344             |    9|          2|   64|        128|
+    |replica_energy_addr_4181533180_reg_4190             |    9|          2|   64|        128|
+    |replica_energy_addr_4181534183_reg_1334             |    9|          2|   64|        128|
+    |replica_energy_addr_4181534186_reg_4146             |    9|          2|   64|        128|
+    |replica_energy_addr_4181535189_reg_1324             |    9|          2|   64|        128|
+    |replica_energy_addr_4181535192_reg_4102             |    9|          2|   64|        128|
+    |replica_energy_addr_4181536195_reg_1314             |    9|          2|   64|        128|
+    |replica_energy_addr_4181536198_reg_4058             |    9|          2|   64|        128|
+    |replica_energy_addr_4181537201_reg_1304             |    9|          2|   64|        128|
+    |replica_energy_addr_4181537204_reg_4014             |    9|          2|   64|        128|
+    |replica_energy_addr_4181538207_reg_1294             |    9|          2|   64|        128|
+    |replica_energy_addr_4181538210_reg_3970             |    9|          2|   64|        128|
+    |replica_energy_addr_4181539213_reg_1284             |    9|          2|   64|        128|
+    |replica_energy_addr_4181539216_reg_3926             |    9|          2|   64|        128|
+    |replica_energy_addr_4181540219_reg_1274             |    9|          2|   64|        128|
+    |replica_energy_addr_4181540222_reg_3882             |    9|          2|   64|        128|
+    |replica_energy_addr_4181541225_reg_1264             |    9|          2|   64|        128|
+    |replica_energy_addr_4181541228_reg_3838             |    9|          2|   64|        128|
+    |replica_energy_addr_4181542231_reg_1254             |    9|          2|   64|        128|
+    |replica_energy_addr_4181542234_reg_3794             |    9|          2|   64|        128|
+    |replica_energy_addr_4181543_reg_1434                |    9|          2|   64|        128|
+    |replica_energy_addr_4181544_reg_1424                |    9|          2|   64|        128|
+    |replica_energy_addr_4_reg_6189                      |   15|          3|   64|        192|
+    |replica_energy_addr_5_reg_6255                      |   15|          3|   64|        192|
+    |replica_energy_addr_6_reg_6321                      |   15|          3|   64|        192|
+    |replica_energy_addr_7_reg_6387                      |   15|          3|   64|        192|
+    |replica_energy_addr_8_reg_6453                      |   15|          3|   64|        192|
+    |replica_energy_addr_9_reg_6519                      |   15|          3|   64|        192|
+    |replica_energy_addr_reg_5925                        |   15|          3|   64|        192|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                               | 6616|       1352|11778|      34048|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |add_ln289_reg_12085                        |    6|   0|    6|          0|
+    |and_ln284_1_reg_12073                      |    1|   0|    1|          0|
+    |ap_CS_fsm                                  |   76|   0|   76|          0|
+    |best_qubit_matrix_0_1_reg_12090            |    3|   0|    3|          0|
+    |best_qubit_matrix_1_1_reg_12095            |    3|   0|    3|          0|
+    |best_qubit_matrix_2_1_reg_12100            |    3|   0|    3|          0|
+    |best_qubit_matrix_3_1_reg_12105            |    3|   0|    3|          0|
+    |best_qubit_matrix_4_1_reg_12110            |    3|   0|    3|          0|
+    |distance_matrix_0_a_reg_10988              |    3|   0|    3|          0|
+    |distance_matrix_1_a_reg_10993              |    3|   0|    3|          0|
+    |distance_matrix_2_a_reg_10998              |    3|   0|    3|          0|
+    |distance_matrix_3_a_reg_11003              |    3|   0|    3|          0|
+    |distance_matrix_4_a_reg_11008              |    3|   0|    3|          0|
+    |grp_calculate_energy_fu_8584_ap_start_reg  |    1|   0|    1|          0|
+    |grp_execute_replica_fu_8428_ap_start_reg   |    1|   0|    1|          0|
+    |grp_replica_exchange_fu_8437_ap_start_reg  |    1|   0|    1|          0|
+    |grp_reset_fu_8471_ap_start_reg             |    1|   0|    1|          0|
+    |i2_0_reg_1444                              |    5|   0|    5|          0|
+    |i3_0_reg_8368                              |    5|   0|    5|          0|
+    |i4_0_reg_8379                              |    3|   0|    3|          0|
+    |i_0_i_reg_827                              |    3|   0|    3|          0|
+    |i_0_reg_851                                |    5|   0|    5|          0|
+    |i_2_reg_10983                              |    3|   0|    3|          0|
+    |i_5_reg_11520                              |    5|   0|    5|          0|
+    |i_6_reg_12080                              |    3|   0|    3|          0|
+    |i_7_reg_12061                              |    5|   0|    5|          0|
+    |i_reg_11312                                |    5|   0|    5|          0|
+    |iter_0_reg_863                             |    4|   0|    4|          0|
+    |iter_reg_11370                             |    4|   0|    4|          0|
+    |j_0_i_reg_839                              |    3|   0|    3|          0|
+    |j_0_reg_8391                               |    3|   0|    3|          0|
+    |j_1_reg_12118                              |    3|   0|    3|          0|
+    |j_reg_11136                                |    3|   0|    3|          0|
+    |lfsr_V                                     |   32|   0|   32|          0|
+    |nodeArray_0_x_read_reg_11317               |   64|   0|   64|          0|
+    |nodeArray_0_y_read_reg_11342               |   64|   0|   64|          0|
+    |nodeArray_1_x_read_reg_11322               |   64|   0|   64|          0|
+    |nodeArray_1_y_read_reg_11347               |   64|   0|   64|          0|
+    |nodeArray_2_x_read_reg_11327               |   64|   0|   64|          0|
+    |nodeArray_2_y_read_reg_11352               |   64|   0|   64|          0|
+    |nodeArray_3_x_read_reg_11332               |   64|   0|   64|          0|
+    |nodeArray_3_y_read_reg_11357               |   64|   0|   64|          0|
+    |nodeArray_4_x_read_reg_11337               |   64|   0|   64|          0|
+    |nodeArray_4_y_read_reg_11362               |   64|   0|   64|          0|
+    |phi_ln279_reg_1456                         |   64|   0|   64|          0|
+    |reg_8625                                   |   64|   0|   64|          0|
+    |replica_0_energy_0_1_reg_5858              |   64|   0|   64|          0|
+    |replica_0_energy_0_reg_1064                |   64|   0|   64|          0|
+    |replica_0_energy_11_reg_2616               |   64|   0|   64|          0|
+    |replica_0_energy_reg_11375                 |   64|   0|   64|          0|
+    |replica_10_energy_111_reg_1996             |   64|   0|   64|          0|
+    |replica_10_energy_1_reg_5198               |   64|   0|   64|          0|
+    |replica_10_energy_reg_11444                |   64|   0|   64|          0|
+    |replica_10_energy_s_reg_964                |   64|   0|   64|          0|
+    |replica_11_energy_112_reg_1934             |   64|   0|   64|          0|
+    |replica_11_energy_1_reg_5132               |   64|   0|   64|          0|
+    |replica_11_energy_reg_11451                |   64|   0|   64|          0|
+    |replica_11_energy_s_reg_954                |   64|   0|   64|          0|
+    |replica_12_energy_113_reg_1872             |   64|   0|   64|          0|
+    |replica_12_energy_1_reg_5066               |   64|   0|   64|          0|
+    |replica_12_energy_reg_11458                |   64|   0|   64|          0|
+    |replica_12_energy_s_reg_944                |   64|   0|   64|          0|
+    |replica_13_energy_114_reg_1810             |   64|   0|   64|          0|
+    |replica_13_energy_1_reg_5000               |   64|   0|   64|          0|
+    |replica_13_energy_reg_11465                |   64|   0|   64|          0|
+    |replica_13_energy_s_reg_934                |   64|   0|   64|          0|
+    |replica_14_energy_115_reg_1748             |   64|   0|   64|          0|
+    |replica_14_energy_1_reg_4934               |   64|   0|   64|          0|
+    |replica_14_energy_reg_11472                |   64|   0|   64|          0|
+    |replica_14_energy_s_reg_924                |   64|   0|   64|          0|
+    |replica_15_energy_116_reg_1686             |   64|   0|   64|          0|
+    |replica_15_energy_1_reg_4868               |   64|   0|   64|          0|
+    |replica_15_energy_reg_11479                |   64|   0|   64|          0|
+    |replica_15_energy_s_reg_914                |   64|   0|   64|          0|
+    |replica_16_energy_117_reg_1624             |   64|   0|   64|          0|
+    |replica_16_energy_1_reg_4802               |   64|   0|   64|          0|
+    |replica_16_energy_reg_11486                |   64|   0|   64|          0|
+    |replica_16_energy_s_reg_904                |   64|   0|   64|          0|
+    |replica_17_energy_118_reg_1562             |   64|   0|   64|          0|
+    |replica_17_energy_1_reg_4736               |   64|   0|   64|          0|
+    |replica_17_energy_reg_11493                |   64|   0|   64|          0|
+    |replica_17_energy_s_reg_894                |   64|   0|   64|          0|
+    |replica_18_energy_119_reg_1500             |   64|   0|   64|          0|
+    |replica_18_energy_1_reg_4670               |   64|   0|   64|          0|
+    |replica_18_energy_reg_11505                |   64|   0|   64|          0|
+    |replica_18_energy_s_reg_884                |   64|   0|   64|          0|
+    |replica_19_beta_10_1_reg_11246             |   64|   0|   64|          0|
+    |replica_19_beta_10_fu_538                  |   64|   0|   64|          0|
+    |replica_19_beta_11_1_reg_11253             |   64|   0|   64|          0|
+    |replica_19_beta_11_fu_542                  |   64|   0|   64|          0|
+    |replica_19_beta_12_1_reg_11260             |   64|   0|   64|          0|
+    |replica_19_beta_12_fu_546                  |   64|   0|   64|          0|
+    |replica_19_beta_13_1_reg_11267             |   64|   0|   64|          0|
+    |replica_19_beta_13_fu_550                  |   64|   0|   64|          0|
+    |replica_19_beta_14_1_reg_11274             |   64|   0|   64|          0|
+    |replica_19_beta_14_fu_554                  |   64|   0|   64|          0|
+    |replica_19_beta_15_1_reg_11281             |   64|   0|   64|          0|
+    |replica_19_beta_15_fu_558                  |   64|   0|   64|          0|
+    |replica_19_beta_16_1_reg_11288             |   64|   0|   64|          0|
+    |replica_19_beta_16_fu_562                  |   64|   0|   64|          0|
+    |replica_19_beta_17_1_reg_11295             |   64|   0|   64|          0|
+    |replica_19_beta_17_fu_566                  |   64|   0|   64|          0|
+    |replica_19_beta_18_1_reg_11302             |   64|   0|   64|          0|
+    |replica_19_beta_18_fu_570                  |   64|   0|   64|          0|
+    |replica_19_beta_19_1_reg_11500             |   64|   0|   64|          0|
+    |replica_19_beta_19_fu_574                  |   64|   0|   64|          0|
+    |replica_19_beta_1_fu_502                   |   64|   0|   64|          0|
+    |replica_19_beta_1_s_reg_11183              |   64|   0|   64|          0|
+    |replica_19_beta_2_fu_506                   |   64|   0|   64|          0|
+    |replica_19_beta_2_s_reg_11190              |   64|   0|   64|          0|
+    |replica_19_beta_3_fu_510                   |   64|   0|   64|          0|
+    |replica_19_beta_3_s_reg_11197              |   64|   0|   64|          0|
+    |replica_19_beta_4_fu_514                   |   64|   0|   64|          0|
+    |replica_19_beta_4_s_reg_11204              |   64|   0|   64|          0|
+    |replica_19_beta_5_fu_518                   |   64|   0|   64|          0|
+    |replica_19_beta_5_s_reg_11211              |   64|   0|   64|          0|
+    |replica_19_beta_6_fu_522                   |   64|   0|   64|          0|
+    |replica_19_beta_6_s_reg_11218              |   64|   0|   64|          0|
+    |replica_19_beta_7_fu_526                   |   64|   0|   64|          0|
+    |replica_19_beta_7_s_reg_11225              |   64|   0|   64|          0|
+    |replica_19_beta_8_fu_530                   |   64|   0|   64|          0|
+    |replica_19_beta_8_s_reg_11232              |   64|   0|   64|          0|
+    |replica_19_beta_9_fu_534                   |   64|   0|   64|          0|
+    |replica_19_beta_9_s_reg_11239              |   64|   0|   64|          0|
+    |replica_19_beta_fu_498                     |   64|   0|   64|          0|
+    |replica_19_beta_lo_reg_11177               |   64|   0|   64|          0|
+    |replica_19_energy_1_reg_4604               |   64|   0|   64|          0|
+    |replica_19_energy_reg_11511                |   64|   0|   64|          0|
+    |replica_19_energy_s_reg_874                |   64|   0|   64|          0|
+    |replica_1_energy_0_1_reg_5792              |   64|   0|   64|          0|
+    |replica_1_energy_0_reg_1054                |   64|   0|   64|          0|
+    |replica_1_energy_12_reg_2554               |   64|   0|   64|          0|
+    |replica_1_energy_reg_11381                 |   64|   0|   64|          0|
+    |replica_2_energy_0_1_reg_5726              |   64|   0|   64|          0|
+    |replica_2_energy_0_reg_1044                |   64|   0|   64|          0|
+    |replica_2_energy_13_reg_2492               |   64|   0|   64|          0|
+    |replica_2_energy_reg_11388                 |   64|   0|   64|          0|
+    |replica_3_energy_0_1_reg_5660              |   64|   0|   64|          0|
+    |replica_3_energy_0_reg_1034                |   64|   0|   64|          0|
+    |replica_3_energy_14_reg_2430               |   64|   0|   64|          0|
+    |replica_3_energy_reg_11395                 |   64|   0|   64|          0|
+    |replica_4_energy_0_1_reg_5594              |   64|   0|   64|          0|
+    |replica_4_energy_0_reg_1024                |   64|   0|   64|          0|
+    |replica_4_energy_15_reg_2368               |   64|   0|   64|          0|
+    |replica_4_energy_reg_11402                 |   64|   0|   64|          0|
+    |replica_5_energy_0_1_reg_5528              |   64|   0|   64|          0|
+    |replica_5_energy_0_reg_1014                |   64|   0|   64|          0|
+    |replica_5_energy_16_reg_2306               |   64|   0|   64|          0|
+    |replica_5_energy_reg_11409                 |   64|   0|   64|          0|
+    |replica_6_energy_0_1_reg_5462              |   64|   0|   64|          0|
+    |replica_6_energy_0_reg_1004                |   64|   0|   64|          0|
+    |replica_6_energy_17_reg_2244               |   64|   0|   64|          0|
+    |replica_6_energy_reg_11416                 |   64|   0|   64|          0|
+    |replica_7_energy_0_1_reg_5396              |   64|   0|   64|          0|
+    |replica_7_energy_0_reg_994                 |   64|   0|   64|          0|
+    |replica_7_energy_18_reg_2182               |   64|   0|   64|          0|
+    |replica_7_energy_reg_11423                 |   64|   0|   64|          0|
+    |replica_8_energy_0_1_reg_5330              |   64|   0|   64|          0|
+    |replica_8_energy_0_reg_984                 |   64|   0|   64|          0|
+    |replica_8_energy_19_reg_2120               |   64|   0|   64|          0|
+    |replica_8_energy_reg_11430                 |   64|   0|   64|          0|
+    |replica_9_energy_0_1_reg_5264              |   64|   0|   64|          0|
+    |replica_9_energy_0_reg_974                 |   64|   0|   64|          0|
+    |replica_9_energy_110_reg_2058              |   64|   0|   64|          0|
+    |replica_9_energy_reg_11437                 |   64|   0|   64|          0|
+    |replica_energy_addr_10_reg_6585            |   64|   0|   64|          0|
+    |replica_energy_addr_11_reg_6651            |   64|   0|   64|          0|
+    |replica_energy_addr_12_reg_6717            |   64|   0|   64|          0|
+    |replica_energy_addr_13_reg_6783            |   64|   0|   64|          0|
+    |replica_energy_addr_14_reg_6849            |   64|   0|   64|          0|
+    |replica_energy_addr_15_reg_6915            |   64|   0|   64|          0|
+    |replica_energy_addr_16_reg_6981            |   64|   0|   64|          0|
+    |replica_energy_addr_17_reg_7047            |   64|   0|   64|          0|
+    |replica_energy_addr_18_reg_7114            |   64|   0|   64|          0|
+    |replica_energy_addr_19_reg_7180            |   64|   0|   64|          0|
+    |replica_energy_addr_1_reg_5991             |   64|   0|   64|          0|
+    |replica_energy_addr_20_reg_7246            |   64|   0|   64|          0|
+    |replica_energy_addr_21_reg_7312            |   64|   0|   64|          0|
+    |replica_energy_addr_22_reg_7378            |   64|   0|   64|          0|
+    |replica_energy_addr_23_reg_7444            |   64|   0|   64|          0|
+    |replica_energy_addr_24_reg_7510            |   64|   0|   64|          0|
+    |replica_energy_addr_25_reg_7576            |   64|   0|   64|          0|
+    |replica_energy_addr_26_reg_7642            |   64|   0|   64|          0|
+    |replica_energy_addr_27_reg_7708            |   64|   0|   64|          0|
+    |replica_energy_addr_28_reg_7774            |   64|   0|   64|          0|
+    |replica_energy_addr_29_reg_7840            |   64|   0|   64|          0|
+    |replica_energy_addr_2_reg_6057             |   64|   0|   64|          0|
+    |replica_energy_addr_30_reg_7906            |   64|   0|   64|          0|
+    |replica_energy_addr_3171566238_reg_3732    |   64|   0|   64|          0|
+    |replica_energy_addr_3171566_reg_1244       |   64|   0|   64|          0|
+    |replica_energy_addr_3171567243_reg_3670    |   64|   0|   64|          0|
+    |replica_energy_addr_3171567_reg_1234       |   64|   0|   64|          0|
+    |replica_energy_addr_3171568248_reg_3608    |   64|   0|   64|          0|
+    |replica_energy_addr_3171568_reg_1224       |   64|   0|   64|          0|
+    |replica_energy_addr_3171569253_reg_3546    |   64|   0|   64|          0|
+    |replica_energy_addr_3171569_reg_1214       |   64|   0|   64|          0|
+    |replica_energy_addr_3171570258_reg_3484    |   64|   0|   64|          0|
+    |replica_energy_addr_3171570_reg_1204       |   64|   0|   64|          0|
+    |replica_energy_addr_3171571263_reg_3422    |   64|   0|   64|          0|
+    |replica_energy_addr_3171571_reg_1194       |   64|   0|   64|          0|
+    |replica_energy_addr_3171572268_reg_3360    |   64|   0|   64|          0|
+    |replica_energy_addr_3171572_reg_1184       |   64|   0|   64|          0|
+    |replica_energy_addr_3171573273_reg_3298    |   64|   0|   64|          0|
+    |replica_energy_addr_3171573_reg_1174       |   64|   0|   64|          0|
+    |replica_energy_addr_3171574278_reg_3236    |   64|   0|   64|          0|
+    |replica_energy_addr_3171574_reg_1164       |   64|   0|   64|          0|
+    |replica_energy_addr_3171575283_reg_3174    |   64|   0|   64|          0|
+    |replica_energy_addr_3171575_reg_1154       |   64|   0|   64|          0|
+    |replica_energy_addr_3171576288_reg_3112    |   64|   0|   64|          0|
+    |replica_energy_addr_3171576_reg_1144       |   64|   0|   64|          0|
+    |replica_energy_addr_3171577293_reg_3050    |   64|   0|   64|          0|
+    |replica_energy_addr_3171577_reg_1134       |   64|   0|   64|          0|
+    |replica_energy_addr_3171578298_reg_2988    |   64|   0|   64|          0|
+    |replica_energy_addr_3171578_reg_1124       |   64|   0|   64|          0|
+    |replica_energy_addr_3171579303_reg_2926    |   64|   0|   64|          0|
+    |replica_energy_addr_3171579_reg_1114       |   64|   0|   64|          0|
+    |replica_energy_addr_3171580308_reg_2864    |   64|   0|   64|          0|
+    |replica_energy_addr_3171580_reg_1104       |   64|   0|   64|          0|
+    |replica_energy_addr_3171581313_reg_2802    |   64|   0|   64|          0|
+    |replica_energy_addr_3171581_reg_1094       |   64|   0|   64|          0|
+    |replica_energy_addr_3171582318_reg_2740    |   64|   0|   64|          0|
+    |replica_energy_addr_3171582_reg_1084       |   64|   0|   64|          0|
+    |replica_energy_addr_3171583323_reg_2678    |   64|   0|   64|          0|
+    |replica_energy_addr_3171583_reg_1074       |   64|   0|   64|          0|
+    |replica_energy_addr_3171584127_reg_4542    |   64|   0|   64|          0|
+    |replica_energy_addr_31_reg_7972            |   64|   0|   64|          0|
+    |replica_energy_addr_32_reg_8038            |   64|   0|   64|          0|
+    |replica_energy_addr_33_reg_8104            |   64|   0|   64|          0|
+    |replica_energy_addr_34_reg_8170            |   64|   0|   64|          0|
+    |replica_energy_addr_35_reg_8236            |   64|   0|   64|          0|
+    |replica_energy_addr_36_reg_8302            |   64|   0|   64|          0|
+    |replica_energy_addr_3_reg_6123             |   64|   0|   64|          0|
+    |replica_energy_addr_4181526135_reg_1414    |   64|   0|   64|          0|
+    |replica_energy_addr_4181526138_reg_4498    |   64|   0|   64|          0|
+    |replica_energy_addr_4181526_reg_11556      |   64|   0|   64|          0|
+    |replica_energy_addr_4181527141_reg_1404    |   64|   0|   64|          0|
+    |replica_energy_addr_4181527144_reg_4454    |   64|   0|   64|          0|
+    |replica_energy_addr_4181527_reg_11578      |   64|   0|   64|          0|
+    |replica_energy_addr_4181528147_reg_1394    |   64|   0|   64|          0|
+    |replica_energy_addr_4181528150_reg_4410    |   64|   0|   64|          0|
+    |replica_energy_addr_4181528_reg_11600      |   64|   0|   64|          0|
+    |replica_energy_addr_4181529153_reg_1384    |   64|   0|   64|          0|
+    |replica_energy_addr_4181529156_reg_4366    |   64|   0|   64|          0|
+    |replica_energy_addr_4181529_reg_11622      |   64|   0|   64|          0|
+    |replica_energy_addr_4181530159_reg_1374    |   64|   0|   64|          0|
+    |replica_energy_addr_4181530162_reg_4322    |   64|   0|   64|          0|
+    |replica_energy_addr_4181530_reg_11644      |   64|   0|   64|          0|
+    |replica_energy_addr_4181531165_reg_1364    |   64|   0|   64|          0|
+    |replica_energy_addr_4181531168_reg_4278    |   64|   0|   64|          0|
+    |replica_energy_addr_4181531_reg_11666      |   64|   0|   64|          0|
+    |replica_energy_addr_4181532171_reg_1354    |   64|   0|   64|          0|
+    |replica_energy_addr_4181532174_reg_4234    |   64|   0|   64|          0|
+    |replica_energy_addr_4181532_reg_11688      |   64|   0|   64|          0|
+    |replica_energy_addr_4181533177_reg_1344    |   64|   0|   64|          0|
+    |replica_energy_addr_4181533180_reg_4190    |   64|   0|   64|          0|
+    |replica_energy_addr_4181533_reg_11710      |   64|   0|   64|          0|
+    |replica_energy_addr_4181534183_reg_1334    |   64|   0|   64|          0|
+    |replica_energy_addr_4181534186_reg_4146    |   64|   0|   64|          0|
+    |replica_energy_addr_4181534_reg_11732      |   64|   0|   64|          0|
+    |replica_energy_addr_4181535189_reg_1324    |   64|   0|   64|          0|
+    |replica_energy_addr_4181535192_reg_4102    |   64|   0|   64|          0|
+    |replica_energy_addr_4181535_reg_11754      |   64|   0|   64|          0|
+    |replica_energy_addr_4181536195_reg_1314    |   64|   0|   64|          0|
+    |replica_energy_addr_4181536198_reg_4058    |   64|   0|   64|          0|
+    |replica_energy_addr_4181536_reg_11776      |   64|   0|   64|          0|
+    |replica_energy_addr_4181537201_reg_1304    |   64|   0|   64|          0|
+    |replica_energy_addr_4181537204_reg_4014    |   64|   0|   64|          0|
+    |replica_energy_addr_4181537_reg_11798      |   64|   0|   64|          0|
+    |replica_energy_addr_4181538207_reg_1294    |   64|   0|   64|          0|
+    |replica_energy_addr_4181538210_reg_3970    |   64|   0|   64|          0|
+    |replica_energy_addr_4181538_reg_11820      |   64|   0|   64|          0|
+    |replica_energy_addr_4181539213_reg_1284    |   64|   0|   64|          0|
+    |replica_energy_addr_4181539216_reg_3926    |   64|   0|   64|          0|
+    |replica_energy_addr_4181539_reg_11842      |   64|   0|   64|          0|
+    |replica_energy_addr_4181540219_reg_1274    |   64|   0|   64|          0|
+    |replica_energy_addr_4181540222_reg_3882    |   64|   0|   64|          0|
+    |replica_energy_addr_4181540_reg_11864      |   64|   0|   64|          0|
+    |replica_energy_addr_4181541225_reg_1264    |   64|   0|   64|          0|
+    |replica_energy_addr_4181541228_reg_3838    |   64|   0|   64|          0|
+    |replica_energy_addr_4181541_reg_11886      |   64|   0|   64|          0|
+    |replica_energy_addr_4181542231_reg_1254    |   64|   0|   64|          0|
+    |replica_energy_addr_4181542234_reg_3794    |   64|   0|   64|          0|
+    |replica_energy_addr_4181542_reg_11908      |   64|   0|   64|          0|
+    |replica_energy_addr_4181543_reg_1434       |   64|   0|   64|          0|
+    |replica_energy_addr_4181544_reg_1424       |   64|   0|   64|          0|
+    |replica_energy_addr_4_reg_6189             |   64|   0|   64|          0|
+    |replica_energy_addr_5_reg_6255             |   64|   0|   64|          0|
+    |replica_energy_addr_6_reg_6321             |   64|   0|   64|          0|
+    |replica_energy_addr_7_reg_6387             |   64|   0|   64|          0|
+    |replica_energy_addr_8_reg_6453             |   64|   0|   64|          0|
+    |replica_energy_addr_9_reg_6519             |   64|   0|   64|          0|
+    |replica_energy_addr_reg_5925               |   64|   0|   64|          0|
+    |select_ln279_17_reg_11546                  |   64|   0|   64|          0|
+    |select_ln279_189_reg_11930                 |   64|   0|   64|          0|
+    |select_ln279_35_reg_11551                  |   64|   0|   64|          0|
+    |tmp_138_reg_12066                          |   64|   0|   64|          0|
+    |tmp_61_reg_11935_1                         |   64|   0|   64|          0|
+    |tmp_8_reg_11161                            |   64|   0|   64|          0|
+    |tmp_9_reg_11172                            |   64|   0|   64|          0|
+    |tmp_s_reg_11167                            |   64|   0|   64|          0|
+    |xi_reg_11141                               |   64|   0|   64|          0|
+    |xj_reg_11151                               |   64|   0|   64|          0|
+    |yi_reg_11146                               |   64|   0|   64|          0|
+    |yj_reg_11156                               |   64|   0|   64|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      |17491|   0|17491|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|ap_start                      |  in |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|ap_done                       | out |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|ap_idle                       | out |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|ap_ready                      | out |    1| ap_ctrl_hs |   DigitalAnnealer   | return value |
+|nodeArray_0_x                 |  in |   64|   ap_none  |    nodeArray_0_x    |    pointer   |
+|nodeArray_1_x                 |  in |   64|   ap_none  |    nodeArray_1_x    |    pointer   |
+|nodeArray_2_x                 |  in |   64|   ap_none  |    nodeArray_2_x    |    pointer   |
+|nodeArray_3_x                 |  in |   64|   ap_none  |    nodeArray_3_x    |    pointer   |
+|nodeArray_4_x                 |  in |   64|   ap_none  |    nodeArray_4_x    |    pointer   |
+|nodeArray_0_y                 |  in |   64|   ap_none  |    nodeArray_0_y    |    pointer   |
+|nodeArray_1_y                 |  in |   64|   ap_none  |    nodeArray_1_y    |    pointer   |
+|nodeArray_2_y                 |  in |   64|   ap_none  |    nodeArray_2_y    |    pointer   |
+|nodeArray_3_y                 |  in |   64|   ap_none  |    nodeArray_3_y    |    pointer   |
+|nodeArray_4_y                 |  in |   64|   ap_none  |    nodeArray_4_y    |    pointer   |
+|best_qubit_matrix_0_address0  | out |    3|  ap_memory | best_qubit_matrix_0 |     array    |
+|best_qubit_matrix_0_ce0       | out |    1|  ap_memory | best_qubit_matrix_0 |     array    |
+|best_qubit_matrix_0_we0       | out |    1|  ap_memory | best_qubit_matrix_0 |     array    |
+|best_qubit_matrix_0_d0        | out |    1|  ap_memory | best_qubit_matrix_0 |     array    |
+|best_qubit_matrix_1_address0  | out |    3|  ap_memory | best_qubit_matrix_1 |     array    |
+|best_qubit_matrix_1_ce0       | out |    1|  ap_memory | best_qubit_matrix_1 |     array    |
+|best_qubit_matrix_1_we0       | out |    1|  ap_memory | best_qubit_matrix_1 |     array    |
+|best_qubit_matrix_1_d0        | out |    1|  ap_memory | best_qubit_matrix_1 |     array    |
+|best_qubit_matrix_2_address0  | out |    3|  ap_memory | best_qubit_matrix_2 |     array    |
+|best_qubit_matrix_2_ce0       | out |    1|  ap_memory | best_qubit_matrix_2 |     array    |
+|best_qubit_matrix_2_we0       | out |    1|  ap_memory | best_qubit_matrix_2 |     array    |
+|best_qubit_matrix_2_d0        | out |    1|  ap_memory | best_qubit_matrix_2 |     array    |
+|best_qubit_matrix_3_address0  | out |    3|  ap_memory | best_qubit_matrix_3 |     array    |
+|best_qubit_matrix_3_ce0       | out |    1|  ap_memory | best_qubit_matrix_3 |     array    |
+|best_qubit_matrix_3_we0       | out |    1|  ap_memory | best_qubit_matrix_3 |     array    |
+|best_qubit_matrix_3_d0        | out |    1|  ap_memory | best_qubit_matrix_3 |     array    |
+|best_qubit_matrix_4_address0  | out |    3|  ap_memory | best_qubit_matrix_4 |     array    |
+|best_qubit_matrix_4_ce0       | out |    1|  ap_memory | best_qubit_matrix_4 |     array    |
+|best_qubit_matrix_4_we0       | out |    1|  ap_memory | best_qubit_matrix_4 |     array    |
+|best_qubit_matrix_4_d0        | out |    1|  ap_memory | best_qubit_matrix_4 |     array    |
+|best_energy_i                 |  in |   64|   ap_ovld  |     best_energy     |    pointer   |
+|best_energy_o                 | out |   64|   ap_ovld  |     best_energy     |    pointer   |
+|best_energy_o_ap_vld          | out |    1|   ap_ovld  |     best_energy     |    pointer   |
++------------------------------+-----+-----+------------+---------------------+--------------+
+

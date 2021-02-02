@@ -1,0 +1,518 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalconv_Jan19.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.852 ; gain = 97.117
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.852 ; gain = 97.117
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.852 ; gain = 97.117
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.852 ; gain = 97.117
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 56 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalconv_Jan19.cpp:268) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalconv_Jan19.cpp:270) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalconv_Jan19.cpp:272) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalconv_Jan19.cpp:274) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalconv_Jan19.cpp:283) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalconv_Jan19.cpp:284) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 4 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.852 ; gain = 97.117
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalconv_Jan19.cpp:113:19) in function 'load_filter_buffer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalconv_Jan19.cpp:139:17) in function 'conv_write' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalconv_Jan19.cpp:136:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalconv_Jan19.cpp:85:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalconv_Jan19.cpp:86:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalconv_Jan19.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalconv_Jan19.cpp:119:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalconv_Jan19.cpp:120:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalconv_Jan19.cpp:121:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalconv_Jan19.cpp:122:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalconv_Jan19.cpp:123:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalconv_Jan19.cpp:124:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalconv_Jan19.cpp:125:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalconv_Jan19.cpp:126:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalconv_Jan19.cpp:127:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalconv_Jan19.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalconv_Jan19.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalconv_Jan19.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalconv_Jan19.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalconv_Jan19.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalconv_Jan19.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalconv_Jan19.cpp:57:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalconv_Jan19.cpp:58:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalconv_Jan19.cpp:59:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalconv_Jan19.cpp:224:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 215.914 ; gain = 126.180
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convolution_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.664 seconds; current allocated memory: 163.843 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 164.060 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 164.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 164.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 164.813 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.085 seconds; current allocated memory: 164.942 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 165.628 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.274 seconds; current allocated memory: 166.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalconv_Jan19.cpp:241) and axis read on port 'cofm' (finalconv_Jan19.cpp:236).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 166.806 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 166.976 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.125 seconds; current allocated memory: 167.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.451 seconds; current allocated memory: 167.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.244 seconds; current allocated memory: 168.185 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 168.944 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 169.280 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'convolution_hw_fabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'convolution_hw_fmcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_mux_32_32_1_1' to 'convolution_hw_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_fabkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_fmcud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_mudEe': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 170.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 0.788 seconds; current allocated memory: 171.456 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'convolution_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_0' to 'convolution_hw_ifeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_1' to 'convolution_hw_iffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_2' to 'convolution_hw_ifg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_0' to 'convolution_hw_ifhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_1' to 'convolution_hw_ifibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_2' to 'convolution_hw_ifjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_0' to 'convolution_hw_ifkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_1' to 'convolution_hw_iflbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_2' to 'convolution_hw_ifmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_0' to 'convolution_hw_ifncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_1' to 'convolution_hw_ifocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_2' to 'convolution_hw_ifpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_0' to 'convolution_hw_fiqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_1' to 'convolution_hw_fircU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_2' to 'convolution_hw_fisc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_0' to 'convolution_hw_fitde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_1' to 'convolution_hw_fiudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_2' to 'convolution_hw_fivdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_0' to 'convolution_hw_fiwdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_1' to 'convolution_hw_fixdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_2' to 'convolution_hw_fiyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_0' to 'convolution_hw_fizec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_1' to 'convolution_hw_fiAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_2' to 'convolution_hw_fiBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_0' to 'convolution_hw_fiCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_1' to 'convolution_hw_fiDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_2' to 'convolution_hw_fiEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_0' to 'convolution_hw_fiFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_1' to 'convolution_hw_fiGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_2' to 'convolution_hw_fiHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_0' to 'convolution_hw_fiIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_1' to 'convolution_hw_fiJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_2' to 'convolution_hw_fiKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_0' to 'convolution_hw_fiLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_1' to 'convolution_hw_fiMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_2' to 'convolution_hw_fiNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_0' to 'convolution_hw_fiOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_1' to 'convolution_hw_fiPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_2' to 'convolution_hw_fiQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_0' to 'convolution_hw_ofRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_1' to 'convolution_hw_ofShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_2' to 'convolution_hw_ofThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_3' to 'convolution_hw_ofUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_4' to 'convolution_hw_ofVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_5' to 'convolution_hw_ofWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_0' to 'convolution_hw_ofXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_1' to 'convolution_hw_ofYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_2' to 'convolution_hw_ofZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_3' to 'convolution_hw_of0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_4' to 'convolution_hw_of1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_5' to 'convolution_hw_of2iS' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.786 seconds; current allocated memory: 174.366 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 119.05 MHz
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ifeOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_fiqcK_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ofRg6_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 249.008 ; gain = 159.273
+INFO: [VHDL 208-304] Generating VHDL RTL for convolution_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for convolution_hw.
+INFO: [HLS 200-112] Total elapsed time: 17.597 seconds; peak allocated memory: 174.366 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalconv_Jan19.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 185.773 ; gain = 93.504
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 185.773 ; gain = 93.504
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 185.773 ; gain = 93.504
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 185.773 ; gain = 93.504
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalconv_Jan19.cpp:258) into a 512-bit variable.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:310:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 6 for loop 'Loop-0-0' (finalconv_Jan19.cpp:142:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 56 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalconv_Jan19.cpp:138:1) in function 'conv_write'.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalconv_Jan19.cpp:268) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalconv_Jan19.cpp:270) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalconv_Jan19.cpp:272) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalconv_Jan19.cpp:274) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalconv_Jan19.cpp:283) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalconv_Jan19.cpp:284) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalconv_Jan19.cpp:277) in dimension 4 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 185.773 ; gain = 93.504
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalconv_Jan19.cpp:113:19) in function 'load_filter_buffer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalconv_Jan19.cpp:139:17) in function 'conv_write' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalconv_Jan19.cpp:136:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalconv_Jan19.cpp:85:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalconv_Jan19.cpp:86:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalconv_Jan19.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalconv_Jan19.cpp:119:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalconv_Jan19.cpp:120:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalconv_Jan19.cpp:121:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalconv_Jan19.cpp:122:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalconv_Jan19.cpp:123:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalconv_Jan19.cpp:124:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalconv_Jan19.cpp:125:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalconv_Jan19.cpp:126:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalconv_Jan19.cpp:127:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalconv_Jan19.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalconv_Jan19.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalconv_Jan19.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalconv_Jan19.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalconv_Jan19.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalconv_Jan19.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalconv_Jan19.cpp:57:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalconv_Jan19.cpp:58:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalconv_Jan19.cpp:59:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalconv_Jan19.cpp:224:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 215.480 ; gain = 123.211
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convolution_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.941 seconds; current allocated memory: 163.843 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.104 seconds; current allocated memory: 164.060 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 164.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 164.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 164.813 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 164.942 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('Y', finalconv_Jan19.cpp:190) and 'fadd' operation ('Y', finalconv_Jan19.cpp:190).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.362 seconds; current allocated memory: 165.628 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.335 seconds; current allocated memory: 166.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalconv_Jan19.cpp:241) and axis read on port 'cofm' (finalconv_Jan19.cpp:236).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.316 seconds; current allocated memory: 166.806 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.099 seconds; current allocated memory: 166.976 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.122 seconds; current allocated memory: 167.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.441 seconds; current allocated memory: 167.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.236 seconds; current allocated memory: 168.185 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.232 seconds; current allocated memory: 168.944 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.261 seconds; current allocated memory: 169.280 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'convolution_hw_fabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'convolution_hw_fmcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_mux_32_32_1_1' to 'convolution_hw_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_fabkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_fmcud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution_hw_mudEe': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.242 seconds; current allocated memory: 170.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 0.611 seconds; current allocated memory: 171.456 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'convolution_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_0' to 'convolution_hw_ifeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_1' to 'convolution_hw_iffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_2' to 'convolution_hw_ifg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_0' to 'convolution_hw_ifhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_1' to 'convolution_hw_ifibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_2' to 'convolution_hw_ifjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_0' to 'convolution_hw_ifkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_1' to 'convolution_hw_iflbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_2' to 'convolution_hw_ifmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_0' to 'convolution_hw_ifncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_1' to 'convolution_hw_ifocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_2' to 'convolution_hw_ifpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_0' to 'convolution_hw_fiqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_1' to 'convolution_hw_fircU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_2' to 'convolution_hw_fisc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_0' to 'convolution_hw_fitde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_1' to 'convolution_hw_fiudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_2' to 'convolution_hw_fivdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_0' to 'convolution_hw_fiwdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_1' to 'convolution_hw_fixdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_2' to 'convolution_hw_fiyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_0' to 'convolution_hw_fizec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_1' to 'convolution_hw_fiAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_2' to 'convolution_hw_fiBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_0' to 'convolution_hw_fiCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_1' to 'convolution_hw_fiDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_2' to 'convolution_hw_fiEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_0' to 'convolution_hw_fiFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_1' to 'convolution_hw_fiGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_2' to 'convolution_hw_fiHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_0' to 'convolution_hw_fiIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_1' to 'convolution_hw_fiJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_2' to 'convolution_hw_fiKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_0' to 'convolution_hw_fiLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_1' to 'convolution_hw_fiMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_2' to 'convolution_hw_fiNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_0' to 'convolution_hw_fiOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_1' to 'convolution_hw_fiPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_2' to 'convolution_hw_fiQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_0' to 'convolution_hw_ofRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_1' to 'convolution_hw_ofShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_2' to 'convolution_hw_ofThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_3' to 'convolution_hw_ofUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_4' to 'convolution_hw_ofVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_5' to 'convolution_hw_ofWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_0' to 'convolution_hw_ofXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_1' to 'convolution_hw_ofYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_2' to 'convolution_hw_ofZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_3' to 'convolution_hw_of0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_4' to 'convolution_hw_of1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_5' to 'convolution_hw_of2iS' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.723 seconds; current allocated memory: 174.366 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 119.05 MHz
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ifeOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_fiqcK_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ofRg6_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 249.176 ; gain = 156.906
+INFO: [VHDL 208-304] Generating VHDL RTL for convolution_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for convolution_hw.
+INFO: [HLS 200-112] Total elapsed time: 20.654 seconds; peak allocated memory: 174.366 MB.

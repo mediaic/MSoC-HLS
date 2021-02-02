@@ -1,0 +1,1554 @@
+INFO-FLOW: Workspace D:/Course/mSOC/final/finalwrapup_hls/solution1 opened at Thu Jan 21 20:26:55 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.112 sec.
+Command     ap_source done; 0.113 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.723 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.867 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.059 sec.
+Execute   set_part xc7z020clg400-1 
+Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.153 sec.
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling finalwrapup.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted finalwrapup.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "finalwrapup.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E finalwrapup.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp
+Command       clang done; 0.969 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.156 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp"  -o "D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.993 sec.
+INFO-FLOW: Done: GCC PP time: 2.1 seconds per iteration
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp std=gnu++98 -directive=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.145 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp std=gnu++98 -directive=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.177 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.finalwrapup.pp.0.cpp.diag.yml D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.finalwrapup.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.finalwrapup.pp.0.cpp.err.log 
+Command       ap_eval done; 0.155 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/tidy-3.1.finalwrapup.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/tidy-3.1.finalwrapup.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/tidy-3.1.finalwrapup.pp.0.cpp.err.log 
+Command         ap_eval done; 0.313 sec.
+Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.finalwrapup.pp.0.cpp.out.log 2> D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.finalwrapup.pp.0.cpp.err.log 
+Command         ap_eval done; 0.113 sec.
+Command       tidy_31 done; 0.496 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.8 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.393 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.bc
+Command       clang done; 1.011 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/finalwrapup.g.bc -hls-opt -except-internalize dnn_hw -LC:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.773 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.652 ; gain = 97.309
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.pp.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.497 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dnn_hw -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.0.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.1.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.926 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.g.1.bc to D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.1.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:695) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:157) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:162) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:234) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:236) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:238) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:249) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:250) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:604) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:606) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:608) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalwrapup.cpp:610) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:619) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:620) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 4 completely.
+Command         transform done; 1.369 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.786 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.2.bc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:92:19) in function 'load_filter_buffer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalwrapup.cpp:475:24) in function 'conv_write' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:472:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:64:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:65:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:66:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:67:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:68:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:69:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:70:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:71:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:72:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:73:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:74:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:75:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:76:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:77:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:78:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:79:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:188:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalwrapup.cpp:98:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalwrapup.cpp:99:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalwrapup.cpp:100:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalwrapup.cpp:101:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalwrapup.cpp:102:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalwrapup.cpp:103:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalwrapup.cpp:104:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalwrapup.cpp:105:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalwrapup.cpp:106:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:13:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:28:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:36:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:50:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:51:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:347:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:348:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:349:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:350:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:351:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:352:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:353:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:354:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:355:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:356:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:357:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:358:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:359:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:360:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:361:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:362:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:370:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:371:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:372:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:373:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:374:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:375:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:376:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:377:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:378:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:379:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:380:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:381:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:382:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:383:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:384:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:385:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalwrapup.cpp:392:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalwrapup.cpp:393:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalwrapup.cpp:394:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[3]' (finalwrapup.cpp:395:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[4]' (finalwrapup.cpp:396:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[5]' (finalwrapup.cpp:397:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[6]' (finalwrapup.cpp:398:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[7]' (finalwrapup.cpp:399:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[8]' (finalwrapup.cpp:400:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[9]' (finalwrapup.cpp:401:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[10]' (finalwrapup.cpp:402:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[11]' (finalwrapup.cpp:403:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[12]' (finalwrapup.cpp:404:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[13]' (finalwrapup.cpp:405:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[14]' (finalwrapup.cpp:406:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[15]' (finalwrapup.cpp:407:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:560:13)
+Command         transform done; 3.116 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 275.508 ; gain = 186.164
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 6.904 sec.
+Command     elaborate done; 12.432 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dnn_hw' ...
+Execute       ap_set_top_model dnn_hw 
+Execute       get_model_list dnn_hw -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dnn_hw 
+Execute       preproc_iomode -model convolution_hw 
+Execute       preproc_iomode -model conv_write 
+Execute       preproc_iomode -model load_filter_buffer 
+Execute       preproc_iomode -model load_cifm_data 
+Execute       preproc_iomode -model pool_hw 
+Execute       preproc_iomode -model conv_read 
+Execute       preproc_iomode -model pool_write 
+Execute       preproc_iomode -model write_row_ifm 
+Execute       preproc_iomode -model load_cifm_data_pool 
+Execute       get_model_list dnn_hw -filter all-wo-channel 
+INFO-FLOW: Model list for configure: load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO-FLOW: Configuring Module : load_cifm_data_pool ...
+Execute       set_default_model load_cifm_data_pool 
+Execute       apply_spec_resource_limit load_cifm_data_pool 
+INFO-FLOW: Configuring Module : write_row_ifm ...
+Execute       set_default_model write_row_ifm 
+Execute       apply_spec_resource_limit write_row_ifm 
+INFO-FLOW: Configuring Module : pool_write ...
+Execute       set_default_model pool_write 
+Execute       apply_spec_resource_limit pool_write 
+INFO-FLOW: Configuring Module : conv_read ...
+Execute       set_default_model conv_read 
+Execute       apply_spec_resource_limit conv_read 
+INFO-FLOW: Configuring Module : pool_hw ...
+Execute       set_default_model pool_hw 
+Execute       apply_spec_resource_limit pool_hw 
+INFO-FLOW: Configuring Module : load_cifm_data ...
+Execute       set_default_model load_cifm_data 
+Execute       apply_spec_resource_limit load_cifm_data 
+INFO-FLOW: Configuring Module : load_filter_buffer ...
+Execute       set_default_model load_filter_buffer 
+Execute       apply_spec_resource_limit load_filter_buffer 
+INFO-FLOW: Configuring Module : conv_write ...
+Execute       set_default_model conv_write 
+Execute       apply_spec_resource_limit conv_write 
+INFO-FLOW: Configuring Module : convolution_hw ...
+Execute       set_default_model convolution_hw 
+Execute       apply_spec_resource_limit convolution_hw 
+INFO-FLOW: Configuring Module : dnn_hw ...
+Execute       set_default_model dnn_hw 
+Execute       apply_spec_resource_limit dnn_hw 
+INFO-FLOW: Model list for preprocess: load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO-FLOW: Preprocessing Module: load_cifm_data_pool ...
+Execute       set_default_model load_cifm_data_pool 
+Execute       cdfg_preprocess -model load_cifm_data_pool 
+Execute       rtl_gen_preprocess load_cifm_data_pool 
+INFO-FLOW: Preprocessing Module: write_row_ifm ...
+Execute       set_default_model write_row_ifm 
+Execute       cdfg_preprocess -model write_row_ifm 
+Execute       rtl_gen_preprocess write_row_ifm 
+INFO-FLOW: Preprocessing Module: pool_write ...
+Execute       set_default_model pool_write 
+Execute       cdfg_preprocess -model pool_write 
+Execute       rtl_gen_preprocess pool_write 
+INFO-FLOW: Preprocessing Module: conv_read ...
+Execute       set_default_model conv_read 
+Execute       cdfg_preprocess -model conv_read 
+Execute       rtl_gen_preprocess conv_read 
+INFO-FLOW: Preprocessing Module: pool_hw ...
+Execute       set_default_model pool_hw 
+Execute       cdfg_preprocess -model pool_hw 
+Execute       rtl_gen_preprocess pool_hw 
+INFO-FLOW: Preprocessing Module: load_cifm_data ...
+Execute       set_default_model load_cifm_data 
+Execute       cdfg_preprocess -model load_cifm_data 
+Execute       rtl_gen_preprocess load_cifm_data 
+INFO-FLOW: Preprocessing Module: load_filter_buffer ...
+Execute       set_default_model load_filter_buffer 
+Execute       cdfg_preprocess -model load_filter_buffer 
+Execute       rtl_gen_preprocess load_filter_buffer 
+INFO-FLOW: Preprocessing Module: conv_write ...
+Execute       set_default_model conv_write 
+Execute       cdfg_preprocess -model conv_write 
+Execute       rtl_gen_preprocess conv_write 
+INFO-FLOW: Preprocessing Module: convolution_hw ...
+Execute       set_default_model convolution_hw 
+Execute       cdfg_preprocess -model convolution_hw 
+Execute       rtl_gen_preprocess convolution_hw 
+INFO-FLOW: Preprocessing Module: dnn_hw ...
+Execute       set_default_model dnn_hw 
+Execute       cdfg_preprocess -model dnn_hw 
+Execute       rtl_gen_preprocess dnn_hw 
+WARNING: [SYN 201-107] Renaming port name 'dnn_hw/config' to 'dnn_hw/config_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_cifm_data_pool 
+Execute       schedule -model load_cifm_data_pool 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 14.311 seconds; current allocated memory: 220.382 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.sched.adb -f 
+INFO-FLOW: Finish scheduling load_cifm_data_pool.
+Execute       set_default_model load_cifm_data_pool 
+Execute       bind -model load_cifm_data_pool 
+BIND OPTION: model=load_cifm_data_pool
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 220.839 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.bind.adb -f 
+INFO-FLOW: Finish binding load_cifm_data_pool.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model write_row_ifm 
+Execute       schedule -model write_row_ifm 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 221.127 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.sched.adb -f 
+INFO-FLOW: Finish scheduling write_row_ifm.
+Execute       set_default_model write_row_ifm 
+Execute       bind -model write_row_ifm 
+BIND OPTION: model=write_row_ifm
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 221.424 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.bind.adb -f 
+INFO-FLOW: Finish binding write_row_ifm.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool_write 
+Execute       schedule -model pool_write 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalwrapup.cpp:167) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.378 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 223.644 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.verbose.sched.rpt 
+Command       syn_report done; 0.334 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.sched.adb -f 
+Command       db_write done; 0.213 sec.
+INFO-FLOW: Finish scheduling pool_write.
+Execute       set_default_model pool_write 
+Execute       bind -model pool_write 
+BIND OPTION: model=pool_write
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.283 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.866 seconds; current allocated memory: 226.983 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.verbose.bind.rpt 
+Command       syn_report done; 0.766 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.bind.adb -f 
+Command       db_write done; 0.288 sec.
+INFO-FLOW: Finish binding pool_write.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_read 
+Execute       schedule -model conv_read 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.163 seconds; current allocated memory: 227.743 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_read.
+Execute       set_default_model conv_read 
+Execute       bind -model conv_read 
+BIND OPTION: model=conv_read
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 228.006 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.bind.adb -f 
+INFO-FLOW: Finish binding conv_read.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool_hw 
+Execute       schedule -model pool_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 228.367 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling pool_hw.
+Execute       set_default_model pool_hw 
+Execute       bind -model pool_hw 
+BIND OPTION: model=pool_hw
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.063 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.176 seconds; current allocated memory: 229.597 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.verbose.bind.rpt 
+Command       syn_report done; 0.538 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.bind.adb -f 
+INFO-FLOW: Finish binding pool_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_cifm_data 
+Execute       schedule -model load_cifm_data 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.134 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.779 seconds; current allocated memory: 230.633 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.sched.adb -f 
+INFO-FLOW: Finish scheduling load_cifm_data.
+Execute       set_default_model load_cifm_data 
+Execute       bind -model load_cifm_data 
+BIND OPTION: model=load_cifm_data
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.218 seconds; current allocated memory: 231.268 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.verbose.bind.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.bind.adb -f 
+INFO-FLOW: Finish binding load_cifm_data.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_filter_buffer 
+Execute       schedule -model load_filter_buffer 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.274 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.492 seconds; current allocated memory: 232.225 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.verbose.sched.rpt 
+Command       syn_report done; 0.11 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.sched.adb -f 
+INFO-FLOW: Finish scheduling load_filter_buffer.
+Execute       set_default_model load_filter_buffer 
+Execute       bind -model load_filter_buffer 
+BIND OPTION: model=load_filter_buffer
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.103 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.338 seconds; current allocated memory: 233.441 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.verbose.bind.rpt 
+Command       syn_report done; 0.109 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.bind.adb -f 
+INFO-FLOW: Finish binding load_filter_buffer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv_write 
+Execute       schedule -model conv_write 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.434 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.701 seconds; current allocated memory: 235.502 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.verbose.sched.rpt 
+Command       syn_report done; 0.432 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.sched.adb -f 
+Command       db_write done; 0.177 sec.
+INFO-FLOW: Finish scheduling conv_write.
+Execute       set_default_model conv_write 
+Execute       bind -model conv_write 
+BIND OPTION: model=conv_write
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.192 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.843 seconds; current allocated memory: 238.555 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.verbose.bind.rpt 
+Command       syn_report done; 0.482 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.bind.adb -f 
+Command       db_write done; 0.211 sec.
+INFO-FLOW: Finish binding conv_write.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model convolution_hw 
+Execute       schedule -model convolution_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.832 seconds; current allocated memory: 239.213 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling convolution_hw.
+Execute       set_default_model convolution_hw 
+Execute       bind -model convolution_hw 
+BIND OPTION: model=convolution_hw
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.289 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.463 seconds; current allocated memory: 240.648 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.verbose.bind.rpt 
+Command       syn_report done; 0.306 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.bind.adb -f 
+INFO-FLOW: Finish binding convolution_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dnn_hw 
+Execute       schedule -model dnn_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.485 seconds; current allocated memory: 240.737 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.verbose.sched.rpt 
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling dnn_hw.
+Execute       set_default_model dnn_hw 
+Execute       bind -model dnn_hw 
+BIND OPTION: model=dnn_hw
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.281 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.395 seconds; current allocated memory: 241.327 MB.
+Execute       syn_report -verbosereport -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.verbose.bind.rpt 
+Command       syn_report done; 1.212 sec.
+Execute       db_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.bind.adb -f 
+INFO-FLOW: Finish binding dnn_hw.
+Execute       get_model_list dnn_hw -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess load_cifm_data_pool 
+Execute       rtl_gen_preprocess write_row_ifm 
+Execute       rtl_gen_preprocess pool_write 
+Execute       rtl_gen_preprocess conv_read 
+Execute       rtl_gen_preprocess pool_hw 
+Execute       rtl_gen_preprocess load_cifm_data 
+Execute       rtl_gen_preprocess load_filter_buffer 
+Execute       rtl_gen_preprocess conv_write 
+Execute       rtl_gen_preprocess convolution_hw 
+Execute       rtl_gen_preprocess dnn_hw 
+INFO-FLOW: Model list for RTL generation: load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_cifm_data_pool -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data_pool'.
+INFO: [HLS 200-111]  Elapsed time: 1.336 seconds; current allocated memory: 242.627 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_cifm_data_pool -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/load_cifm_data_pool -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl load_cifm_data_pool -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/load_cifm_data_pool 
+Execute       gen_rtl load_cifm_data_pool -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/load_cifm_data_pool 
+Execute       syn_report -csynth -model load_cifm_data_pool -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_cifm_data_pool_csynth.rpt 
+Execute       syn_report -rtlxml -model load_cifm_data_pool -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_cifm_data_pool_csynth.xml 
+Execute       syn_report -verbosereport -model load_cifm_data_pool -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.verbose.rpt 
+Execute       db_write -model load_cifm_data_pool -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.adb 
+Execute       gen_tb_info load_cifm_data_pool -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model write_row_ifm -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 243.392 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl write_row_ifm -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/write_row_ifm -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl write_row_ifm -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/write_row_ifm 
+Execute       gen_rtl write_row_ifm -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/write_row_ifm 
+Execute       syn_report -csynth -model write_row_ifm -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/write_row_ifm_csynth.rpt 
+Execute       syn_report -rtlxml -model write_row_ifm -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/write_row_ifm_csynth.xml 
+Execute       syn_report -verbosereport -model write_row_ifm -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.verbose.rpt 
+Execute       db_write -model write_row_ifm -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.adb 
+Execute       gen_tb_info write_row_ifm -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model pool_write -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fcmp_32ns_32ns_1_2_1' to 'dnn_hw_fcmp_32ns_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fcmp_32ns_bkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+Command       create_rtl_model done; 0.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.556 seconds; current allocated memory: 249.495 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool_write -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/pool_write -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl pool_write -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/pool_write 
+Execute       gen_rtl pool_write -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/pool_write 
+Execute       syn_report -csynth -model pool_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/pool_write_csynth.rpt 
+Command       syn_report done; 0.307 sec.
+Execute       syn_report -rtlxml -model pool_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/pool_write_csynth.xml 
+Command       syn_report done; 0.172 sec.
+Execute       syn_report -verbosereport -model pool_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.verbose.rpt 
+Command       syn_report done; 0.895 sec.
+Execute       db_write -model pool_write -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.adb 
+Command       db_write done; 0.598 sec.
+Execute       gen_tb_info pool_write -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model conv_read -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.819 seconds; current allocated memory: 252.322 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_read -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/conv_read -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl conv_read -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/conv_read 
+Execute       gen_rtl conv_read -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/conv_read 
+Execute       syn_report -csynth -model conv_read -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/conv_read_csynth.rpt 
+Execute       syn_report -rtlxml -model conv_read -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/conv_read_csynth.xml 
+Execute       syn_report -verbosereport -model conv_read -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.verbose.rpt 
+Execute       db_write -model conv_read -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.adb 
+Command       db_write done; 0.102 sec.
+Execute       gen_tb_info conv_read -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model pool_hw -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+Command       create_rtl_model done; 0.495 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.816 seconds; current allocated memory: 256.435 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/pool_hw -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl pool_hw -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/pool_hw 
+Execute       gen_rtl pool_hw -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/pool_hw 
+Execute       syn_report -csynth -model pool_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/pool_hw_csynth.rpt 
+Command       syn_report done; 0.28 sec.
+Execute       syn_report -rtlxml -model pool_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/pool_hw_csynth.xml 
+Command       syn_report done; 0.139 sec.
+Execute       syn_report -verbosereport -model pool_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.verbose.rpt 
+Command       syn_report done; 0.677 sec.
+Execute       db_write -model pool_hw -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.adb 
+Command       db_write done; 0.286 sec.
+Execute       gen_tb_info pool_hw -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_cifm_data -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 1.72 seconds; current allocated memory: 258.346 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_cifm_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/load_cifm_data -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl load_cifm_data -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/load_cifm_data 
+Execute       gen_rtl load_cifm_data -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/load_cifm_data 
+Execute       syn_report -csynth -model load_cifm_data -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_cifm_data_csynth.rpt 
+Execute       syn_report -rtlxml -model load_cifm_data -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_cifm_data_csynth.xml 
+Execute       syn_report -verbosereport -model load_cifm_data -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.verbose.rpt 
+Execute       db_write -model load_cifm_data -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.adb 
+Command       db_write done; 0.184 sec.
+Execute       gen_tb_info load_cifm_data -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_filter_buffer -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+INFO: [RTGEN 206-104] Estimated max fanout for 'load_filter_buffer' is 5184 from HDL expression: (1'b1 == ap_CS_fsm_state2)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.624 seconds; current allocated memory: 260.636 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_filter_buffer -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/load_filter_buffer -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl load_filter_buffer -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/load_filter_buffer 
+Execute       gen_rtl load_filter_buffer -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/load_filter_buffer 
+Execute       syn_report -csynth -model load_filter_buffer -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_filter_buffer_csynth.rpt 
+Execute       syn_report -rtlxml -model load_filter_buffer -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/load_filter_buffer_csynth.xml 
+Execute       syn_report -verbosereport -model load_filter_buffer -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.verbose.rpt 
+Command       syn_report done; 0.133 sec.
+Execute       db_write -model load_filter_buffer -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.adb 
+Command       db_write done; 0.193 sec.
+Execute       gen_tb_info load_filter_buffer -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model conv_write -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'dnn_hw_fadd_32ns_Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'dnn_hw_fmul_32ns_Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_mux_164_32_1_1' to 'dnn_hw_mux_164_32IfE' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fadd_32ns_Gfk': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fmul_32ns_Hfu': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_mux_164_32IfE': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+Command       create_rtl_model done; 0.178 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.914 seconds; current allocated memory: 265.512 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv_write -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/conv_write -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl conv_write -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/conv_write 
+Execute       gen_rtl conv_write -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/conv_write 
+Execute       syn_report -csynth -model conv_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/conv_write_csynth.rpt 
+Execute       syn_report -rtlxml -model conv_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/conv_write_csynth.xml 
+Execute       syn_report -verbosereport -model conv_write -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.verbose.rpt 
+Command       syn_report done; 0.527 sec.
+Execute       db_write -model conv_write -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.adb 
+Command       db_write done; 0.352 sec.
+Execute       gen_tb_info conv_write -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model convolution_hw -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_0' to 'convolution_hw_ifJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_1' to 'convolution_hw_ifKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_2' to 'convolution_hw_ifLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_3' to 'convolution_hw_ifMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_4' to 'convolution_hw_ifNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_5' to 'convolution_hw_ifOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_6' to 'convolution_hw_ifPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_7' to 'convolution_hw_ifQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_8' to 'convolution_hw_ifRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_9' to 'convolution_hw_ifShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_10' to 'convolution_hw_ifThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_11' to 'convolution_hw_ifUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_12' to 'convolution_hw_ifVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_13' to 'convolution_hw_ifWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_14' to 'convolution_hw_ifXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_15' to 'convolution_hw_ifYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_0' to 'convolution_hw_ifZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_1' to 'convolution_hw_if0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_2' to 'convolution_hw_if1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_3' to 'convolution_hw_if2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_4' to 'convolution_hw_if3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_5' to 'convolution_hw_if4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_6' to 'convolution_hw_if5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_7' to 'convolution_hw_if6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_8' to 'convolution_hw_if7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_9' to 'convolution_hw_if8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_10' to 'convolution_hw_if9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_11' to 'convolution_hw_ifbak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_12' to 'convolution_hw_ifbbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_13' to 'convolution_hw_ifbck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_14' to 'convolution_hw_ifbdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_15' to 'convolution_hw_ifbek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_0' to 'convolution_hw_ifbfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_1' to 'convolution_hw_ifbgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_2' to 'convolution_hw_ifbhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_3' to 'convolution_hw_ifbil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_4' to 'convolution_hw_ifbjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_5' to 'convolution_hw_ifbkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_6' to 'convolution_hw_ifbll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_7' to 'convolution_hw_ifbml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_8' to 'convolution_hw_ifbnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_9' to 'convolution_hw_ifbom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_10' to 'convolution_hw_ifbpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_11' to 'convolution_hw_ifbqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_12' to 'convolution_hw_ifbrm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_13' to 'convolution_hw_ifbsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_14' to 'convolution_hw_ifbtn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_15' to 'convolution_hw_ifbun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_0' to 'convolution_hw_ifbvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_1' to 'convolution_hw_ifbwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_2' to 'convolution_hw_ifbxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_3' to 'convolution_hw_ifbyn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_4' to 'convolution_hw_ifbzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_5' to 'convolution_hw_ifbAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_6' to 'convolution_hw_ifbBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_7' to 'convolution_hw_ifbCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_8' to 'convolution_hw_ifbDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_9' to 'convolution_hw_ifbEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_10' to 'convolution_hw_ifbFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_11' to 'convolution_hw_ifbGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_12' to 'convolution_hw_ifbHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_13' to 'convolution_hw_ifbIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_14' to 'convolution_hw_ifbJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_15' to 'convolution_hw_ifbKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_0' to 'convolution_hw_fibLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_1' to 'convolution_hw_fibMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_2' to 'convolution_hw_fibNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_0' to 'convolution_hw_fibOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_1' to 'convolution_hw_fibPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_2' to 'convolution_hw_fibQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_0' to 'convolution_hw_fibRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_1' to 'convolution_hw_fibSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_2' to 'convolution_hw_fibTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_0' to 'convolution_hw_fibUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_1' to 'convolution_hw_fibVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_2' to 'convolution_hw_fibWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_0' to 'convolution_hw_fibXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_1' to 'convolution_hw_fibYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_2' to 'convolution_hw_fibZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_0' to 'convolution_hw_fib0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_1' to 'convolution_hw_fib1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_2' to 'convolution_hw_fib2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_0' to 'convolution_hw_fib3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_1' to 'convolution_hw_fib4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_2' to 'convolution_hw_fib5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_0' to 'convolution_hw_fib6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_1' to 'convolution_hw_fib7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_2' to 'convolution_hw_fib8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_0' to 'convolution_hw_fib9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_1' to 'convolution_hw_ficau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_2' to 'convolution_hw_ficbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_0' to 'convolution_hw_ficcu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_1' to 'convolution_hw_ficdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_2' to 'convolution_hw_ficeu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_0' to 'convolution_hw_ficfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_1' to 'convolution_hw_ficgu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_2' to 'convolution_hw_fichv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_0' to 'convolution_hw_ficiv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_1' to 'convolution_hw_ficjv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_2' to 'convolution_hw_fickv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_0' to 'convolution_hw_ficlv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_1' to 'convolution_hw_ficmv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_2' to 'convolution_hw_ficnw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_0' to 'convolution_hw_ficow' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_1' to 'convolution_hw_ficpw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_2' to 'convolution_hw_ficqw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_0' to 'convolution_hw_ficrw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_1' to 'convolution_hw_ficsw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_2' to 'convolution_hw_fictx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_0' to 'convolution_hw_ficux' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_1' to 'convolution_hw_ficvx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_2' to 'convolution_hw_ficwx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_0' to 'convolution_hw_ficxx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_1' to 'convolution_hw_ficyx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_2' to 'convolution_hw_ficzy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_0' to 'convolution_hw_ficAy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_1' to 'convolution_hw_ficBy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_2' to 'convolution_hw_ficCy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_0' to 'convolution_hw_ficDy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_1' to 'convolution_hw_ficEy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_2' to 'convolution_hw_ficFz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_0' to 'convolution_hw_ficGz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_1' to 'convolution_hw_ficHz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_2' to 'convolution_hw_ficIz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_0' to 'convolution_hw_ficJz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_1' to 'convolution_hw_ficKz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_2' to 'convolution_hw_ficLz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_0' to 'convolution_hw_ficMA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_1' to 'convolution_hw_ficNA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_2' to 'convolution_hw_ficOA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_0' to 'convolution_hw_ficPA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_1' to 'convolution_hw_ficQA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_2' to 'convolution_hw_ficRA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_0' to 'convolution_hw_ficSB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_1' to 'convolution_hw_ficTB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_2' to 'convolution_hw_ficUB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_0' to 'convolution_hw_ficVB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_1' to 'convolution_hw_ficWB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_2' to 'convolution_hw_ficXB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_0' to 'convolution_hw_ficYC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_1' to 'convolution_hw_ficZC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_2' to 'convolution_hw_fic0C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_0' to 'convolution_hw_fic1C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_1' to 'convolution_hw_fic2C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_2' to 'convolution_hw_fic3C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_0' to 'convolution_hw_fic4D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_1' to 'convolution_hw_fic5D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_2' to 'convolution_hw_fic6D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_0' to 'convolution_hw_fic7D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_1' to 'convolution_hw_fic8D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_2' to 'convolution_hw_fic9D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_0' to 'convolution_hw_fidaE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_1' to 'convolution_hw_fidbE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_2' to 'convolution_hw_fidcE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_0' to 'convolution_hw_fiddE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_1' to 'convolution_hw_fideE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_2' to 'convolution_hw_fidfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_0' to 'convolution_hw_fidgE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_1' to 'convolution_hw_fidhF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_2' to 'convolution_hw_fidiF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_0' to 'convolution_hw_fidjF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_1' to 'convolution_hw_fidkF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_2' to 'convolution_hw_fidlF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_0' to 'convolution_hw_fidmF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_1' to 'convolution_hw_fidnG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_2' to 'convolution_hw_fidoG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_0' to 'convolution_hw_fidpG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_1' to 'convolution_hw_fidqG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_2' to 'convolution_hw_fidrG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_0' to 'convolution_hw_fidsG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_1' to 'convolution_hw_fidtH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_2' to 'convolution_hw_fiduH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_0' to 'convolution_hw_fidvH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_1' to 'convolution_hw_fidwH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_2' to 'convolution_hw_fidxH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_0' to 'convolution_hw_fidyH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_1' to 'convolution_hw_fidzI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_2' to 'convolution_hw_fidAI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_0' to 'convolution_hw_fidBI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_1' to 'convolution_hw_fidCI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_2' to 'convolution_hw_fidDI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_0' to 'convolution_hw_fidEI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_1' to 'convolution_hw_fidFJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_2' to 'convolution_hw_fidGJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_0' to 'convolution_hw_fidHJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_1' to 'convolution_hw_fidIJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_2' to 'convolution_hw_fidJJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_0' to 'convolution_hw_fidKJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_1' to 'convolution_hw_fidLJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_2' to 'convolution_hw_fidMK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_0' to 'convolution_hw_fidNK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_1' to 'convolution_hw_fidOK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_2' to 'convolution_hw_fidPK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_0' to 'convolution_hw_fidQK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_1' to 'convolution_hw_fidRK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_2' to 'convolution_hw_fidSL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_0' to 'convolution_hw_fidTL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_1' to 'convolution_hw_fidUL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_2' to 'convolution_hw_fidVL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_0' to 'convolution_hw_fidWL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_1' to 'convolution_hw_fidXL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_2' to 'convolution_hw_fidYM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_0' to 'convolution_hw_fidZM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_1' to 'convolution_hw_fid0M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_2' to 'convolution_hw_fid1M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_0' to 'convolution_hw_fid2M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_1' to 'convolution_hw_fid3M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_2' to 'convolution_hw_fid4N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_0' to 'convolution_hw_ofd5N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_1' to 'convolution_hw_ofd6N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_2' to 'convolution_hw_ofd7N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_3' to 'convolution_hw_ofd8N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_4' to 'convolution_hw_ofd9N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_5' to 'convolution_hw_ofeaO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_6' to 'convolution_hw_ofebO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_7' to 'convolution_hw_ofecO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_8' to 'convolution_hw_ofedO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_9' to 'convolution_hw_ofeeO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_10' to 'convolution_hw_ofefO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_11' to 'convolution_hw_ofegO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_12' to 'convolution_hw_ofehP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_13' to 'convolution_hw_ofeiP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_14' to 'convolution_hw_ofejP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_15' to 'convolution_hw_ofekP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_0' to 'convolution_hw_ofelP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_1' to 'convolution_hw_ofemP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_2' to 'convolution_hw_ofenQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_3' to 'convolution_hw_ofeoQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_4' to 'convolution_hw_ofepQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_5' to 'convolution_hw_ofeqQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_6' to 'convolution_hw_oferQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_7' to 'convolution_hw_ofesQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_8' to 'convolution_hw_ofetR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_9' to 'convolution_hw_ofeuR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_10' to 'convolution_hw_ofevR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_11' to 'convolution_hw_ofewR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_12' to 'convolution_hw_ofexR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_13' to 'convolution_hw_ofeyR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_14' to 'convolution_hw_ofezS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_15' to 'convolution_hw_ofeAS' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_hw'.
+Command       create_rtl_model done; 4.003 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.67 seconds; current allocated memory: 277.742 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl convolution_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/convolution_hw -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl convolution_hw -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/convolution_hw 
+Execute       gen_rtl convolution_hw -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/convolution_hw 
+Command       gen_rtl done; 0.106 sec.
+Execute       syn_report -csynth -model convolution_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/convolution_hw_csynth.rpt 
+Command       syn_report done; 0.635 sec.
+Execute       syn_report -rtlxml -model convolution_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/convolution_hw_csynth.xml 
+Command       syn_report done; 0.311 sec.
+Execute       syn_report -verbosereport -model convolution_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.verbose.rpt 
+Command       syn_report done; 0.629 sec.
+Execute       db_write -model convolution_hw -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.adb 
+Command       db_write done; 0.558 sec.
+Execute       gen_tb_info convolution_hw -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dnn_hw -vendor xilinx -mg_file D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/config_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dnn_hw' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dnn_hw'.
+INFO: [HLS 200-111]  Elapsed time: 2.765 seconds; current allocated memory: 279.236 MB.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dnn_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/systemc/dnn_hw -synmodules load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw 
+Execute       gen_rtl dnn_hw -istop -style xilinx -f -lang vhdl -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/vhdl/dnn_hw 
+Execute       gen_rtl dnn_hw -istop -style xilinx -f -lang vlog -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/verilog/dnn_hw 
+Execute       syn_report -csynth -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/dnn_hw_csynth.rpt 
+Execute       syn_report -rtlxml -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/syn/report/dnn_hw_csynth.xml 
+Execute       syn_report -verbosereport -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.verbose.rpt 
+Command       syn_report done; 1.194 sec.
+Execute       db_write -model dnn_hw -f -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.adb 
+Command       db_write done; 0.125 sec.
+Execute       gen_tb_info dnn_hw -p D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw 
+Execute       export_constraint_db -f -tool general -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.constraint.tcl 
+Execute       syn_report -designview -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.design.xml 
+Command       syn_report done; 1.296 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model dnn_hw -o D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks dnn_hw 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain dnn_hw 
+INFO-FLOW: Model list for RTL component generation: load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO-FLOW: Handling components in module [load_cifm_data_pool] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+INFO-FLOW: Handling components in module [write_row_ifm] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+INFO-FLOW: Handling components in module [pool_write] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+INFO-FLOW: Found component dnn_hw_fcmp_32ns_bkb.
+INFO-FLOW: Append model dnn_hw_fcmp_32ns_bkb
+INFO-FLOW: Handling components in module [conv_read] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+INFO-FLOW: Handling components in module [pool_hw] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+INFO-FLOW: Found component pool_hw_ifm_buff0_0.
+INFO-FLOW: Append model pool_hw_ifm_buff0_0
+INFO-FLOW: Found component pool_hw_ofm_buff0_0.
+INFO-FLOW: Append model pool_hw_ofm_buff0_0
+INFO-FLOW: Handling components in module [load_cifm_data] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+INFO-FLOW: Handling components in module [load_filter_buffer] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_write] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+INFO-FLOW: Found component dnn_hw_fadd_32ns_Gfk.
+INFO-FLOW: Append model dnn_hw_fadd_32ns_Gfk
+INFO-FLOW: Found component dnn_hw_fmul_32ns_Hfu.
+INFO-FLOW: Append model dnn_hw_fmul_32ns_Hfu
+INFO-FLOW: Found component dnn_hw_mux_164_32IfE.
+INFO-FLOW: Append model dnn_hw_mux_164_32IfE
+INFO-FLOW: Handling components in module [convolution_hw] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+INFO-FLOW: Found component convolution_hw_ifJfO.
+INFO-FLOW: Append model convolution_hw_ifJfO
+INFO-FLOW: Found component convolution_hw_fibLp.
+INFO-FLOW: Append model convolution_hw_fibLp
+INFO-FLOW: Found component convolution_hw_ofd5N.
+INFO-FLOW: Append model convolution_hw_ofd5N
+INFO-FLOW: Handling components in module [dnn_hw] ... 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model load_cifm_data_pool
+INFO-FLOW: Append model write_row_ifm
+INFO-FLOW: Append model pool_write
+INFO-FLOW: Append model conv_read
+INFO-FLOW: Append model pool_hw
+INFO-FLOW: Append model load_cifm_data
+INFO-FLOW: Append model load_filter_buffer
+INFO-FLOW: Append model conv_write
+INFO-FLOW: Append model convolution_hw
+INFO-FLOW: Append model dnn_hw
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: dnn_hw_fcmp_32ns_bkb pool_hw_ifm_buff0_0 pool_hw_ofm_buff0_0 dnn_hw_fadd_32ns_Gfk dnn_hw_fmul_32ns_Hfu dnn_hw_mux_164_32IfE convolution_hw_ifJfO convolution_hw_fibLp convolution_hw_ofd5N regslice_core load_cifm_data_pool write_row_ifm pool_write conv_read pool_hw load_cifm_data load_filter_buffer conv_write convolution_hw dnn_hw
+INFO-FLOW: To file: write model dnn_hw_fcmp_32ns_bkb
+INFO-FLOW: To file: write model pool_hw_ifm_buff0_0
+INFO-FLOW: To file: write model pool_hw_ofm_buff0_0
+INFO-FLOW: To file: write model dnn_hw_fadd_32ns_Gfk
+INFO-FLOW: To file: write model dnn_hw_fmul_32ns_Hfu
+INFO-FLOW: To file: write model dnn_hw_mux_164_32IfE
+INFO-FLOW: To file: write model convolution_hw_ifJfO
+INFO-FLOW: To file: write model convolution_hw_fibLp
+INFO-FLOW: To file: write model convolution_hw_ofd5N
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model load_cifm_data_pool
+INFO-FLOW: To file: write model write_row_ifm
+INFO-FLOW: To file: write model pool_write
+INFO-FLOW: To file: write model conv_read
+INFO-FLOW: To file: write model pool_hw
+INFO-FLOW: To file: write model load_cifm_data
+INFO-FLOW: To file: write model load_filter_buffer
+INFO-FLOW: To file: write model conv_write
+INFO-FLOW: To file: write model convolution_hw
+INFO-FLOW: To file: write model dnn_hw
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model dnn_hw -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Course/mSOC/final/finalwrapup_hls/solution1
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.105 sec.
+Command       ap_source done; 0.105 sec.
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.112 sec.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.186 sec.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ifJfO_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_fibLp_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ofd5N_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.173 sec.
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Course/mSOC/final/finalwrapup_hls/solution1
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.109 sec.
+Command       ap_source done; 0.109 sec.
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=dnn_hw xml_exists=0
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.131 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.compgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.constraint.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=10
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=20 #gSsdmPorts=10
+Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.rtl_wrap.cfg.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.compgen.dataonly.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.constraint.tcl 
+Execute       sc_get_clocks dnn_hw 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/impl/misc/dnn_hw_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/impl/misc/dnn_hw_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/impl/misc/dnn_hw_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data_pool.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/write_row_ifm.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_write.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_read.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/pool_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_cifm_data.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/load_filter_buffer.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/conv_write.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/convolution_hw.tbgen.tcl 
+Execute       source D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/dnn_hw.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Course/mSOC/final/finalwrapup_hls/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 413.664 ; gain = 324.320
+INFO: [VHDL 208-304] Generating VHDL RTL for dnn_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for dnn_hw.
+Command     autosyn done; 36.521 sec.
+Command   csynth_design done; 48.959 sec.
+Command ap_source done; 50.184 sec.
+Execute cleanup_all 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="finalconv_Jan19.cpp" path="D:\Course\mSOC\final\finalconv_Jan19.cpp"/>
+    <originFiles name="finalconv.h" path="D:\Course\mSOC\final\finalconv.h"/>
+  </source>
+  <testbench>
+    <originFiles name="finalconv_test.cpp" path="D:\Course\mSOC\final\finalconv_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

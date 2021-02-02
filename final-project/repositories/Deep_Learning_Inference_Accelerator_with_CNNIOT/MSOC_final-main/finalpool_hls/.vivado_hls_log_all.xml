@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:45.272+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:42.545+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224)." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:36.264+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:34.412+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.481+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.474+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.467+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.460+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.453+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'." projectName="finalpool_hls" solutionName="channel_pip" date="2021-01-20T17:37:31.446+0800" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:50.582+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:48.491+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224)." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:45.411+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.839+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.785+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.778+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.771+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.764+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'." projectName="finalpool_hls" solutionName="solution1" date="2021-01-20T17:36:42.757+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,6 @@
+[flake8]
+ignore = E741, E226, F401
+max-line-length = 120
+exclude =
+    .git,
+    __pycache__,

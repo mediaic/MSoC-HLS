@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)&#xD;&#xA;   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:17.608+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)&#xD;&#xA;   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:16.574+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)&#xD;&#xA;   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:16.566+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)&#xD;&#xA;   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:16.557+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalwrapup.cpp:167) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:10.490+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'dnn_hw/config' to 'dnn_hw/config_r' to avoid the conflict with HDL keywords or other object names." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:09.447+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalwrapup.cpp:475:24) in function 'conv_write' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:06.494+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:04.504+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:04.483+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:695)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:04.340+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:695)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:04.331+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:695)." projectName="finalwrapup_hls" solutionName="solution1" date="2021-01-21T20:27:04.324+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

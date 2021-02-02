@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="finalpool.cpp" path="D:\Course\mSOC\final\finalpool.cpp"/>
+    <originFiles name="finalpool.h" path="D:\Course\mSOC\final\finalpool.h"/>
+  </source>
+  <testbench>
+    <originFiles name="finalpool_test.cpp" path="D:\Course\mSOC\final\finalpool_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,14 @@
+NAME: easy
+TYPE: TSP
+COMMENT: 5 point
+DIMENSION : 5
+EDGE_WEIGHT_TYPE: GEO
+EDGE_WEIGHT_FORMAT: FUNCTION 
+DISPLAY_DATA_TYPE: COORD_DISPLAY
+NODE_COORD_SECTION
+   1  0           0
+   2  1           0
+   3  2           0.2
+   4  1           1
+   5  0           1
+EOF

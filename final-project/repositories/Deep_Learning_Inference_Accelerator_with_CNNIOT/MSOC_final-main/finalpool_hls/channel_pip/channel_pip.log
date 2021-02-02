@@ -1,0 +1,801 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalpool.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.277 ; gain = 95.680
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.277 ; gain = 95.680
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.277 ; gain = 95.680
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.277 ; gain = 95.680
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalpool.cpp:179) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 56 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 16 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalpool.cpp:184) in function 'pool_write' completely with a factor of 56.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalpool.cpp:256) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalpool.cpp:258) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalpool.cpp:260) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalpool.cpp:271) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalpool.cpp:272) in dimension 1 completely.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.6' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.7' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.8' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.9' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.10' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.11' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.12' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.13' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.14' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff0.15' (finalpool.cpp:271) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.6' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.7' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.8' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.9' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.10' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.11' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.12' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.13' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.14' (finalpool.cpp:272) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ofm_buff1.15' (finalpool.cpp:272) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 189.227 ; gain = 99.629
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:86:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:88:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalpool.cpp:210:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalpool.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalpool.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalpool.cpp:37:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 647.016 ; gain = 557.418
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pool_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.995 seconds; current allocated memory: 514.124 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.405 seconds; current allocated memory: 514.291 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.423 seconds; current allocated memory: 514.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.361 seconds; current allocated memory: 514.543 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 29, Depth = 35.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.973 seconds; current allocated memory: 538.725 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 20.001 seconds; current allocated memory: 573.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.338 seconds; current allocated memory: 576.261 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.431 seconds; current allocated memory: 576.432 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.277 seconds; current allocated memory: 593.515 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 12.535 seconds; current allocated memory: 615.997 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 9.628 seconds; current allocated memory: 618.256 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.553 seconds; current allocated memory: 618.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pool_hw_fcmp_32ns_32ns_1_2_1' to 'pool_hw_fcmp_32nsbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_mux_164_32_1_1' to 'pool_hw_mux_164_3cud' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'pool_write' is 17921 from HDL expression: (1'b1 == ap_CS_fsm_state37)
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_fcmp_32nsbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_mux_164_3cud': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 33.127 seconds; current allocated memory: 1.307 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 27.331 seconds; current allocated memory: 1.307 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/tran_wgt' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pool_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2udo' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-104] Estimated max fanout for 'pool_hw' is 17980, found 2 HDL expressions with this fanout: (((icmp_ln301_reg_30234 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((ap_predicate_op6300_call_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5)) | ((ap_predicate_op4048_call_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5))), (((ap_predicate_op7426_call_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5)) | ((ap_predicate_op5174_call_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5)))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+INFO: [HLS 200-111]  Elapsed time: 25.234 seconds; current allocated memory: 1.696 GB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.36 MHz
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'pool_hw_ifm_buff0_3_rom' using block ROMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:03:37 ; elapsed = 00:04:07 . Memory (MB): peak = 2659.145 ; gain = 2569.547
+INFO: [VHDL 208-304] Generating VHDL RTL for pool_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for pool_hw.
+INFO: [HLS 200-112] Total elapsed time: 248.737 seconds; peak allocated memory: 1.696 GB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalpool.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.113 ; gain = 95.754
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.113 ; gain = 95.754
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.113 ; gain = 95.754
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.113 ; gain = 95.754
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalpool.cpp:179) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalpool.cpp:184) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalpool.cpp:256) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalpool.cpp:258) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalpool.cpp:260) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalpool.cpp:271) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalpool.cpp:272) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.113 ; gain = 95.754
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:86:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:88:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalpool.cpp:210:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalpool.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalpool.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalpool.cpp:37:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 210.641 ; gain = 120.281
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pool_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.545 seconds; current allocated memory: 157.877 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.102 seconds; current allocated memory: 158.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 158.167 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 158.296 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.481 seconds; current allocated memory: 160.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.819 seconds; current allocated memory: 163.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.078 seconds; current allocated memory: 164.563 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 164.733 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 165.057 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.115 seconds; current allocated memory: 166.204 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.672 seconds; current allocated memory: 166.970 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.195 seconds; current allocated memory: 167.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pool_hw_fcmp_32ns_32ns_1_2_1' to 'pool_hw_fcmp_32nsbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_fcmp_32nsbkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.504 seconds; current allocated memory: 173.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.679 seconds; current allocated memory: 176.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/tran_wgt' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pool_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.755 seconds; current allocated memory: 179.567 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'pool_hw_ifm_buff0_3_rom' using block ROMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_6_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 267.820 ; gain = 177.461
+INFO: [VHDL 208-304] Generating VHDL RTL for pool_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for pool_hw.
+INFO: [HLS 200-112] Total elapsed time: 23.781 seconds; peak allocated memory: 179.567 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalpool.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.473 ; gain = 97.160
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.473 ; gain = 97.160
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.473 ; gain = 97.160
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.473 ; gain = 97.160
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalpool.cpp:179) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalpool.cpp:184) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalpool.cpp:256) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalpool.cpp:258) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalpool.cpp:260) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalpool.cpp:271) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalpool.cpp:272) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.473 ; gain = 97.160
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:86:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:88:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalpool.cpp:210:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalpool.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalpool.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalpool.cpp:37:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 210.355 ; gain = 121.043
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pool_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.193 seconds; current allocated memory: 157.924 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 158.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.108 seconds; current allocated memory: 158.183 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.081 seconds; current allocated memory: 158.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.461 seconds; current allocated memory: 160.532 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.777 seconds; current allocated memory: 163.907 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.009 seconds; current allocated memory: 164.579 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.104 seconds; current allocated memory: 164.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 165.089 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.075 seconds; current allocated memory: 166.236 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.668 seconds; current allocated memory: 167.002 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 167.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pool_hw_fcmp_32ns_32ns_1_2_1' to 'pool_hw_fcmp_32nsbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_fcmp_32nsbkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.456 seconds; current allocated memory: 173.450 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.647 seconds; current allocated memory: 176.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/tran_wgt' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pool_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.687 seconds; current allocated memory: 179.552 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'pool_hw_ifm_buff0_3_rom' using block ROMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_6_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 267.832 ; gain = 178.520
+INFO: [VHDL 208-304] Generating VHDL RTL for pool_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for pool_hw.
+INFO: [HLS 200-112] Total elapsed time: 22.937 seconds; peak allocated memory: 179.552 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalpool.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalpool.cpp:246) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalpool.cpp:179) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:299:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalpool.cpp:186:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalpool.cpp:182:1) in function 'pool_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalpool.cpp:184) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalpool.cpp:256) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalpool.cpp:258) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalpool.cpp:260) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalpool.cpp:271) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalpool.cpp:272) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.973 ; gain = 96.539
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:86:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:87:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:88:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalpool.cpp:210:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalpool.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalpool.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalpool.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalpool.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalpool.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalpool.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalpool.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalpool.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalpool.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalpool.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalpool.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalpool.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalpool.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalpool.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalpool.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalpool.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalpool.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalpool.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalpool.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalpool.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalpool.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalpool.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalpool.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalpool.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalpool.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalpool.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalpool.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalpool.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalpool.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalpool.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalpool.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalpool.cpp:50:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 211.926 ; gain = 122.492
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pool_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.518 seconds; current allocated memory: 158.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 159.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 159.421 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 159.550 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalpool.cpp:189) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.446 seconds; current allocated memory: 161.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.775 seconds; current allocated memory: 165.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'conv_read' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port 'cofm' (finalpool.cpp:229) and axis read on port 'cofm' (finalpool.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.01 seconds; current allocated memory: 165.817 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 165.987 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.134 seconds; current allocated memory: 166.327 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.034 seconds; current allocated memory: 167.491 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.664 seconds; current allocated memory: 168.737 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.319 seconds; current allocated memory: 169.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pool_hw_fcmp_32ns_32ns_1_2_1' to 'pool_hw_fcmp_32nsbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'pool_hw_fcmp_32nsbkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 175.249 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.757 seconds; current allocated memory: 177.952 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pool_hw/tran_wgt' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pool_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'pool_hw/tran_wgt' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.764 seconds; current allocated memory: 181.806 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+WARNING: [RTMG 210-274] Memory 'pool_hw_ifm_buff0_3' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'pool_hw_ifm_buff0_3_rom' using block ROMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_6_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 271.598 ; gain = 182.164
+INFO: [VHDL 208-304] Generating VHDL RTL for pool_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for pool_hw.
+INFO: [HLS 200-112] Total elapsed time: 23.647 seconds; peak allocated memory: 181.806 MB.

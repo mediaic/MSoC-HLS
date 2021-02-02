@@ -1,0 +1,95 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "convolution_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "both",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "cifm",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "convolution_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "both",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "cofm",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "convolution_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "both",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "tran_wgt",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }
+      ]
+    }]}

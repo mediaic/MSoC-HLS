@@ -1,0 +1,2129 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:333:3: error: no matching function for call to 'load_cifm_data'
+  load_cifm_data(cifm, ifm_buff1, ifm_buff2, &cifm_counter);
+  ^~~~~~~~~~~~~~
+finalwrapup.cpp:2:6: note: candidate function not viable: requires 5 arguments, but 4 were provided
+void load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[16][(56 +2*1)], FIXDATA ifm_buff1[16][(56 +2*1)], FIXDATA ifm_buff2[16][(56 +2*1)], int* cifm_counter)
+     ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.867 ; gain = 95.945
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.867 ; gain = 95.945
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.867 ; gain = 95.945
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-61] finalwrapup.cpp:160: unsupported memory access on variable 'cifm.a0' which is (or contains) an array with unknown size at compile time.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.414 ; gain = 96.980
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.414 ; gain = 96.980
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.414 ; gain = 96.980
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 186.414 ; gain = 96.980
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:253) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalwrapup.cpp:357:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:357:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-1' (finalwrapup.cpp:422:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-1' (finalwrapup.cpp:422:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:260:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:260:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalwrapup.cpp:256:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:256:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:217:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:213:1) in function 'conv_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:258) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:315) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:317) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:319) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalwrapup.cpp:321) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:330) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:331) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 4 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 186.414 ; gain = 96.980
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:188:19) in function 'load_filter_buffer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalwrapup.cpp:214:17) in function 'conv_write' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:211:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:160:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:161:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:162:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:163:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:164:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:165:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:166:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:167:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:168:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:169:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:170:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:171:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:172:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:173:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:174:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:175:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:266:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalwrapup.cpp:194:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalwrapup.cpp:195:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalwrapup.cpp:196:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalwrapup.cpp:197:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalwrapup.cpp:198:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalwrapup.cpp:199:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalwrapup.cpp:200:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalwrapup.cpp:201:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalwrapup.cpp:202:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:87:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:88:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:89:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:90:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:91:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:92:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:93:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:94:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:95:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:96:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:97:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:98:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:99:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:100:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:101:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:102:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:110:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:111:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:112:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:113:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:114:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:115:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:116:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:117:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:118:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:119:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:120:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:121:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:122:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:123:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:124:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:125:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:50:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalwrapup.cpp:57:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalwrapup.cpp:58:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalwrapup.cpp:59:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[3]' (finalwrapup.cpp:60:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[4]' (finalwrapup.cpp:61:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[5]' (finalwrapup.cpp:62:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[6]' (finalwrapup.cpp:63:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[7]' (finalwrapup.cpp:64:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[8]' (finalwrapup.cpp:65:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[9]' (finalwrapup.cpp:66:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[10]' (finalwrapup.cpp:67:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[11]' (finalwrapup.cpp:68:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[12]' (finalwrapup.cpp:69:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[13]' (finalwrapup.cpp:70:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[14]' (finalwrapup.cpp:71:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[15]' (finalwrapup.cpp:72:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:246:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 255.398 ; gain = 165.965
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dnn_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'dnn_hw/config' to 'dnn_hw/config_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.836 seconds; current allocated memory: 200.417 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 200.874 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 201.146 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 201.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalwrapup.cpp:263) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 203.647 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.868 seconds; current allocated memory: 206.986 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.164 seconds; current allocated memory: 207.762 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 208.025 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.255 seconds; current allocated memory: 208.587 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 209.222 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 210.179 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.311 seconds; current allocated memory: 211.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('Y', finalwrapup.cpp:243) and 'fadd' operation ('Y', finalwrapup.cpp:243).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('Y', finalwrapup.cpp:243) and 'fadd' operation ('Y', finalwrapup.cpp:243).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('Y', finalwrapup.cpp:243) and 'fadd' operation ('Y', finalwrapup.cpp:243).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('Y', finalwrapup.cpp:243) and 'fadd' operation ('Y', finalwrapup.cpp:243).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.704 seconds; current allocated memory: 213.474 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.836 seconds; current allocated memory: 216.529 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.896 seconds; current allocated memory: 217.401 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.872 seconds; current allocated memory: 220.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data_pool'.
+INFO: [HLS 200-111]  Elapsed time: 0.982 seconds; current allocated memory: 221.522 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.364 seconds; current allocated memory: 222.255 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fcmp_32ns_32ns_1_2_1' to 'dnn_hw_fcmp_32ns_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fcmp_32ns_bkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.546 seconds; current allocated memory: 228.358 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.786 seconds; current allocated memory: 231.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.361 seconds; current allocated memory: 232.401 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'load_filter_buffer' is 5184 from HDL expression: (1'b1 == ap_CS_fsm_state2)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.591 seconds; current allocated memory: 234.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'dnn_hw_fadd_32ns_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'dnn_hw_fmul_32ns_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_mux_164_32_1_1' to 'dnn_hw_mux_164_32eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fadd_32ns_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fmul_32ns_dEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_mux_164_32eOg': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.898 seconds; current allocated memory: 239.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/config_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dnn_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_0' to 'dnn_hw_filter_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_1' to 'dnn_hw_filter_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_2' to 'dnn_hw_filter_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_0' to 'dnn_hw_filter_bufibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_1' to 'dnn_hw_filter_bufjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_2' to 'dnn_hw_filter_bufkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_0' to 'dnn_hw_filter_buflbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_1' to 'dnn_hw_filter_bufmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_2' to 'dnn_hw_filter_bufncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_0' to 'dnn_hw_filter_bufocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_1' to 'dnn_hw_filter_bufpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_2' to 'dnn_hw_filter_bufqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_0' to 'dnn_hw_filter_bufrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_1' to 'dnn_hw_filter_bufsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_2' to 'dnn_hw_filter_buftde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_0' to 'dnn_hw_filter_bufudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_1' to 'dnn_hw_filter_bufvdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_2' to 'dnn_hw_filter_bufwdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_0' to 'dnn_hw_filter_bufxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_1' to 'dnn_hw_filter_bufyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_2' to 'dnn_hw_filter_bufzec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_0' to 'dnn_hw_filter_bufAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_1' to 'dnn_hw_filter_bufBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_2' to 'dnn_hw_filter_bufCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_0' to 'dnn_hw_filter_bufDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_1' to 'dnn_hw_filter_bufEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_2' to 'dnn_hw_filter_bufFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_0' to 'dnn_hw_filter_bufGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_1' to 'dnn_hw_filter_bufHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_2' to 'dnn_hw_filter_bufIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_0' to 'dnn_hw_filter_bufJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_1' to 'dnn_hw_filter_bufKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_2' to 'dnn_hw_filter_bufLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_0' to 'dnn_hw_filter_bufMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_1' to 'dnn_hw_filter_bufNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_2' to 'dnn_hw_filter_bufOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_0' to 'dnn_hw_filter_bufPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_1' to 'dnn_hw_filter_bufQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_2' to 'dnn_hw_filter_bufRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_0' to 'dnn_hw_filter_bufShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_1' to 'dnn_hw_filter_bufThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_2' to 'dnn_hw_filter_bufUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_0' to 'dnn_hw_filter_bufVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_1' to 'dnn_hw_filter_bufWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_2' to 'dnn_hw_filter_bufXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_0' to 'dnn_hw_filter_bufYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_1' to 'dnn_hw_filter_bufZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_2' to 'dnn_hw_filter_buf0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_0' to 'dnn_hw_filter_buf1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_1' to 'dnn_hw_filter_buf2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_2' to 'dnn_hw_filter_buf3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_0' to 'dnn_hw_filter_buf4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_1' to 'dnn_hw_filter_buf5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_2' to 'dnn_hw_filter_buf6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_0' to 'dnn_hw_filter_buf7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_1' to 'dnn_hw_filter_buf8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_2' to 'dnn_hw_filter_buf9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_0' to 'dnn_hw_filter_bufbak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_1' to 'dnn_hw_filter_bufbbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_2' to 'dnn_hw_filter_bufbck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_0' to 'dnn_hw_filter_bufbdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_1' to 'dnn_hw_filter_bufbek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_2' to 'dnn_hw_filter_bufbfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_0' to 'dnn_hw_filter_bufbgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_1' to 'dnn_hw_filter_bufbhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_2' to 'dnn_hw_filter_bufbil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_0' to 'dnn_hw_filter_bufbjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_1' to 'dnn_hw_filter_bufbkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_2' to 'dnn_hw_filter_bufbll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_0' to 'dnn_hw_filter_bufbml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_1' to 'dnn_hw_filter_bufbnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_2' to 'dnn_hw_filter_bufbom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_0' to 'dnn_hw_filter_bufbpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_1' to 'dnn_hw_filter_bufbqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_2' to 'dnn_hw_filter_bufbrm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_0' to 'dnn_hw_filter_bufbsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_1' to 'dnn_hw_filter_bufbtn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_2' to 'dnn_hw_filter_bufbun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_0' to 'dnn_hw_filter_bufbvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_1' to 'dnn_hw_filter_bufbwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_2' to 'dnn_hw_filter_bufbxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_0' to 'dnn_hw_filter_bufbyn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_1' to 'dnn_hw_filter_bufbzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_2' to 'dnn_hw_filter_bufbAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_0' to 'dnn_hw_filter_bufbBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_1' to 'dnn_hw_filter_bufbCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_2' to 'dnn_hw_filter_bufbDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_0' to 'dnn_hw_filter_bufbEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_1' to 'dnn_hw_filter_bufbFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_2' to 'dnn_hw_filter_bufbGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_0' to 'dnn_hw_filter_bufbHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_1' to 'dnn_hw_filter_bufbIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_2' to 'dnn_hw_filter_bufbJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_0' to 'dnn_hw_filter_bufbKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_1' to 'dnn_hw_filter_bufbLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_2' to 'dnn_hw_filter_bufbMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_0' to 'dnn_hw_filter_bufbNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_1' to 'dnn_hw_filter_bufbOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_2' to 'dnn_hw_filter_bufbPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_0' to 'dnn_hw_filter_bufbQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_1' to 'dnn_hw_filter_bufbRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_2' to 'dnn_hw_filter_bufbSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_0' to 'dnn_hw_filter_bufbTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_1' to 'dnn_hw_filter_bufbUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_2' to 'dnn_hw_filter_bufbVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_0' to 'dnn_hw_filter_bufbWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_1' to 'dnn_hw_filter_bufbXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_2' to 'dnn_hw_filter_bufbYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_0' to 'dnn_hw_filter_bufbZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_1' to 'dnn_hw_filter_bufb0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_2' to 'dnn_hw_filter_bufb1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_0' to 'dnn_hw_filter_bufb2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_1' to 'dnn_hw_filter_bufb3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_2' to 'dnn_hw_filter_bufb4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_0' to 'dnn_hw_filter_bufb5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_1' to 'dnn_hw_filter_bufb6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_2' to 'dnn_hw_filter_bufb7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_0' to 'dnn_hw_filter_bufb8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_1' to 'dnn_hw_filter_bufb9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_2' to 'dnn_hw_filter_bufcau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_0' to 'dnn_hw_filter_bufcbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_1' to 'dnn_hw_filter_bufccu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_2' to 'dnn_hw_filter_bufcdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_0' to 'dnn_hw_filter_bufceu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_1' to 'dnn_hw_filter_bufcfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_2' to 'dnn_hw_filter_bufcgu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_0' to 'dnn_hw_filter_bufchv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_1' to 'dnn_hw_filter_bufciv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_2' to 'dnn_hw_filter_bufcjv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_0' to 'dnn_hw_filter_bufckv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_1' to 'dnn_hw_filter_bufclv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_2' to 'dnn_hw_filter_bufcmv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_0' to 'dnn_hw_filter_bufcnw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_1' to 'dnn_hw_filter_bufcow' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_2' to 'dnn_hw_filter_bufcpw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_0' to 'dnn_hw_filter_bufcqw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_1' to 'dnn_hw_filter_bufcrw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_2' to 'dnn_hw_filter_bufcsw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_0' to 'dnn_hw_filter_bufctx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_1' to 'dnn_hw_filter_bufcux' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_2' to 'dnn_hw_filter_bufcvx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_0' to 'dnn_hw_filter_bufcwx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_1' to 'dnn_hw_filter_bufcxx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_2' to 'dnn_hw_filter_bufcyx' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dnn_hw'.
+INFO: [HLS 200-111]  Elapsed time: 5.147 seconds; current allocated memory: 253.131 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_filter_buffYi_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 388.996 ; gain = 299.562
+INFO: [VHDL 208-304] Generating VHDL RTL for dnn_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for dnn_hw.
+INFO: [HLS 200-112] Total elapsed time: 44.011 seconds; peak allocated memory: 253.131 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.500 ; gain = 96.164
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.500 ; gain = 96.164
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.500 ; gain = 96.164
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 186.500 ; gain = 96.164
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:301) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:253) in function 'pool_write' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (finalwrapup.cpp:214) in function 'conv_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalwrapup.cpp:357:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:357:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-1' (finalwrapup.cpp:422:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-1' (finalwrapup.cpp:422:1) in function 'dnn_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:260:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:260:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 56 for loop 'Loop-0' (finalwrapup.cpp:256:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:256:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 16 for loop 'Loop-0-0' (finalwrapup.cpp:217:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:213:1) in function 'conv_write'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:258) in function 'pool_write' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (finalwrapup.cpp:220) in function 'conv_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:315) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:317) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:319) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalwrapup.cpp:321) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:330) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:331) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:324) in dimension 4 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 186.500 ; gain = 96.164
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:188:19) in function 'load_filter_buffer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:211:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:160:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:161:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:162:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:163:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:164:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:165:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:166:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:167:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:168:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:169:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:170:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:171:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:172:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:173:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:174:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:175:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:266:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalwrapup.cpp:194:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalwrapup.cpp:195:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalwrapup.cpp:196:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalwrapup.cpp:197:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalwrapup.cpp:198:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalwrapup.cpp:199:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalwrapup.cpp:200:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalwrapup.cpp:201:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalwrapup.cpp:202:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:87:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:88:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:89:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:90:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:91:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:92:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:93:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:94:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:95:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:96:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:97:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:98:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:99:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:100:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:101:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:102:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:110:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:111:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:112:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:113:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:114:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:115:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:116:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:117:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:118:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:119:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:120:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:121:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:122:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:123:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:124:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:125:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:12:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:13:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:35:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:36:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:50:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalwrapup.cpp:57:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalwrapup.cpp:58:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalwrapup.cpp:59:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[3]' (finalwrapup.cpp:60:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[4]' (finalwrapup.cpp:61:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[5]' (finalwrapup.cpp:62:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[6]' (finalwrapup.cpp:63:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[7]' (finalwrapup.cpp:64:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[8]' (finalwrapup.cpp:65:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[9]' (finalwrapup.cpp:66:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[10]' (finalwrapup.cpp:67:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[11]' (finalwrapup.cpp:68:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[12]' (finalwrapup.cpp:69:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[13]' (finalwrapup.cpp:70:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[14]' (finalwrapup.cpp:71:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[15]' (finalwrapup.cpp:72:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:246:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 256.422 ; gain = 166.086
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dnn_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'dnn_hw/config' to 'dnn_hw/config_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.791 seconds; current allocated memory: 201.296 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 201.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 202.026 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 202.323 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalwrapup.cpp:263) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.487 seconds; current allocated memory: 204.511 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.883 seconds; current allocated memory: 207.866 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.107 seconds; current allocated memory: 208.626 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 208.889 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.255 seconds; current allocated memory: 209.466 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 210.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.456 seconds; current allocated memory: 211.043 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.308 seconds; current allocated memory: 212.259 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_3', finalwrapup.cpp:232) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 113.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.49 seconds; current allocated memory: 216.580 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.974 seconds; current allocated memory: 223.661 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.24 seconds; current allocated memory: 225.097 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.86 seconds; current allocated memory: 227.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data_pool'.
+INFO: [HLS 200-111]  Elapsed time: 1.467 seconds; current allocated memory: 229.322 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.377 seconds; current allocated memory: 230.139 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fcmp_32ns_32ns_1_2_1' to 'dnn_hw_fcmp_32ns_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fcmp_32ns_bkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.592 seconds; current allocated memory: 236.205 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.822 seconds; current allocated memory: 239.067 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 240.269 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'load_filter_buffer' is 5184 from HDL expression: (1'b1 == ap_CS_fsm_state2)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.591 seconds; current allocated memory: 242.405 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'dnn_hw_fadd_32ns_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'dnn_hw_fmul_32ns_dEe' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv_write' is 13716 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fadd_32ns_cud': 72 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fmul_32ns_dEe': 72 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+INFO: [HLS 200-111]  Elapsed time: 1.699 seconds; current allocated memory: 252.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/config_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dnn_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_0' to 'dnn_hw_filter_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_1' to 'dnn_hw_filter_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_0_2' to 'dnn_hw_filter_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_0' to 'dnn_hw_filter_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_1' to 'dnn_hw_filter_bufibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_1_2' to 'dnn_hw_filter_bufjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_0' to 'dnn_hw_filter_bufkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_1' to 'dnn_hw_filter_buflbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_0_2_2' to 'dnn_hw_filter_bufmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_0' to 'dnn_hw_filter_bufncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_1' to 'dnn_hw_filter_bufocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_0_2' to 'dnn_hw_filter_bufpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_0' to 'dnn_hw_filter_bufqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_1' to 'dnn_hw_filter_bufrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_1_2' to 'dnn_hw_filter_bufsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_0' to 'dnn_hw_filter_buftde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_1' to 'dnn_hw_filter_bufudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_1_2_2' to 'dnn_hw_filter_bufvdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_0' to 'dnn_hw_filter_bufwdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_1' to 'dnn_hw_filter_bufxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_0_2' to 'dnn_hw_filter_bufyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_0' to 'dnn_hw_filter_bufzec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_1' to 'dnn_hw_filter_bufAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_1_2' to 'dnn_hw_filter_bufBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_0' to 'dnn_hw_filter_bufCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_1' to 'dnn_hw_filter_bufDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_2_2_2' to 'dnn_hw_filter_bufEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_0' to 'dnn_hw_filter_bufFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_1' to 'dnn_hw_filter_bufGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_0_2' to 'dnn_hw_filter_bufHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_0' to 'dnn_hw_filter_bufIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_1' to 'dnn_hw_filter_bufJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_1_2' to 'dnn_hw_filter_bufKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_0' to 'dnn_hw_filter_bufLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_1' to 'dnn_hw_filter_bufMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_3_2_2' to 'dnn_hw_filter_bufNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_0' to 'dnn_hw_filter_bufOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_1' to 'dnn_hw_filter_bufPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_0_2' to 'dnn_hw_filter_bufQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_0' to 'dnn_hw_filter_bufRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_1' to 'dnn_hw_filter_bufShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_1_2' to 'dnn_hw_filter_bufThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_0' to 'dnn_hw_filter_bufUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_1' to 'dnn_hw_filter_bufVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_4_2_2' to 'dnn_hw_filter_bufWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_0' to 'dnn_hw_filter_bufXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_1' to 'dnn_hw_filter_bufYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_0_2' to 'dnn_hw_filter_bufZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_0' to 'dnn_hw_filter_buf0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_1' to 'dnn_hw_filter_buf1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_1_2' to 'dnn_hw_filter_buf2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_0' to 'dnn_hw_filter_buf3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_1' to 'dnn_hw_filter_buf4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_5_2_2' to 'dnn_hw_filter_buf5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_0' to 'dnn_hw_filter_buf6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_1' to 'dnn_hw_filter_buf7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_0_2' to 'dnn_hw_filter_buf8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_0' to 'dnn_hw_filter_buf9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_1' to 'dnn_hw_filter_bufbak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_1_2' to 'dnn_hw_filter_bufbbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_0' to 'dnn_hw_filter_bufbck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_1' to 'dnn_hw_filter_bufbdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_6_2_2' to 'dnn_hw_filter_bufbek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_0' to 'dnn_hw_filter_bufbfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_1' to 'dnn_hw_filter_bufbgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_0_2' to 'dnn_hw_filter_bufbhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_0' to 'dnn_hw_filter_bufbil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_1' to 'dnn_hw_filter_bufbjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_1_2' to 'dnn_hw_filter_bufbkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_0' to 'dnn_hw_filter_bufbll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_1' to 'dnn_hw_filter_bufbml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_7_2_2' to 'dnn_hw_filter_bufbnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_0' to 'dnn_hw_filter_bufbom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_1' to 'dnn_hw_filter_bufbpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_0_2' to 'dnn_hw_filter_bufbqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_0' to 'dnn_hw_filter_bufbrm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_1' to 'dnn_hw_filter_bufbsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_1_2' to 'dnn_hw_filter_bufbtn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_0' to 'dnn_hw_filter_bufbun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_1' to 'dnn_hw_filter_bufbvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_8_2_2' to 'dnn_hw_filter_bufbwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_0' to 'dnn_hw_filter_bufbxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_1' to 'dnn_hw_filter_bufbyn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_0_2' to 'dnn_hw_filter_bufbzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_0' to 'dnn_hw_filter_bufbAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_1' to 'dnn_hw_filter_bufbBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_1_2' to 'dnn_hw_filter_bufbCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_0' to 'dnn_hw_filter_bufbDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_1' to 'dnn_hw_filter_bufbEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_9_2_2' to 'dnn_hw_filter_bufbFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_0' to 'dnn_hw_filter_bufbGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_1' to 'dnn_hw_filter_bufbHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_0_2' to 'dnn_hw_filter_bufbIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_0' to 'dnn_hw_filter_bufbJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_1' to 'dnn_hw_filter_bufbKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_1_2' to 'dnn_hw_filter_bufbLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_0' to 'dnn_hw_filter_bufbMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_1' to 'dnn_hw_filter_bufbNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_10_2_2' to 'dnn_hw_filter_bufbOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_0' to 'dnn_hw_filter_bufbPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_1' to 'dnn_hw_filter_bufbQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_0_2' to 'dnn_hw_filter_bufbRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_0' to 'dnn_hw_filter_bufbSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_1' to 'dnn_hw_filter_bufbTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_1_2' to 'dnn_hw_filter_bufbUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_0' to 'dnn_hw_filter_bufbVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_1' to 'dnn_hw_filter_bufbWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_11_2_2' to 'dnn_hw_filter_bufbXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_0' to 'dnn_hw_filter_bufbYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_1' to 'dnn_hw_filter_bufbZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_0_2' to 'dnn_hw_filter_bufb0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_0' to 'dnn_hw_filter_bufb1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_1' to 'dnn_hw_filter_bufb2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_1_2' to 'dnn_hw_filter_bufb3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_0' to 'dnn_hw_filter_bufb4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_1' to 'dnn_hw_filter_bufb5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_12_2_2' to 'dnn_hw_filter_bufb6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_0' to 'dnn_hw_filter_bufb7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_1' to 'dnn_hw_filter_bufb8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_0_2' to 'dnn_hw_filter_bufb9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_0' to 'dnn_hw_filter_bufcau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_1' to 'dnn_hw_filter_bufcbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_1_2' to 'dnn_hw_filter_bufccu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_0' to 'dnn_hw_filter_bufcdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_1' to 'dnn_hw_filter_bufceu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_13_2_2' to 'dnn_hw_filter_bufcfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_0' to 'dnn_hw_filter_bufcgu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_1' to 'dnn_hw_filter_bufchv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_0_2' to 'dnn_hw_filter_bufciv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_0' to 'dnn_hw_filter_bufcjv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_1' to 'dnn_hw_filter_bufckv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_1_2' to 'dnn_hw_filter_bufclv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_0' to 'dnn_hw_filter_bufcmv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_1' to 'dnn_hw_filter_bufcnw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_14_2_2' to 'dnn_hw_filter_bufcow' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_0' to 'dnn_hw_filter_bufcpw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_1' to 'dnn_hw_filter_bufcqw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_0_2' to 'dnn_hw_filter_bufcrw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_0' to 'dnn_hw_filter_bufcsw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_1' to 'dnn_hw_filter_bufctx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_1_2' to 'dnn_hw_filter_bufcux' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_0' to 'dnn_hw_filter_bufcvx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_1' to 'dnn_hw_filter_bufcwx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_filter_buff_15_2_2' to 'dnn_hw_filter_bufcxx' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dnn_hw'.
+INFO: [HLS 200-111]  Elapsed time: 7.63 seconds; current allocated memory: 267.702 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_filter_bufeOg_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dnn_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:53 . Memory (MB): peak = 410.406 ; gain = 320.070
+INFO: [VHDL 208-304] Generating VHDL RTL for dnn_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for dnn_hw.
+INFO: [HLS 200-112] Total elapsed time: 53.365 seconds; peak allocated memory: 267.702 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:18: error: unexpected type name 'IPACK': expected expression
+  convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt, int* config)
+                 ^
+finalwrapup.cpp:53:3: error: use of undeclared identifier 'load_cifm_data_pool'
+  load_cifm_data_pool(cifm, ifm_buff1, ifm_buff2, &cifm_counter);
+  ^
+finalwrapup.cpp:67:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff0, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:69:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff1, ifm_buff2, ofm_buff0);
+    ^
+finalwrapup.cpp:70:5: error: use of undeclared identifier 'conv_read'
+    conv_read(cofm, ofm_buff1, &cofm_counter, row!=0);
+    ^
+finalwrapup.cpp:78:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff1, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:79:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff2, ifm_buff0, ofm_buff1);
+    ^
+finalwrapup.cpp:80:5: error: use of undeclared identifier 'conv_read'
+    conv_read(cofm, ofm_buff0, &cofm_counter, 1);
+    ^
+finalwrapup.cpp:87:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff2, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:88:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff0, ifm_buff1, ofm_buff0);
+    ^
+finalwrapup.cpp:89:5: error: use of undeclared identifier 'conv_read'
+    conv_read(cofm, ofm_buff1, &cofm_counter, 1);
+    ^
+finalwrapup.cpp:96:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff0, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:97:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff1, ifm_buff2, ofm_buff1);
+    ^
+finalwrapup.cpp:98:5: error: use of undeclared identifier 'conv_read'
+    conv_read(cofm, ofm_buff0, &cofm_counter, 1);
+    ^
+finalwrapup.cpp:105:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff1, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:106:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff2, ifm_buff0, ofm_buff0);
+    ^
+finalwrapup.cpp:107:5: error: use of undeclared identifier 'conv_read'
+    conv_read(cofm, ofm_buff1, &cofm_counter, 1);
+    ^
+finalwrapup.cpp:110:5: error: use of undeclared identifier 'write_row_ifm'
+    write_row_ifm(cifm, ifm_buff2, &cifm_counter, row!=32 -1);
+    ^
+finalwrapup.cpp:111:5: error: use of undeclared identifier 'pool_write'
+    pool_write(ifm_buff0, ifm_buff1, ofm_buff1);
+    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:18: error: unexpected type name 'IPACK': expected expression
+  convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt, int* config)
+                 ^
+finalwrapup.cpp:47:18: error: unexpected type name 'IPACK': expected expression
+  load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], FIXDATA ifm_buff1[3][(32 +2*1)], int* cifm_counter)
+                 ^
+2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+WARNING: [HLS 200-40] In file included from finalwrapup.cpp:2:
+./finalpool.h:23:9: warning: 'N' macro redefined
+#define N 16
+        ^
+./finalconv.h:24:9: note: previous definition is here
+#define N 3
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:24:9: warning: 'M' macro redefined
+#define M 16
+        ^
+./finalconv.h:25:9: note: previous definition is here
+#define M 6
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:25:9: warning: 'IR' macro redefined
+#define IR 10
+        ^
+./finalconv.h:26:9: note: previous definition is here
+#define IR 32
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:26:9: warning: 'IC' macro redefined
+#define IC 10
+        ^
+./finalconv.h:27:9: note: previous definition is here
+#define IC 32
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:27:9: warning: 'OR' macro redefined
+#define OR 5
+        ^
+./finalconv.h:28:9: note: previous definition is here
+#define OR 32
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:28:9: warning: 'OC' macro redefined
+#define OC 5
+        ^
+./finalconv.h:29:9: note: previous definition is here
+#define OC 32
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:29:9: warning: 'K' macro redefined
+#define K 2
+        ^
+./finalconv.h:30:9: note: previous definition is here
+#define K 3
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:31:9: warning: 'P' macro redefined
+#define P 0
+        ^
+./finalconv.h:32:9: note: previous definition is here
+#define P 1
+        ^
+In file included from finalwrapup.cpp:2:
+./finalpool.h:32:9: warning: 'w_m' macro redefined
+#define w_m 2
+        ^
+./finalconv.h:33:9: note: previous definition is here
+#define w_m 1
+        ^
+9 warnings generated.
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:41:16: error: redefinition of 'ifm_struct'
+typedef struct ifm_struct
+               ^
+./finalconv.h:55:16: note: previous definition is here
+typedef struct ifm_struct
+               ^
+In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:59:4: error: typedef redefinition with different types ('struct IPACK' vs 'struct ifm_struct')
+ } IPACK;
+   ^
+./finalconv.h:73:4: note: previous definition is here
+ } IPACK;
+   ^
+In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:60:17: error: redefinition of 'filter_struct'
+ typedef struct filter_struct
+                ^
+./finalconv.h:74:17: note: previous definition is here
+ typedef struct filter_struct
+                ^
+In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:79:4: error: typedef redefinition with different types ('struct FPACK' vs 'struct filter_struct')
+ } FPACK;
+   ^
+./finalconv.h:93:4: note: previous definition is here
+ } FPACK;
+   ^
+In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:80:17: error: redefinition of 'ofm_struct'
+ typedef struct ofm_struct
+                ^
+./finalconv.h:94:17: note: previous definition is here
+ typedef struct ofm_struct
+                ^
+In file included from finalwrapup.cpp:1:
+In file included from finalwrapup.cpp:2:
+./finalpool.h:98:4: error: typedef redefinition with different types ('struct OPACK' vs 'struct ofm_struct')
+ } OPACK;
+   ^
+./finalconv.h:112:4: note: previous definition is here
+ } OPACK;
+   ^
+In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:18: error: unexpected type name 'IPACK': expected expression
+  convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt, int* config)
+                 ^
+finalwrapup.cpp:47:18: error: unexpected type name 'IPACK': expected expression
+  load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[16][(10 +2*0)], FIXDATA ifm_buff1[16][(10 +2*0)], int* cifm_counter)
+                 ^
+8 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:18: error: unexpected type name 'IPACK': expected expression
+  convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt, int* config)
+                 ^
+finalwrapup.cpp:47:18: error: unexpected type name 'IPACK': expected expression
+  load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], FIXDATA ifm_buff1[3][(32 +2*1)], int* cifm_counter)
+                 ^
+2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:3: error: no matching function for call to 'convolution_hw'
+  convolution_hw(cifm,cofm,tran_wgt,config)
+  ^~~~~~~~~~~~~~
+./finalconv.h:114:6: note: candidate function not viable: requires 3 arguments, but 4 were provided
+void convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt);
+     ^
+In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:47:3: error: no matching function for call to 'load_cifm_data'
+  load_cifm_data(cifm,ifm_buff0,ifm_buff1,cifm_counter)
+  ^~~~~~~~~~~~~~
+./finalconv.h:115:6: note: candidate function not viable: no known conversion from 'int' to 'int *' for 4th argument; take the address of the argument with &
+void load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], FIXDATA ifm_buff1[3][(32 +2*1)], int* cifm_counter);
+     ^
+2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:3: error: no matching function for call to 'convolution_hw'
+  convolution_hw(cifm,cofm,tran_wgt,config)
+  ^~~~~~~~~~~~~~
+./finalconv.h:114:6: note: candidate function not viable: requires 3 arguments, but 4 were provided
+void convolution_hw(IPACK* cifm, OPACK* cofm, FPACK* tran_wgt);
+     ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:44:37: error: expected ';' after expression
+  convolution_hw(cifm,cofm,tran_wgt)
+                                    ^
+                                    ;
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.117 ; gain = 96.023
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.117 ; gain = 96.023
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.117 ; gain = 96.023
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-71] finalwrapup.cpp:44: function 'convolution_hw(ifm_struct*, ofm_struct*, filter_struct*)' has no function body.
+ERROR: [SYNCHK 200-71] finalwrapup.cpp:47: function 'pool_hw(ifm_struct*, ofm_struct*, filter_struct*)' has no function body.
+WARNING: [SYNCHK 200-77] The top function 'dnn_hw' (finalwrapup.cpp:3) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 2 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:435:6: error: redefinition of 'write_row_ifm'
+void write_row_ifm(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], int* cifm_counter, bool enable)
+     ^
+finalwrapup.cpp:79:6: note: previous definition is here
+void write_row_ifm(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], int* cifm_counter, bool enable)
+     ^
+finalwrapup.cpp:465:6: error: redefinition of 'load_filter_buffer'
+void load_filter_buffer(FPACK* wgt, FIXDATA filter_buff[6][3][3][3])
+     ^
+finalwrapup.cpp:109:6: note: previous definition is here
+void load_filter_buffer(FPACK* wgt, FIXDATA filter_buff[6][3][3][3])
+     ^
+finalwrapup.cpp:587:6: error: redefinition of 'conv_read'
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+finalwrapup.cpp:218:6: note: previous definition is here
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+3 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:435:6: error: redefinition of 'write_row_ifm'
+void write_row_ifm(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], int* cifm_counter, bool enable)
+     ^
+finalwrapup.cpp:79:6: note: previous definition is here
+void write_row_ifm(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], int* cifm_counter, bool enable)
+     ^
+finalwrapup.cpp:465:6: error: redefinition of 'load_filter_buffer'
+void load_filter_buffer(FPACK* wgt, FIXDATA filter_buff[6][3][3][3])
+     ^
+finalwrapup.cpp:109:6: note: previous definition is here
+void load_filter_buffer(FPACK* wgt, FIXDATA filter_buff[6][3][3][3])
+     ^
+finalwrapup.cpp:587:6: error: redefinition of 'conv_read'
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+finalwrapup.cpp:218:6: note: previous definition is here
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+3 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:589:6: error: redefinition of 'conv_read'
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+finalwrapup.cpp:218:6: note: previous definition is here
+void conv_read(OPACK* cofm, FIXDATA ofm_buff0[6][32], int* cofm_counter, bool enable)
+     ^
+finalwrapup.cpp:660:5: error: no matching function for call to 'load_cifm_data'
+    load_cifm_data(cifm, ifm_buff1, ifm_buff2, ifm_buff3, &cifm_counter);
+    ^~~~~~~~~~~~~~
+finalwrapup.cpp:3:6: note: candidate function not viable: requires 4 arguments, but 5 were provided
+void load_cifm_data(IPACK* cifm, FIXDATA ifm_buff0[3][(32 +2*1)], FIXDATA ifm_buff1[3][(32 +2*1)], int* cifm_counter)
+     ^
+2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from finalwrapup.cpp:1:
+finalwrapup.cpp:364:8: error: use of undeclared identifier 'Load'
+     * Load the standard input feature maps from PS to PL using FIFO, implemented at PL.
+       ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.785 ; gain = 97.062
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.785 ; gain = 97.062
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.785 ; gain = 97.062
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.785 ; gain = 97.062
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:719).
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:719) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:719).
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:719) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:719).
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:719) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:180) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32 to 3 for loop 'Loop-0-0' (finalwrapup.cpp:187:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 3 for loop 'Loop-0-0' (finalwrapup.cpp:187:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 32 for loop 'Loop-0' (finalwrapup.cpp:183:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:183:1) in function 'pool_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 6 for loop 'Loop-0-0' (finalwrapup.cpp:502:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 6 for loop 'Loop-0-0' (finalwrapup.cpp:502:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 56 to 32 for loop 'Loop-0' (finalwrapup.cpp:498:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:498:1) in function 'conv_write'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalwrapup.cpp:300:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:300:1) in function 'pool_hw'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalwrapup.cpp:670:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:670:1) in function 'convolution_hw'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:185) in function 'pool_write' completely with a factor of 3.
+ERROR: [XFORM 203-103] Cannot partition array 'ifm_buff1' (finalwrapup.cpp:259): array access out of bound (finalwrapup.cpp:22:9).
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.965 ; gain = 96.828
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.965 ; gain = 96.828
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.965 ; gain = 96.828
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.965 ; gain = 96.828
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:718).
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:718) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:718).
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:718) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:718).
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:718) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:180) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalwrapup.cpp:669:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:669:1) in function 'convolution_hw'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:185) in function 'pool_write' completely with a factor of 3.
+ERROR: [XFORM 203-103] Cannot partition array 'ifm_buff1' (finalwrapup.cpp:259): array access out of bound (finalwrapup.cpp:18:9).
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.816 ; gain = 96.266
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.816 ; gain = 96.266
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.816 ; gain = 96.266
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.816 ; gain = 96.266
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:695) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:157) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 32 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:162) in function 'pool_write' completely with a factor of 3.
+ERROR: [XFORM 203-103] Cannot partition array 'ifm_buff0' (finalwrapup.cpp:234): array access out of bound (finalwrapup.cpp:79:13).
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'finalwrapup.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 186.652 ; gain = 97.309
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cifm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cifm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'cofm' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'cofm' (finalwrapup.cpp:695) into a 512-bit variable.
+WARNING: [XFORM 203-1102] Ignored multiple data pack pragma for variable 'tran_wgt' (finalwrapup.cpp:695).
+INFO: [XFORM 203-1101] Packing variable 'tran_wgt' (finalwrapup.cpp:695) into a 512-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (finalwrapup.cpp:157) in function 'pool_write' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 56 for loop 'Loop-0' (finalwrapup.cpp:646:1) in function 'convolution_hw'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (finalwrapup.cpp:162) in function 'pool_write' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:234) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:236) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:238) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:249) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:250) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff0' (finalwrapup.cpp:604) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff1' (finalwrapup.cpp:606) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff2' (finalwrapup.cpp:608) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifm_buff3' (finalwrapup.cpp:610) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff0' (finalwrapup.cpp:619) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofm_buff1' (finalwrapup.cpp:620) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:718) in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'filter_buff' (finalwrapup.cpp:613) in dimension 4 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 186.652 ; gain = 97.309
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:92:19) in function 'load_filter_buffer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (finalwrapup.cpp:475:24) in function 'conv_write' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (finalwrapup.cpp:472:21) in function 'conv_write'.
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:64:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:65:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:66:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:67:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:68:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:69:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:70:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:71:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:72:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:73:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:74:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:75:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:76:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:77:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:78:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:79:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:188:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][0]' (finalwrapup.cpp:98:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][1]' (finalwrapup.cpp:99:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][0][2]' (finalwrapup.cpp:100:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][0]' (finalwrapup.cpp:101:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][1]' (finalwrapup.cpp:102:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][1][2]' (finalwrapup.cpp:103:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][0]' (finalwrapup.cpp:104:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][1]' (finalwrapup.cpp:105:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'filter_buff[0][2][2]' (finalwrapup.cpp:106:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:13:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:14:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:15:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:16:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:17:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:18:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:19:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:20:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:21:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:22:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:23:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:24:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:25:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:26:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:28:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:36:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:37:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:38:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:39:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:40:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:42:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:43:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:44:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:45:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:47:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:48:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:49:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:50:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:51:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[0]' (finalwrapup.cpp:347:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[1]' (finalwrapup.cpp:348:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[2]' (finalwrapup.cpp:349:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[3]' (finalwrapup.cpp:350:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[4]' (finalwrapup.cpp:351:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[5]' (finalwrapup.cpp:352:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[6]' (finalwrapup.cpp:353:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[7]' (finalwrapup.cpp:354:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[8]' (finalwrapup.cpp:355:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[9]' (finalwrapup.cpp:356:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[10]' (finalwrapup.cpp:357:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[11]' (finalwrapup.cpp:358:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[12]' (finalwrapup.cpp:359:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[13]' (finalwrapup.cpp:360:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[14]' (finalwrapup.cpp:361:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff0[15]' (finalwrapup.cpp:362:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[0]' (finalwrapup.cpp:370:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[1]' (finalwrapup.cpp:371:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[2]' (finalwrapup.cpp:372:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[3]' (finalwrapup.cpp:373:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[4]' (finalwrapup.cpp:374:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[5]' (finalwrapup.cpp:375:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[6]' (finalwrapup.cpp:376:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[7]' (finalwrapup.cpp:377:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[8]' (finalwrapup.cpp:378:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[9]' (finalwrapup.cpp:379:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[10]' (finalwrapup.cpp:380:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[11]' (finalwrapup.cpp:381:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[12]' (finalwrapup.cpp:382:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[13]' (finalwrapup.cpp:383:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[14]' (finalwrapup.cpp:384:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff1[15]' (finalwrapup.cpp:385:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[0]' (finalwrapup.cpp:392:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[1]' (finalwrapup.cpp:393:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[2]' (finalwrapup.cpp:394:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[3]' (finalwrapup.cpp:395:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[4]' (finalwrapup.cpp:396:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[5]' (finalwrapup.cpp:397:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[6]' (finalwrapup.cpp:398:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[7]' (finalwrapup.cpp:399:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[8]' (finalwrapup.cpp:400:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[9]' (finalwrapup.cpp:401:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[10]' (finalwrapup.cpp:402:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[11]' (finalwrapup.cpp:403:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[12]' (finalwrapup.cpp:404:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[13]' (finalwrapup.cpp:405:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[14]' (finalwrapup.cpp:406:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ifm_buff2[15]' (finalwrapup.cpp:407:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'ofm_buff0[0]' (finalwrapup.cpp:560:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 275.508 ; gain = 186.164
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dnn_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'dnn_hw/config' to 'dnn_hw/config_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.311 seconds; current allocated memory: 220.382 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 220.839 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 221.127 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 221.424 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ifm_buff0_0_load_2', finalwrapup.cpp:167) on array 'ifm_buff0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ifm_buff0_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 223.644 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.866 seconds; current allocated memory: 226.983 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.163 seconds; current allocated memory: 227.743 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 228.006 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 228.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.176 seconds; current allocated memory: 229.597 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.779 seconds; current allocated memory: 230.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.218 seconds; current allocated memory: 231.268 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.492 seconds; current allocated memory: 232.225 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.338 seconds; current allocated memory: 233.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('Y', finalwrapup.cpp:526) and 'fadd' operation ('Y', finalwrapup.cpp:526).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.701 seconds; current allocated memory: 235.502 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.843 seconds; current allocated memory: 238.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.832 seconds; current allocated memory: 239.213 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.463 seconds; current allocated memory: 240.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.485 seconds; current allocated memory: 240.737 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.395 seconds; current allocated memory: 241.327 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data_pool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data_pool'.
+INFO: [HLS 200-111]  Elapsed time: 1.336 seconds; current allocated memory: 242.627 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_row_ifm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_row_ifm'.
+INFO: [HLS 200-111]  Elapsed time: 0.366 seconds; current allocated memory: 243.392 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fcmp_32ns_32ns_1_2_1' to 'dnn_hw_fcmp_32ns_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fcmp_32ns_bkb': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.556 seconds; current allocated memory: 249.495 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_read' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_read'.
+INFO: [HLS 200-111]  Elapsed time: 2.819 seconds; current allocated memory: 252.322 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_10' to 'pool_hw_ifm_buff0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_11' to 'pool_hw_ifm_buff0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_12' to 'pool_hw_ifm_buff0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_13' to 'pool_hw_ifm_buff0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_14' to 'pool_hw_ifm_buff0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff0_15' to 'pool_hw_ifm_buff0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_10' to 'pool_hw_ifm_buff1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_11' to 'pool_hw_ifm_buff1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_12' to 'pool_hw_ifm_buff1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_13' to 'pool_hw_ifm_buff1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_14' to 'pool_hw_ifm_buff1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff1_15' to 'pool_hw_ifm_buff1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_10' to 'pool_hw_ifm_buff2ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_11' to 'pool_hw_ifm_buff2pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_12' to 'pool_hw_ifm_buff2qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_13' to 'pool_hw_ifm_buff2rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_14' to 'pool_hw_ifm_buff2sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ifm_buff2_15' to 'pool_hw_ifm_buff2tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_10' to 'pool_hw_ofm_buff0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_11' to 'pool_hw_ofm_buff0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_12' to 'pool_hw_ofm_buff0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_13' to 'pool_hw_ofm_buff0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_14' to 'pool_hw_ofm_buff0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff0_15' to 'pool_hw_ofm_buff0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_10' to 'pool_hw_ofm_buff1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_11' to 'pool_hw_ofm_buff1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_12' to 'pool_hw_ofm_buff1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_13' to 'pool_hw_ofm_buff1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_14' to 'pool_hw_ofm_buff1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_hw_ofm_buff1_15' to 'pool_hw_ofm_buff1Ffa' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.816 seconds; current allocated memory: 256.435 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_cifm_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_cifm_data'.
+INFO: [HLS 200-111]  Elapsed time: 1.72 seconds; current allocated memory: 258.346 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_filter_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'load_filter_buffer' is 5184 from HDL expression: (1'b1 == ap_CS_fsm_state2)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_filter_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.624 seconds; current allocated memory: 260.636 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fadd_32ns_32ns_32_5_full_dsp_1' to 'dnn_hw_fadd_32ns_Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_fmul_32ns_32ns_32_4_max_dsp_1' to 'dnn_hw_fmul_32ns_Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dnn_hw_mux_164_32_1_1' to 'dnn_hw_mux_164_32IfE' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fadd_32ns_Gfk': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_fmul_32ns_Hfu': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dnn_hw_mux_164_32IfE': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_write'.
+INFO: [HLS 200-111]  Elapsed time: 0.914 seconds; current allocated memory: 265.512 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_0' to 'convolution_hw_ifJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_1' to 'convolution_hw_ifKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_2' to 'convolution_hw_ifLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_3' to 'convolution_hw_ifMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_4' to 'convolution_hw_ifNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_5' to 'convolution_hw_ifOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_6' to 'convolution_hw_ifPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_7' to 'convolution_hw_ifQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_8' to 'convolution_hw_ifRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_9' to 'convolution_hw_ifShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_10' to 'convolution_hw_ifThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_11' to 'convolution_hw_ifUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_12' to 'convolution_hw_ifVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_13' to 'convolution_hw_ifWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_14' to 'convolution_hw_ifXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff0_15' to 'convolution_hw_ifYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_0' to 'convolution_hw_ifZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_1' to 'convolution_hw_if0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_2' to 'convolution_hw_if1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_3' to 'convolution_hw_if2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_4' to 'convolution_hw_if3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_5' to 'convolution_hw_if4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_6' to 'convolution_hw_if5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_7' to 'convolution_hw_if6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_8' to 'convolution_hw_if7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_9' to 'convolution_hw_if8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_10' to 'convolution_hw_if9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_11' to 'convolution_hw_ifbak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_12' to 'convolution_hw_ifbbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_13' to 'convolution_hw_ifbck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_14' to 'convolution_hw_ifbdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff1_15' to 'convolution_hw_ifbek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_0' to 'convolution_hw_ifbfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_1' to 'convolution_hw_ifbgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_2' to 'convolution_hw_ifbhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_3' to 'convolution_hw_ifbil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_4' to 'convolution_hw_ifbjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_5' to 'convolution_hw_ifbkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_6' to 'convolution_hw_ifbll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_7' to 'convolution_hw_ifbml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_8' to 'convolution_hw_ifbnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_9' to 'convolution_hw_ifbom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_10' to 'convolution_hw_ifbpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_11' to 'convolution_hw_ifbqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_12' to 'convolution_hw_ifbrm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_13' to 'convolution_hw_ifbsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_14' to 'convolution_hw_ifbtn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff2_15' to 'convolution_hw_ifbun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_0' to 'convolution_hw_ifbvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_1' to 'convolution_hw_ifbwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_2' to 'convolution_hw_ifbxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_3' to 'convolution_hw_ifbyn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_4' to 'convolution_hw_ifbzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_5' to 'convolution_hw_ifbAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_6' to 'convolution_hw_ifbBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_7' to 'convolution_hw_ifbCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_8' to 'convolution_hw_ifbDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_9' to 'convolution_hw_ifbEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_10' to 'convolution_hw_ifbFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_11' to 'convolution_hw_ifbGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_12' to 'convolution_hw_ifbHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_13' to 'convolution_hw_ifbIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_14' to 'convolution_hw_ifbJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ifm_buff3_15' to 'convolution_hw_ifbKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_0' to 'convolution_hw_fibLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_1' to 'convolution_hw_fibMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_0_2' to 'convolution_hw_fibNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_0' to 'convolution_hw_fibOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_1' to 'convolution_hw_fibPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_1_2' to 'convolution_hw_fibQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_0' to 'convolution_hw_fibRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_1' to 'convolution_hw_fibSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_0_2_2' to 'convolution_hw_fibTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_0' to 'convolution_hw_fibUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_1' to 'convolution_hw_fibVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_0_2' to 'convolution_hw_fibWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_0' to 'convolution_hw_fibXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_1' to 'convolution_hw_fibYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_1_2' to 'convolution_hw_fibZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_0' to 'convolution_hw_fib0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_1' to 'convolution_hw_fib1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_1_2_2' to 'convolution_hw_fib2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_0' to 'convolution_hw_fib3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_1' to 'convolution_hw_fib4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_0_2' to 'convolution_hw_fib5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_0' to 'convolution_hw_fib6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_1' to 'convolution_hw_fib7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_1_2' to 'convolution_hw_fib8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_0' to 'convolution_hw_fib9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_1' to 'convolution_hw_ficau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_2_2_2' to 'convolution_hw_ficbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_0' to 'convolution_hw_ficcu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_1' to 'convolution_hw_ficdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_0_2' to 'convolution_hw_ficeu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_0' to 'convolution_hw_ficfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_1' to 'convolution_hw_ficgu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_1_2' to 'convolution_hw_fichv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_0' to 'convolution_hw_ficiv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_1' to 'convolution_hw_ficjv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_3_2_2' to 'convolution_hw_fickv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_0' to 'convolution_hw_ficlv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_1' to 'convolution_hw_ficmv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_0_2' to 'convolution_hw_ficnw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_0' to 'convolution_hw_ficow' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_1' to 'convolution_hw_ficpw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_1_2' to 'convolution_hw_ficqw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_0' to 'convolution_hw_ficrw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_1' to 'convolution_hw_ficsw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_4_2_2' to 'convolution_hw_fictx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_0' to 'convolution_hw_ficux' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_1' to 'convolution_hw_ficvx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_0_2' to 'convolution_hw_ficwx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_0' to 'convolution_hw_ficxx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_1' to 'convolution_hw_ficyx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_1_2' to 'convolution_hw_ficzy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_0' to 'convolution_hw_ficAy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_1' to 'convolution_hw_ficBy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_5_2_2' to 'convolution_hw_ficCy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_0' to 'convolution_hw_ficDy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_1' to 'convolution_hw_ficEy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_0_2' to 'convolution_hw_ficFz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_0' to 'convolution_hw_ficGz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_1' to 'convolution_hw_ficHz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_1_2' to 'convolution_hw_ficIz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_0' to 'convolution_hw_ficJz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_1' to 'convolution_hw_ficKz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_6_2_2' to 'convolution_hw_ficLz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_0' to 'convolution_hw_ficMA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_1' to 'convolution_hw_ficNA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_0_2' to 'convolution_hw_ficOA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_0' to 'convolution_hw_ficPA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_1' to 'convolution_hw_ficQA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_1_2' to 'convolution_hw_ficRA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_0' to 'convolution_hw_ficSB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_1' to 'convolution_hw_ficTB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_7_2_2' to 'convolution_hw_ficUB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_0' to 'convolution_hw_ficVB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_1' to 'convolution_hw_ficWB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_0_2' to 'convolution_hw_ficXB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_0' to 'convolution_hw_ficYC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_1' to 'convolution_hw_ficZC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_1_2' to 'convolution_hw_fic0C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_0' to 'convolution_hw_fic1C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_1' to 'convolution_hw_fic2C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_8_2_2' to 'convolution_hw_fic3C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_0' to 'convolution_hw_fic4D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_1' to 'convolution_hw_fic5D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_0_2' to 'convolution_hw_fic6D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_0' to 'convolution_hw_fic7D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_1' to 'convolution_hw_fic8D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_1_2' to 'convolution_hw_fic9D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_0' to 'convolution_hw_fidaE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_1' to 'convolution_hw_fidbE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_9_2_2' to 'convolution_hw_fidcE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_0' to 'convolution_hw_fiddE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_1' to 'convolution_hw_fideE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_0_2' to 'convolution_hw_fidfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_0' to 'convolution_hw_fidgE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_1' to 'convolution_hw_fidhF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_1_2' to 'convolution_hw_fidiF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_0' to 'convolution_hw_fidjF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_1' to 'convolution_hw_fidkF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_10_2_2' to 'convolution_hw_fidlF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_0' to 'convolution_hw_fidmF' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_1' to 'convolution_hw_fidnG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_0_2' to 'convolution_hw_fidoG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_0' to 'convolution_hw_fidpG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_1' to 'convolution_hw_fidqG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_1_2' to 'convolution_hw_fidrG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_0' to 'convolution_hw_fidsG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_1' to 'convolution_hw_fidtH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_11_2_2' to 'convolution_hw_fiduH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_0' to 'convolution_hw_fidvH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_1' to 'convolution_hw_fidwH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_0_2' to 'convolution_hw_fidxH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_0' to 'convolution_hw_fidyH' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_1' to 'convolution_hw_fidzI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_1_2' to 'convolution_hw_fidAI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_0' to 'convolution_hw_fidBI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_1' to 'convolution_hw_fidCI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_12_2_2' to 'convolution_hw_fidDI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_0' to 'convolution_hw_fidEI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_1' to 'convolution_hw_fidFJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_0_2' to 'convolution_hw_fidGJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_0' to 'convolution_hw_fidHJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_1' to 'convolution_hw_fidIJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_1_2' to 'convolution_hw_fidJJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_0' to 'convolution_hw_fidKJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_1' to 'convolution_hw_fidLJ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_13_2_2' to 'convolution_hw_fidMK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_0' to 'convolution_hw_fidNK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_1' to 'convolution_hw_fidOK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_0_2' to 'convolution_hw_fidPK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_0' to 'convolution_hw_fidQK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_1' to 'convolution_hw_fidRK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_1_2' to 'convolution_hw_fidSL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_0' to 'convolution_hw_fidTL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_1' to 'convolution_hw_fidUL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_14_2_2' to 'convolution_hw_fidVL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_0' to 'convolution_hw_fidWL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_1' to 'convolution_hw_fidXL' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_0_2' to 'convolution_hw_fidYM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_0' to 'convolution_hw_fidZM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_1' to 'convolution_hw_fid0M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_1_2' to 'convolution_hw_fid1M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_0' to 'convolution_hw_fid2M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_1' to 'convolution_hw_fid3M' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_filter_buff_15_2_2' to 'convolution_hw_fid4N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_0' to 'convolution_hw_ofd5N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_1' to 'convolution_hw_ofd6N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_2' to 'convolution_hw_ofd7N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_3' to 'convolution_hw_ofd8N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_4' to 'convolution_hw_ofd9N' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_5' to 'convolution_hw_ofeaO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_6' to 'convolution_hw_ofebO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_7' to 'convolution_hw_ofecO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_8' to 'convolution_hw_ofedO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_9' to 'convolution_hw_ofeeO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_10' to 'convolution_hw_ofefO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_11' to 'convolution_hw_ofegO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_12' to 'convolution_hw_ofehP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_13' to 'convolution_hw_ofeiP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_14' to 'convolution_hw_ofejP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff0_15' to 'convolution_hw_ofekP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_0' to 'convolution_hw_ofelP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_1' to 'convolution_hw_ofemP' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_2' to 'convolution_hw_ofenQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_3' to 'convolution_hw_ofeoQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_4' to 'convolution_hw_ofepQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_5' to 'convolution_hw_ofeqQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_6' to 'convolution_hw_oferQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_7' to 'convolution_hw_ofesQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_8' to 'convolution_hw_ofetR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_9' to 'convolution_hw_ofeuR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_10' to 'convolution_hw_ofevR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_11' to 'convolution_hw_ofewR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_12' to 'convolution_hw_ofexR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_13' to 'convolution_hw_ofeyR' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_14' to 'convolution_hw_ofezS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution_hw_ofm_buff1_15' to 'convolution_hw_ofeAS' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_hw'.
+INFO: [HLS 200-111]  Elapsed time: 5.67 seconds; current allocated memory: 277.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dnn_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cifm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/cofm' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/tran_wgt' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dnn_hw/config_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dnn_hw' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dnn_hw'.
+INFO: [HLS 200-111]  Elapsed time: 2.765 seconds; current allocated memory: 279.236 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.14 MHz
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ifm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_hw_ofm_buff0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ifJfO_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_fibLp_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution_hw_ofd5N_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 413.664 ; gain = 324.320
+INFO: [VHDL 208-304] Generating VHDL RTL for dnn_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for dnn_hw.
+INFO: [HLS 200-112] Total elapsed time: 50.733 seconds; peak allocated memory: 279.236 MB.

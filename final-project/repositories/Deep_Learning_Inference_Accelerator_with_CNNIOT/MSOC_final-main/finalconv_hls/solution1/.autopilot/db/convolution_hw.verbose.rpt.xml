@@ -1,0 +1,437 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'convolution_hw'" level="0">
+<item name = "Date">Wed Jan 20 14:16:50 2021
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">finalconv_hls</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.400 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">178, 295188, 1.780 us, 2.952 ms, 178, 295188, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv_write_fu_297">conv_write, 9217, 9217, 92.170 us, 92.170 us, 9217, 9217, none</column>
+<column name="grp_conv_read_fu_343">conv_read, 1, 67, 10.000 ns, 0.670 us, 1, 67, none</column>
+<column name="grp_write_row_ifm_fu_358">write_row_ifm, 1, 36, 10.000 ns, 0.360 us, 1, 36, none</column>
+<column name="grp_load_cifm_data_fu_370">load_cifm_data, 108, 108, 1.080 us, 1.080 us, 108, 108, none</column>
+<column name="grp_load_filter_buffer_fu_385">load_filter_buffer, 20, 20, 0.200 us, 0.200 us, 20, 20, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">64, 295008, 2 ~ 9219, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 164, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 10, 3051, 2907, -</column>
+<column name="Memory">36, -, 1728, 81, 0</column>
+<column name="Multiplexer">-, -, -, 3803, -</column>
+<column name="Register">-, -, 174, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">12, 4, 4, 13, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_conv_read_fu_343">conv_read, 0, 0, 628, 171, 0</column>
+<column name="grp_conv_write_fu_297">conv_write, 0, 10, 2280, 2322, 0</column>
+<column name="grp_load_cifm_data_fu_370">load_cifm_data, 0, 0, 25, 161, 0</column>
+<column name="grp_load_filter_buffer_fu_385">load_filter_buffer, 0, 0, 13, 120, 0</column>
+<column name="grp_write_row_ifm_fu_358">write_row_ifm, 0, 0, 105, 133, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="filter_buff_0_0_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_0_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_0_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_1_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_1_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_1_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_2_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_2_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_0_2_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_0_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_0_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_0_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_1_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_1_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_1_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_2_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_2_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_1_2_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_0_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_0_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_0_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_1_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_1_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_1_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_2_0_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_2_1_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="filter_buff_2_2_2_U">convolution_hw_fiqcK, 0, 64, 3, 0, 6, 32, 1, 192</column>
+<column name="ifm_buff0_0_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff0_1_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff0_2_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff1_0_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff1_1_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff1_2_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff2_0_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff2_1_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff2_2_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff3_0_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff3_1_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ifm_buff3_2_U">convolution_hw_ifeOg, 2, 0, 0, 0, 34, 32, 1, 1088</column>
+<column name="ofm_buff0_0_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff0_1_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff0_2_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff0_3_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff0_4_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff0_5_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_0_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_1_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_2_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_3_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_4_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+<column name="ofm_buff1_5_U">convolution_hw_ofRg6, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="rotate_counter_fu_506_p2">+, 0, 0, 23, 16, 1</column>
+<column name="row_fu_462_p2">+, 0, 0, 15, 6, 1</column>
+<column name="ap_predicate_op113_call_state5">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op119_call_state5">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op125_call_state5">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln308_fu_456_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="icmp_ln312_fu_468_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln316_fu_499_p2">icmp, 0, 0, 11, 6, 1</column>
+<column name="icmp_ln322_fu_474_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln331_fu_480_p2">icmp, 0, 0, 13, 16, 2</column>
+<column name="icmp_ln340_fu_486_p2">icmp, 0, 0, 13, 16, 2</column>
+<column name="icmp_ln342_fu_492_p2">icmp, 0, 0, 11, 6, 5</column>
+<column name="icmp_ln351_fu_512_p2">icmp, 0, 0, 13, 16, 3</column>
+<column name="ap_block_state3_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="grp_conv_read_fu_343_cofm_o_TREADY">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln351_fu_518_p3">select, 0, 0, 16, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">41, 8, 1, 8</column>
+<column name="cifm_TREADY_int">15, 3, 1, 3</column>
+<column name="cifm_counter_4_fu_62">9, 2, 32, 64</column>
+<column name="cofm_counter_4_fu_66">9, 2, 32, 64</column>
+<column name="cofm_i_TREADY_int">9, 2, 1, 2</column>
+<column name="cofm_o_TVALID_int">9, 2, 1, 2</column>
+<column name="filter_buff_0_0_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_0_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_0_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_0_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_0_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_0_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_0_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_0_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_0_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_1_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_1_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_1_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_1_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_1_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_1_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_1_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_1_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_1_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_2_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_2_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_2_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_2_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_2_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_2_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_0_2_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_0_2_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_0_2_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_0_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_0_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_0_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_0_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_0_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_0_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_0_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_0_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_0_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_1_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_1_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_1_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_1_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_1_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_1_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_1_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_1_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_1_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_2_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_2_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_2_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_2_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_2_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_2_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_1_2_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_1_2_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_1_2_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_0_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_0_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_0_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_0_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_0_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_0_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_0_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_0_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_0_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_1_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_1_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_1_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_1_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_1_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_1_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_1_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_1_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_1_2_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_2_0_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_2_0_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_2_0_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_2_1_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_2_1_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_2_1_we0">9, 2, 1, 2</column>
+<column name="filter_buff_2_2_2_address0">15, 3, 3, 9</column>
+<column name="filter_buff_2_2_2_ce0">15, 3, 1, 3</column>
+<column name="filter_buff_2_2_2_we0">9, 2, 1, 2</column>
+<column name="grp_conv_read_fu_343_enable">15, 3, 1, 3</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_0_q0">15, 3, 32, 96</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_1_q0">15, 3, 32, 96</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_2_q0">15, 3, 32, 96</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_3_q0">15, 3, 32, 96</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_4_q0">15, 3, 32, 96</column>
+<column name="grp_conv_read_fu_343_ofm_buff0_5_q0">15, 3, 32, 96</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_0_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_0_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_1_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_1_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_2_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff0_2_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_0_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_0_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_1_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_1_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_2_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff1_2_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_0_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_0_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_1_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_1_q1">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_2_q0">27, 5, 32, 160</column>
+<column name="grp_conv_write_fu_297_ifm_buff2_2_q1">27, 5, 32, 160</column>
+<column name="grp_write_row_ifm_fu_358_enable">15, 3, 1, 3</column>
+<column name="ifm_buff0_0_address0">27, 5, 6, 30</column>
+<column name="ifm_buff0_0_address1">21, 4, 6, 24</column>
+<column name="ifm_buff0_0_ce0">27, 5, 1, 5</column>
+<column name="ifm_buff0_0_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff0_0_we0">9, 2, 1, 2</column>
+<column name="ifm_buff0_1_address0">27, 5, 6, 30</column>
+<column name="ifm_buff0_1_address1">21, 4, 6, 24</column>
+<column name="ifm_buff0_1_ce0">27, 5, 1, 5</column>
+<column name="ifm_buff0_1_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff0_1_we0">9, 2, 1, 2</column>
+<column name="ifm_buff0_2_address0">27, 5, 6, 30</column>
+<column name="ifm_buff0_2_address1">21, 4, 6, 24</column>
+<column name="ifm_buff0_2_ce0">27, 5, 1, 5</column>
+<column name="ifm_buff0_2_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff0_2_we0">9, 2, 1, 2</column>
+<column name="ifm_buff1_0_address0">33, 6, 6, 36</column>
+<column name="ifm_buff1_0_address1">21, 4, 6, 24</column>
+<column name="ifm_buff1_0_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff1_0_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff1_0_d0">15, 3, 32, 96</column>
+<column name="ifm_buff1_0_we0">15, 3, 1, 3</column>
+<column name="ifm_buff1_1_address0">33, 6, 6, 36</column>
+<column name="ifm_buff1_1_address1">21, 4, 6, 24</column>
+<column name="ifm_buff1_1_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff1_1_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff1_1_d0">15, 3, 32, 96</column>
+<column name="ifm_buff1_1_we0">15, 3, 1, 3</column>
+<column name="ifm_buff1_2_address0">33, 6, 6, 36</column>
+<column name="ifm_buff1_2_address1">21, 4, 6, 24</column>
+<column name="ifm_buff1_2_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff1_2_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff1_2_d0">15, 3, 32, 96</column>
+<column name="ifm_buff1_2_we0">15, 3, 1, 3</column>
+<column name="ifm_buff2_0_address0">33, 6, 6, 36</column>
+<column name="ifm_buff2_0_address1">21, 4, 6, 24</column>
+<column name="ifm_buff2_0_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff2_0_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff2_0_d0">15, 3, 32, 96</column>
+<column name="ifm_buff2_0_we0">15, 3, 1, 3</column>
+<column name="ifm_buff2_1_address0">33, 6, 6, 36</column>
+<column name="ifm_buff2_1_address1">21, 4, 6, 24</column>
+<column name="ifm_buff2_1_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff2_1_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff2_1_d0">15, 3, 32, 96</column>
+<column name="ifm_buff2_1_we0">15, 3, 1, 3</column>
+<column name="ifm_buff2_2_address0">33, 6, 6, 36</column>
+<column name="ifm_buff2_2_address1">21, 4, 6, 24</column>
+<column name="ifm_buff2_2_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff2_2_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff2_2_d0">15, 3, 32, 96</column>
+<column name="ifm_buff2_2_we0">15, 3, 1, 3</column>
+<column name="ifm_buff3_0_address0">33, 6, 6, 36</column>
+<column name="ifm_buff3_0_address1">21, 4, 6, 24</column>
+<column name="ifm_buff3_0_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff3_0_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff3_0_d0">15, 3, 32, 96</column>
+<column name="ifm_buff3_0_we0">15, 3, 1, 3</column>
+<column name="ifm_buff3_1_address0">33, 6, 6, 36</column>
+<column name="ifm_buff3_1_address1">21, 4, 6, 24</column>
+<column name="ifm_buff3_1_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff3_1_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff3_1_d0">15, 3, 32, 96</column>
+<column name="ifm_buff3_1_we0">15, 3, 1, 3</column>
+<column name="ifm_buff3_2_address0">33, 6, 6, 36</column>
+<column name="ifm_buff3_2_address1">21, 4, 6, 24</column>
+<column name="ifm_buff3_2_ce0">33, 6, 1, 6</column>
+<column name="ifm_buff3_2_ce1">21, 4, 1, 4</column>
+<column name="ifm_buff3_2_d0">15, 3, 32, 96</column>
+<column name="ifm_buff3_2_we0">15, 3, 1, 3</column>
+<column name="ofm_buff0_0_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_0_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_0_we0">9, 2, 1, 2</column>
+<column name="ofm_buff0_1_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_1_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_1_we0">9, 2, 1, 2</column>
+<column name="ofm_buff0_2_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_2_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_2_we0">9, 2, 1, 2</column>
+<column name="ofm_buff0_3_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_3_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_3_we0">9, 2, 1, 2</column>
+<column name="ofm_buff0_4_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_4_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_4_we0">9, 2, 1, 2</column>
+<column name="ofm_buff0_5_address0">15, 3, 5, 15</column>
+<column name="ofm_buff0_5_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff0_5_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_0_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_0_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_0_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_1_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_1_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_1_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_2_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_2_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_2_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_3_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_3_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_3_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_4_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_4_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_4_we0">9, 2, 1, 2</column>
+<column name="ofm_buff1_5_address0">15, 3, 5, 15</column>
+<column name="ofm_buff1_5_ce0">15, 3, 1, 3</column>
+<column name="ofm_buff1_5_we0">9, 2, 1, 2</column>
+<column name="rotate_counter_0_reg_274">9, 2, 16, 32</column>
+<column name="row_0_reg_286">9, 2, 6, 12</column>
+<column name="tran_wgt_TREADY_int">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="cifm_counter_4_fu_62">32, 0, 32, 0</column>
+<column name="cofm_counter_4_fu_66">32, 0, 32, 0</column>
+<column name="grp_conv_read_fu_343_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv_write_fu_297_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_load_cifm_data_fu_370_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_load_filter_buffer_fu_385_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_write_row_ifm_fu_358_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln312_reg_548">1, 0, 1, 0</column>
+<column name="icmp_ln316_reg_569">1, 0, 1, 0</column>
+<column name="icmp_ln322_reg_552">1, 0, 1, 0</column>
+<column name="icmp_ln331_reg_556">1, 0, 1, 0</column>
+<column name="icmp_ln340_reg_560">1, 0, 1, 0</column>
+<column name="icmp_ln342_reg_564">1, 0, 1, 0</column>
+<column name="reg_436">32, 0, 32, 0</column>
+<column name="reg_441">32, 0, 32, 0</column>
+<column name="rotate_counter_0_reg_274">16, 0, 16, 0</column>
+<column name="row_0_reg_286">6, 0, 6, 0</column>
+<column name="row_reg_543">6, 0, 6, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, convolution_hw, return value</column>
+<column name="cifm_TDATA">in, 512, axis, cifm, pointer</column>
+<column name="cifm_TVALID">in, 1, axis, cifm, pointer</column>
+<column name="cifm_TREADY">out, 1, axis, cifm, pointer</column>
+<column name="cofm_i_TDATA">in, 512, axis, cofm, pointer</column>
+<column name="cofm_i_TVALID">in, 1, axis, cofm, pointer</column>
+<column name="cofm_i_TREADY">out, 1, axis, cofm, pointer</column>
+<column name="cofm_o_TDATA">out, 512, axis, cofm, pointer</column>
+<column name="cofm_o_TVALID">out, 1, axis, cofm, pointer</column>
+<column name="cofm_o_TREADY">in, 1, axis, cofm, pointer</column>
+<column name="tran_wgt_TDATA">in, 512, axis, tran_wgt, pointer</column>
+<column name="tran_wgt_TVALID">in, 1, axis, tran_wgt, pointer</column>
+<column name="tran_wgt_TREADY">out, 1, axis, tran_wgt, pointer</column>
+</table>
+</item>
+</section>
+</profile>

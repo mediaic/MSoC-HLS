@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv_read'
+================================================================
+* Date:           Wed Jan 20 14:16:49 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        finalconv_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.254 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        1|       67| 10.000 ns | 0.670 us |    1|   67|   none  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       64|       64|         3|          2|          1|    32|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     75|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     96|    -|
+|Register         |        -|      -|     628|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     628|    171|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln233_fu_191_p2               |     +    |      0|  0|  39|          32|           6|
+    |j_fu_203_p2                       |     +    |      0|  0|  15|           6|           1|
+    |ap_block_pp0_stage0_11001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln233_fu_197_p2              |   icmp   |      0|  0|  11|           6|           7|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  75|          49|          20|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  33|          6|    1|          6|
+    |ap_enable_reg_pp0_iter1       |   9|          2|    1|          2|
+    |ap_phi_mux_j_0_phi_fu_175_p4  |   9|          2|    6|         12|
+    |ap_return                     |   9|          2|   32|         64|
+    |cofm_TDATA_i_blk_n            |   9|          2|    1|          2|
+    |cofm_TDATA_o_blk_n            |   9|          2|    1|          2|
+    |cofm_counter_1_reg_182        |   9|          2|   32|         64|
+    |j_0_reg_171                   |   9|          2|    6|         12|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |  96|         20|   80|        164|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+-----+----+-----+-----------+
+    |             Name             |  FF | LUT| Bits| Const Bits|
+    +------------------------------+-----+----+-----+-----------+
+    |add_ln233_reg_280             |   32|   0|   32|          0|
+    |ap_CS_fsm                     |    5|   0|    5|          0|
+    |ap_enable_reg_pp0_iter0       |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1       |    1|   0|    1|          0|
+    |ap_return_preg                |   32|   0|   32|          0|
+    |cofm_b5_addr1516_par_reg_324  |  512|   0|  512|          0|
+    |cofm_counter_1_reg_182        |   32|   0|   32|          0|
+    |icmp_ln233_reg_285            |    1|   0|    1|          0|
+    |j_0_reg_171                   |    6|   0|    6|          0|
+    |j_reg_289                     |    6|   0|    6|          0|
+    +------------------------------+-----+----+-----+-----------+
+    |Total                         |  628|   0|  628|          0|
+    +------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_done               | out |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |     conv_read     | return value |
+|ap_return             | out |   32| ap_ctrl_hs |     conv_read     | return value |
+|cofm_i_TDATA          |  in |  512|    axis    |        cofm       |    pointer   |
+|cofm_i_TVALID         |  in |    1|    axis    |        cofm       |    pointer   |
+|cofm_i_TREADY         | out |    1|    axis    |        cofm       |    pointer   |
+|cofm_o_TDATA          | out |  512|    axis    |        cofm       |    pointer   |
+|cofm_o_TVALID         | out |    1|    axis    |        cofm       |    pointer   |
+|cofm_o_TREADY         |  in |    1|    axis    |        cofm       |    pointer   |
+|ofm_buff0_0_address0  | out |    5|  ap_memory |    ofm_buff0_0    |     array    |
+|ofm_buff0_0_ce0       | out |    1|  ap_memory |    ofm_buff0_0    |     array    |
+|ofm_buff0_0_q0        |  in |   32|  ap_memory |    ofm_buff0_0    |     array    |
+|ofm_buff0_1_address0  | out |    5|  ap_memory |    ofm_buff0_1    |     array    |
+|ofm_buff0_1_ce0       | out |    1|  ap_memory |    ofm_buff0_1    |     array    |
+|ofm_buff0_1_q0        |  in |   32|  ap_memory |    ofm_buff0_1    |     array    |
+|ofm_buff0_2_address0  | out |    5|  ap_memory |    ofm_buff0_2    |     array    |
+|ofm_buff0_2_ce0       | out |    1|  ap_memory |    ofm_buff0_2    |     array    |
+|ofm_buff0_2_q0        |  in |   32|  ap_memory |    ofm_buff0_2    |     array    |
+|ofm_buff0_3_address0  | out |    5|  ap_memory |    ofm_buff0_3    |     array    |
+|ofm_buff0_3_ce0       | out |    1|  ap_memory |    ofm_buff0_3    |     array    |
+|ofm_buff0_3_q0        |  in |   32|  ap_memory |    ofm_buff0_3    |     array    |
+|ofm_buff0_4_address0  | out |    5|  ap_memory |    ofm_buff0_4    |     array    |
+|ofm_buff0_4_ce0       | out |    1|  ap_memory |    ofm_buff0_4    |     array    |
+|ofm_buff0_4_q0        |  in |   32|  ap_memory |    ofm_buff0_4    |     array    |
+|ofm_buff0_5_address0  | out |    5|  ap_memory |    ofm_buff0_5    |     array    |
+|ofm_buff0_5_ce0       | out |    1|  ap_memory |    ofm_buff0_5    |     array    |
+|ofm_buff0_5_q0        |  in |   32|  ap_memory |    ofm_buff0_5    |     array    |
+|cofm_counter_read     |  in |   32|   ap_none  | cofm_counter_read |    scalar    |
+|enable                |  in |    1|   ap_none  |       enable      |    scalar    |
++----------------------+-----+-----+------------+-------------------+--------------+
+
