@@ -46,10 +46,10 @@
 
 <!-- LIST OF FINAL PROJECTS -->
 ## Final Projects
-| Topic | Authors | Slide |
+| Topics | Authors | Slides |
 | --- | --- | --- |
-| [Reconstruction of Compressively Sensed Diagnostic Images Using HLS Solution](https://github.com/linkingmon/ReconNet-hls) | Ting-Yang Chen, Yu-Cheng Lin, I-Hsuan Liu |
-| [High level synthesis for Image Deblurring Processor](https://github.com/2020MSOC_Final) | 楊智翔, 舒泓諭, 董濟昀|
+| [Reconstruction of Compressively Sensed Diagnostic Images Using HLS Solution](https://github.com/linkingmon/ReconNet-hls) | Ting-Yang Chen, Yu-Cheng Lin, I-Hsuan Liu | [link](final-project/slides/Reconstruction of Compressively Sensed Images Using HLS Solutions.pptx) |
+| [High level synthesis for Image Deblurring Processor](https://github.com/leo870823/2020MSOC_Final) | 楊智翔, 舒泓諭, 董濟昀|
 | Accelerate calculation of mel-frequency cepstral coefficients by HLS | 林承德, 張俊堉, 蔡孟桓 |
 | [Real-time 3D Rendering](https://github.com/victoresque/HLS3D) | team4 |
 | [BNN – Binarized CNN](https://github.com/siangyang/BNN-for-pynq) | 陳昱愷, 楊凱翔, 孫名志|
@@ -136,3 +136,19 @@
 
 
 ### Directory Structure
+```
+	
+	|   README.md
+	\---final-project
+			\---repositories
+          \---* (cloned repositories)
+			\---slides
+          *.pptx
+	\---improved-projects
+      \---pp4fpga
+			    \---* (cloned repositories from different students)
+      \---* (other project)
+	\---images
+			logo.jpg
+			
+```
