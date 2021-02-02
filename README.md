@@ -136,19 +136,19 @@
 ### Directory Structure
 ```
 	
-	|   README.md
-	\---final-project
-	    \---repositories
-            \---* (cloned repositories)
+  |   README.md
+  \---final-project
+      \---repositories
+          \---* (cloned repositories)
               .
               .
               .
-        \---slides
-            *.pptx
+      \---slides
+          *.pptx
               .
               .
               .
-	\---images
-			logo.jpg
+  \---images
+      logo.jpg
 			
 ```
