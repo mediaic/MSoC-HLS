@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vivado HLS Report for 'frft'
+================================================================
+* Date:           Thu Jan 21 20:36:39 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        frft
+* Solution:       baseline
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.375 ns |   0.63 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    69139|    69139| 0.346 ms | 0.346 ms |  69128|  69128| dataflow |
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------+--------+---------+---------+----------+----------+-------+-------+----------+
+        |           |        |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+        |  Instance | Module |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+        +-----------+--------+---------+---------+----------+----------+-------+-------+----------+
+        |U2_U0      |U2      |    69127|    69127| 0.346 ms | 0.346 ms |  69127|  69127|   none   |
+        |C_U124_U0  |C_U124  |    67336|    67336| 0.337 ms | 0.337 ms |  67074|  67074| dataflow |
+        |E_U0       |E       |     1537|     1537| 7.685 us | 7.685 us |   1537|   1537|   none   |
+        +-----------+--------+---------+---------+----------+----------+-------+-------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|      4|    -|
+|FIFO             |        0|      -|      46|    288|    -|
+|Instance         |      152|     22|    3371|   5369|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |      152|     22|    3417|   5661|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       54|     10|       3|     10|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+---------------------+---------+-------+------+------+-----+
+    |        Instance       |        Module       | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +-----------------------+---------------------+---------+-------+------+------+-----+
+    |C_U124_U0              |C_U124               |       72|      2|   783|  2843|    0|
+    |E_U0                   |E                    |        0|      4|   294|   209|    0|
+    |U2_U0                  |U2                   |       76|     16|  1058|   825|    0|
+    |frft_AXILiteS_s_axi_U  |frft_AXILiteS_s_axi  |        0|      0|   212|   332|    0|
+    |frft_im_m_axi_U        |frft_im_m_axi        |        2|      0|   512|   580|    0|
+    |frft_re_m_axi_U        |frft_re_m_axi        |        2|      0|   512|   580|    0|
+    +-----------------------+---------------------+---------+-------+------+------+-----+
+    |Total                  |                     |      152|     22|  3371|  5369|    0|
+    +-----------------------+---------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------+---------+---+----+-----+------+-----+---------+
+    |         Name        | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------+---------+---+----+-----+------+-----+---------+
+    |cos_V_U              |        0|  6|   0|    -|     8|   10|       80|
+    |data_im_out_o_V_c_U  |        0|  5|   0|    -|     3|   32|       96|
+    |data_re_out_o_V_c_U  |        0|  5|   0|    -|     3|   32|       96|
+    |e_im_V_U             |        0|  6|   0|    -|     8|   24|      192|
+    |e_re_V_U             |        0|  6|   0|    -|     8|   24|      192|
+    |sin_V_U              |        0|  6|   0|    -|     8|   10|       80|
+    |u1_im_V_U            |        0|  6|   0|    -|     8|   24|      192|
+    |u1_re_V_U            |        0|  6|   0|    -|     8|   24|      192|
+    +---------------------+---------+---+----+-----+------+-----+---------+
+    |Total                |        0| 46|   0|    0|    54|  180|     1120|
+    +---------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |C_U124_U0_start_full_n  |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                 |    and   |      0|  0|   2|           1|           1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0|   4|           2|           2|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|ap_clk                  |  in |    1| ap_ctrl_hs |     frft     | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |     frft     | return value |
+|interrupt               | out |    1| ap_ctrl_hs |     frft     | return value |
+|m_axi_re_AWVALID        | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWREADY        |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWADDR         | out |   32|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWID           | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWLEN          | out |    8|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWSIZE         | out |    3|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWBURST        | out |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWLOCK         | out |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWCACHE        | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWPROT         | out |    3|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWQOS          | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWREGION       | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_AWUSER         | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_WVALID         | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_WREADY         |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_WDATA          | out |   32|    m_axi   |      re      |    pointer   |
+|m_axi_re_WSTRB          | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_WLAST          | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_WID            | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_WUSER          | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARVALID        | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARREADY        |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARADDR         | out |   32|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARID           | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARLEN          | out |    8|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARSIZE         | out |    3|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARBURST        | out |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARLOCK         | out |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARCACHE        | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARPROT         | out |    3|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARQOS          | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARREGION       | out |    4|    m_axi   |      re      |    pointer   |
+|m_axi_re_ARUSER         | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RVALID         |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RREADY         | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RDATA          |  in |   32|    m_axi   |      re      |    pointer   |
+|m_axi_re_RLAST          |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RID            |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RUSER          |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_RRESP          |  in |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_BVALID         |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_BREADY         | out |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_BRESP          |  in |    2|    m_axi   |      re      |    pointer   |
+|m_axi_re_BID            |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_re_BUSER          |  in |    1|    m_axi   |      re      |    pointer   |
+|m_axi_im_AWVALID        | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWREADY        |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWADDR         | out |   32|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWID           | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWLEN          | out |    8|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWSIZE         | out |    3|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWBURST        | out |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWLOCK         | out |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWCACHE        | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWPROT         | out |    3|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWQOS          | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWREGION       | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_AWUSER         | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_WVALID         | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_WREADY         |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_WDATA          | out |   32|    m_axi   |      im      |    pointer   |
+|m_axi_im_WSTRB          | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_WLAST          | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_WID            | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_WUSER          | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARVALID        | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARREADY        |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARADDR         | out |   32|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARID           | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARLEN          | out |    8|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARSIZE         | out |    3|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARBURST        | out |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARLOCK         | out |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARCACHE        | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARPROT         | out |    3|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARQOS          | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARREGION       | out |    4|    m_axi   |      im      |    pointer   |
+|m_axi_im_ARUSER         | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RVALID         |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RREADY         | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RDATA          |  in |   32|    m_axi   |      im      |    pointer   |
+|m_axi_im_RLAST          |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RID            |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RUSER          |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_RRESP          |  in |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_BVALID         |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_BREADY         | out |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_BRESP          |  in |    2|    m_axi   |      im      |    pointer   |
+|m_axi_im_BID            |  in |    1|    m_axi   |      im      |    pointer   |
+|m_axi_im_BUSER          |  in |    1|    m_axi   |      im      |    pointer   |
++------------------------+-----+-----+------------+--------------+--------------+
+
