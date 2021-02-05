@@ -73,64 +73,110 @@
 [[pp4fpga]](https://github.com/KastnerRG/pp4fpgas/tree/master/examples)
 * [original project](https://github.com/KastnerRG/pp4fpgas/tree/master/examples), from Kastnter pp4fpga text book
 * [FIR](https://github.com/yyhsieh/HLS_FIR), by 🎓 [yyhsieh](https://github.com/yyhsieh)
-* [FIR](https://github.com/aqle4090/Self-paced-FIR), by 🎓 [aqle4090](https://github.com/aqle4090)
-* [FIR](https://github.com/kevin226655/-pp4fpga-FIR), by 🎓 [kevin226655](https://github.com/kevin226655)
+* [FIR](https://github.com/tofumanjeff/pp4fpga_FIR), by 🎓 [tofumanjeff](https://github.com/tofumanjeff)
+* [FIR](https://github.com/r08943112/MSoC/tree/main/FIR), by 🎓 [r08943112](https://github.com/r08943112)
 
 * [CORDIC](https://github.com/yyhsieh/HLS_CORDIC), by 🎓 [yyhsieh](https://github.com/yyhsieh)
-
-* [DFT]
-
-* [Sparse Matrix Vector]
-
-* [Matrix Multiplication]
-
-* [Prefix Sum and Histogram]
-
-* [Huffman Encoding]
+* [CORDIC](https://github.com/r08943112/MSoC/tree/main/CORDIC), by 🎓 [r08943112](https://github.com/r08943112)
+* [CORDIC](https://github.com/schuang23/MSOC/tree/main/cordic_pp4fpga), by 🎓 [schuang23](https://github.com/schuang23)
 
 
-[[UCSD]](https://github.com/KastnerRG/pp4fpgas/tree/master/labs)
-* [original project](https://github.com/KastnerRG/pp4fpgas/tree/master/labs), from UCSD lab
-* [DFT](https://github.com/b05901058/ucsd-DFT), by 🎓 [b05901058](https://github.com/b05901058)
+* [DFT](https://github.com/yyhsieh/HLS_DFT), by 🎓 [yyhsieh](https://github.com/yyhsieh)
+* [DFT](https://github.com/poyenchu/MSoC---pp4fpga-DFT), by 🎓 [poyenchu](https://github.com/poyenchu)
+* [DFT](https://github.com/shinyaowo1226/MSoC_projects/tree/main/DFT), by 🎓 [shinyaowo1226](https://github.com/shinyaowo1226)
+
+
+* [Sparse Matrix Vector](https://github.com/r08943099/MSOCFall2020/tree/main/self_paced_leraning_project/session1_pp4fpga-spmv), by 🎓 [r08943099](https://github.com/r08943099)
+* [Sparse Matrix Vector](https://github.com/r08943112/MSoC/tree/main/Sparse_Matrix_Vector), by 🎓 [r08943112](https://github.com/r08943112)
+* [Sparse Matrix Vector](https://github.com/r08943112/MSoC/tree/main/Sparse_Matrix_Vector), by 🎓 [r08943112](https://github.com/r08943112)
+
+
+* [Matrix Multiplication](https://github.com/r08943099/MSOCFall2020/tree/main/self_paced_leraning_project/session3_pp4fpga-matrixmultiplication), by 🎓 [r08943099](https://github.com/r08943099)
+* [Matrix Multiplication](https://github.com/r08943112/MSoC/tree/main/Matrix_Multiplication), by 🎓 [r08943112](https://github.com/r08943112)
+* [Matrix Multiplication](https://github.com/schuang23/MSOC/tree/main/matrixmultiplication.proj), by 🎓 [schuang23](https://github.com/schuang23)
+
+
+* [Prefix Sum and Histogram](https://github.com/guanhsu714/MSOC_self_paced/tree/master/Documents/MSOC/selfpaced/histogram%26prefixsum), by 🎓 [guanhsu714](https://github.com/guanhsu714)
+* [Prefix Sum and Histogram](https://github.com/nodetibylno/MSoC_self_paced_learning/tree/main/pp4fpga_prefixsum%20and%20histogram), by 🎓 [nodetibylno](https://github.com/nodetibylno)
 
 
 [[XAPP]](https://www.xilinx.com/support.html#documentation)
 * [original project](https://www.xilinx.com/support.html#documentation), from Xilinx Application Note
-* [XAPP1317 - Scalable Floating-Point Matrix Inversion Design]
-* [XAPP1273 - Reed-Solomon Erasure Codec]
-* [XAPP1170 - Floating Point Matrix Multiplication]
-* [XAPP890 -Sobel Filter]
+* [XAPP1170 - Floating Point Matrix Multiplication](https://github.com/tofumanjeff/xapp1170_floating_point_matrix_multiplication), by 🎓 [tofumanjeff](https://github.com/tofumanjeff)
+
+* [XAPP890 -Sobel Filter](https://github.com/sandy30538/Self-paced-Learning-Project-Sobel-Filter), by 🎓 [sandy30538](https://github.com/sandy30538)
 
 
 [[cornell]](https://github.com/ptpan/ece5775)
 * [original project](https://github.com/ptpan/ece5775), from Cornell - ECE5775
-* [lab2: KNN-based digit recognition]
+* [lab2: KNN-based digit recognition](https://github.com/r08943099/MSOCFall2020/tree/main/self_paced_leraning_project/session2_cornell_digitrec), by 🎓 [r08943099](https://github.com/r08943099)
 
 
 [[xhls]](https://github.com/Xilinx/HLx_Examples)
 * [original project](https://github.com/Xilinx/HLx_Examples), from Xilinx HLx Example
-* [Vision - img_histEq]
-* [Vision - mpeg_forward]
-* [fir_example]
-* [fp_pid_contr (xapp1163)]
-* [reed_solomon_erasure(xapp1273)]
-* [atan2_cordic]
-* [fp_accum]
-* [sqrt_cordic]
-* [Squared_difference_accumulate]
+* [Vision - img_histEq](https://github.com/k583230/MSOC2020FALL/tree/main/img_histeq), by 🎓 [k583230](https://github.com/k583230)
+* [Vision - img_histEq](https://github.com/Shu-Chen-Lin/MSOC/tree/master/MSOC/xhls_imgHistEq), by 🎓 [Shu-Chen-Lin](https://github.com/Shu-Chen-Lin)
+
+
+* [Vision - mpeg_forward](https://github.com/siangyang/-xhls-Vision---mpeg_forward), by 🎓 [siangyang](https://github.com/siangyang)
+* [Vision - mpeg_forward](https://github.com/shane5713/MSoC-2020/tree/main/Self-paced_MPEG), by 🎓 [shane5713](https://github.com/shane5713)
+
+
+* [fir_example](https://github.com/tingyungchen/FIR_example), by 🎓 [tingyungchen](https://github.com/tingyungchen)
+* [fir_example](https://github.com/IHsuanLiu/MSOC/tree/main/fir_example), by 🎓 [IHsuanLiu](https://github.com/IHsuanLiu)
+* [fir_example](https://github.com/Lin0611/MSOC---Application-Acceleration-with-High-Level-Synthesis/tree/main/fir_example), by 🎓 [Lin0611](https://github.com/Lin0611)
+
+
+* [fp_pid_contr (xapp1163)](https://github.com/ycjustin-msoc/MSoC_self/tree/main/fp_pid_contr_new), by 🎓 [ycjustin-mso](https://github.com/ycjustin-mso)
+
+
+* [reed_solomon_erasure(xapp1273)](https://github.com/r08943112/MSoC/tree/main/reed_solomon_erasure(xapp1273)), by 🎓 [r08943112](https://github.com/r08943112)
+* [reed_solomon_erasure(xapp1273)](https://github.com/whoami90506/MSoC-Self-Paced/tree/master/rsErasure), by 🎓 [whoami90506](https://github.com/whoami90506)
+
+
+* [atan2_cordic](https://github.com/see1000see1000/MSOC2020FALL/tree/main/xhls_atan2_cordic), by 🎓 [see1000see1000](https://github.com/see1000see1000)
+* [atan2_cordic](https://github.com/r08943112/MSoC/tree/main/atan2_cordic), by 🎓 [r08943112](https://github.com/r08943112)
+* [atan2_cordic]https://github.com/MRdudu156/MSoC-2020-Fall-self-paced/tree/main/ATAN2_CORDIC), by 🎓 [MRdudu156](https://github.com/MRdudu156)
+
+
+* [fp_accum](https://github.com/sandy30538/Self-paced-Learning-Project-2-Fp_accum), by 🎓 [sandy30538](https://github.com/sandy30538)
+* [fp_accum](https://github.com/Lin0611/MSOC---Application-Acceleration-with-High-Level-Synthesis/tree/main/fp_accum), by 🎓 [Lin0611](https://github.com/Lin0611)
+* [fp_accum](https://github.com/MRdudu156/MSoC-2020-Fall-self-paced/tree/main/FP_ACCUM), by 🎓 [MRdudu156](https://github.com/MRdudu156)
+
+
+* [sqrt_cordic](https://github.com/siangyang/-xhls-sqrt_cordic), by 🎓 [siangyang](https://github.com/siangyang)
+* [sqrt_cordic](https://github.com/tingyungchen/cordic_sqrt), by 🎓 [tingyungchen](https://github.com/tingyungchen)
+* [sqrt_cordic](https://github.com/IHsuanLiu/MSOC/tree/main/sqrt_cordic), by 🎓 [IHsuanLiu](https://github.com/IHsuanLiu)
+
+
+* [Squared_difference_accumulate](https://github.com/sandy30538/Self-paced-Learning-Project-3-Squared_difference_accumulate), by 🎓 [sandy30538](https://github.com/sandy30538)
+* [Squared_difference_accumulate](https://github.com/r08943112/MSoC/tree/main/squared_difference_accumulate), by 🎓 [r08943112](https://github.com/r08943112)
+* [Squared_difference_accumulate](https://github.com/MRdudu156/MSoC-2020-Fall-self-paced/tree/main/SQUARED_DIFF_ACCUM), by 🎓 [MRdudu156](https://github.com/MRdudu156)
 
 
 [[xdesign]](~Xilinx/Vivado/2019.2/examples/design)
 * [original project](~Xilinx/Vivado/2019.2/examples/design), from Xilinx HLS Design Examples
-* [2D_convolution_with_linebuffer]
-* [dataflow_stable_content]
-* [linear_algebra]
-* [memory_porting_and_ii]
+* [2D_convolution_with_linebuffer](https://github.com/see1000see1000/MSOC2020FALL/tree/main/xdesign_2D_convolution_with_line_buffer), by 🎓 [see1000see1000](https://github.com/see1000see1000)
+* [2D_convolution_with_linebuffer](https://github.com/r08943112/MSoC/tree/main/2D_convolution_with_linebuffer), by 🎓 [r08943112](https://github.com/r08943112)
+* [2D_convolution_with_linebuffer](https://github.com/tingyungchen/2D_convolution_with_linebuffer), by 🎓 [tingyungchen](https://github.com/tingyungchen)
+
+
+* [dataflow_stable_content](https://github.com/b04901060/MSoC-Application-Acceleration-with-High-Level-Synthesis/tree/main/xdesign_DataflowStableContent), by 🎓 [b04901060](https://github.com/b04901060)
+* [dataflow_stable_content](https://github.com/r08943112/MSoC/tree/main/dataflow_stable_content), by 🎓 [r08943112](https://github.com/r08943112)
+* [dataflow_stable_content](https://github.com/R09943156/MSOC/tree/main/Xilinx%20Example%20Design/dataflow_stable_content), by 🎓 [R09943156](https://github.com/R09943156)
+
+
+* [linear_algebra](https://github.com/siangyang/-xdesign-linear-algebra-SVD), by 🎓 [siangyang](https://github.com/siangyang)
+* [linear_algebra](https://github.com/shane5713/MSoC-2020/tree/main/Self-paced_linear_algebra_SVD), by 🎓 [shane5713](https://github.com/shane5713)
+
+
+* [memory_porting_and_ii](https://github.com/r08943112/MSoC/tree/main/memory_porting_and_ii), by 🎓 [r08943112](https://github.com/r08943112)
+* [memory_porting_and_ii](https://github.com/ian9435/memory_porting_and_ii), by 🎓 [ian9435](https://github.com/ian9435)
 
 
 [[vitis]](https://github.com/Xilinx/Vitis-Tutorials/tree/master/docs)
 * [original project](https://github.com/Xilinx/Vitis-Tutorials/tree/master/docs), from Xilinx Vitis Tutorial
-* [Bloom]
+* [Bloom](https://github.com/whoami90506/MSoC-Self-Paced/tree/master/bloomfilter), by 🎓 [whoami90506](https://github.com/whoami90506)
 
 
 ### Directory Structure
