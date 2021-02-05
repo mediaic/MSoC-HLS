@@ -39,7 +39,10 @@
 
 <!-- ABOUT THIS PROJECT -->
 ## About This Project
+The project is a collection of final projects of the course EEE5029 "MSoC-Application Acceleration with High-Level-Synthesis" taught in the National Taiwan University Electrical Engineering Department.
+The section of "List of Improved Existing Projects" is a collection of students' self-paced projects. It improves on the existing open-source code.
 
+Note: The platform used by the projects, include PYNQ-Z2, and Xilinx U50.
 
 
 
