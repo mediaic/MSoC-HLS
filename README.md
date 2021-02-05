@@ -107,16 +107,13 @@ Prefix Sum and Histogram
 
 [[XAPP]](https://www.xilinx.com/support.html#documentation) [original project](https://www.xilinx.com/support.html#documentation), from Xilinx Application Note
 
-XAPP1170 - Floating Point Matrix Multiplication
 * [XAPP1170 - Floating Point Matrix Multiplication](https://github.com/tofumanjeff/xapp1170_floating_point_matrix_multiplication), by 🎓 [tofumanjeff](https://github.com/tofumanjeff)
 
-XAPP890 -Sobel Filter
 * [XAPP890 -Sobel Filter](https://github.com/sandy30538/Self-paced-Learning-Project-Sobel-Filter), by 🎓 [sandy30538](https://github.com/sandy30538)
 
 
 [[cornell]](https://github.com/ptpan/ece5775) [original project](https://github.com/ptpan/ece5775), from Cornell - ECE5775
 
-lab2: KNN-based digit recognition
 * [lab2: KNN-based digit recognition](https://github.com/r08943099/MSOCFall2020/tree/main/self_paced_leraning_project/session2_cornell_digitrec), by 🎓 [r08943099](https://github.com/r08943099)
 
 
@@ -186,7 +183,6 @@ memory_porting_and_ii
 
 [[vitis]](https://github.com/Xilinx/Vitis-Tutorials/tree/master/docs) [original project](https://github.com/Xilinx/Vitis-Tutorials/tree/master/docs), from Xilinx Vitis Tutorial
 
-Bloom
 * [Bloom](https://github.com/whoami90506/MSoC-Self-Paced/tree/master/bloomfilter), by 🎓 [whoami90506](https://github.com/whoami90506)
 
 
