@@ -19,10 +19,11 @@ This is a  github repository for hls final project. This project implement a dig
 * **README.md** - introduce the project, algorithm, reference ....
 * **code/**
   * original - original code we establish 
-  * final (use inline pragma) - include both host and kernel code
+  * final
 * **code-opt/** - test with different pragma
   * code-Oo1
   * code-Oo2
+  * code-Oo3
 * **testdata/** - include input test data
 * **script/** 
   * run_hls.tcl  
@@ -37,7 +38,7 @@ This is a  github repository for hls final project. This project implement a dig
   * Open the Vivado HLS Command Prompt
   ```sh
   vivado_hls -f run_hls.tcl
-  vivado_hls -p da_final
+  vivado_hls -p danew_v1
   ```
 
 <!-- Algorithm -->
